@@ -1,12 +1,14 @@
 🌐 embarkstudios.github.io
 =================
 
+[![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
+[![Embark](https://img.shields.io/badge/embark-open%20source-blueviolet.svg)](https://github.com/EmbarkStudios)
+
 Hub for Embark's open source efforts.
 
-About
-------------
+## About
 
-This is a __static__ site made using Vue.js.
+This is a static site made using Vue.js.
 
 Project data is provided by a small JSON file, but in the future this should be grabbed from an API.
 
@@ -14,8 +16,9 @@ All non-project data and text is hardcoded for now, but in the future this shoul
 
 We should also add routing, multiple pages, and all sorts of other things 🙂
 
-Adding or Changing Projects
-------------
+## User Guide
+
+### Adding or Changing Projects
 
 The site's data comes from `data.json`. You can add a new project by adding its info to this file.
 
@@ -39,8 +42,7 @@ The site's data comes from `data.json`. You can add a new project by adding its 
 }
 ```
 
-Adding or Changing Category Sections
-------------
+### Adding or Changing Category Sections
 
 You can insert a section showing all projects with a specified tag by putting the following into `index.html`:
 
@@ -51,3 +53,22 @@ You can insert a section showing all projects with a specified tag by putting th
   v-bind:projects="projectsWithTag('rust')"
 ></project-category>
 ```
+
+## Contributing
+
+We welcome community contributions to this project.
+
+Please read our [Contributor Guide](CONTRIBUTING.md) for more information on how to get started.
+
+## License
+
+Licensed under either of
+
+* Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+* MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
+
+at your option.
+
+### Contribution
+
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.
