@@ -1,5 +1,4 @@
 {
-  
   "projects": [
     {
       "name": "texture-synthesis",
@@ -76,6 +75,12 @@
       "name": "gke-accelerated-xorg-example",
       "emoji": "",
       "tags": ["docker"]
+    },
+    {
+      "name": "embarkstudios.github.io",
+      "emoji": "🌐",
+      "tags": ["web"],
+      "description": "The webpage you're looking at right now"
     }
   ]
 }
