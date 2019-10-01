@@ -19,7 +19,7 @@ Adding or Changing Projects
 
 The site's data comes from `data.json`. You can add a new project by adding its info to this file.
 
-```javascript
+```json
 {
   // Make sure the name is exactly the same as the GitHub repo name
   "name": "texture-synthesis",
