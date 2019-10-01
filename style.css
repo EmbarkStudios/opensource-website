@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap');
+
+:root {
+  --embark-blue: #0fa0b4;
+  --embark-red: #b40000;
+}
+
+body {
+  font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* All 2nd level items (ie. sections) should have margins... */
+body > * > * {
+  margin: 2em;
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+/* ...Except full-width sections */
+.full-width-section {
+  background: black;
+  color: white;
+  margin: 0;
+  padding: 4em;
+}
+
+.full-width-section > p {
+  font-size: 1.2em;
+  max-width: 1400px;
+}
+
+.button-primary {
+  display: inline-block;
+  font-size: 20px;
+  background: var(--embark-blue);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  margin: 1em 0;
+}
+
+.background-blue {
+  background: var(--embark-blue);
+}
+
+.background-red {
+  background: var(--embark-red);
+}
+
+.background-black {
+  background: black;
+}
+
+.background-grey {
+  background: #eee;
+  color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  margin: 0;
+  font-size: 1.5em;
+  position: fixed;
+  top: 0px;
+  padding: 1em 2em;
+  width: calc(100% - 4em);
+  height: 60px;
+  z-index: 100;
+}
+
+.header * {
+  margin: 0;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.2em;
+  display: inline-block;
+  transition: all .2s ease-in-out;
+}
+
+.header a:hover {
+  transform: scale(1.1);
+}
+
+#logo {
+  width: 200px;
+}
+
+#intro {
+  margin-top: 6em;
+  background-image: url('https://res.cloudinary.com/teamtailor/image/upload/ar_3:2,c_fill,dpr_2,f_auto,g_faces:center,q_80,w_520/v1568294786/su9bqxhbthzo0go4af9y.jpg');
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+}
+
+.category-tag {
+  color: var(--embark-blue);
+}
+
+.projects-container {
+  max-width: 1600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background: white;
+  box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+/*   height: 150px; */
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  transition: all .2s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project-featured {
+  font-size: 1.1em;
+  text-shadow: 1px 1px rgba(0,0,0,0.5);
+  width: 450px;
+  color: white;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+
+.title {
+  margin: 0;
+}
+
+.emoji {
+  font-size: 1.5em;
+  padding-right: 5px;
+}
+
+.projects-list {
+  list-style:none; 
+  padding-left:0; 
+}
+
+.projects-list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.projects-list li {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1000px;
+  padding: 1em 2em;
+  border-bottom: 1px #ccc solid;
+  transition: all .2s ease-in-out;
+}
+
+.projects-list li:hover {
+  background: #eee;
+}
+
+.tag {
+  font-size: 12px;
+  background: var(--embark-blue);
+  padding: 2px 6px;
+  margin: 3px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.logo-container img {
+  height: 50px;
+  margin: 1em;
+}

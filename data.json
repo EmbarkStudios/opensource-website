@@ -1,0 +1,81 @@
+{
+  
+  "projects": [
+    {
+      "name": "texture-synthesis",
+      "emoji": "🎨",
+      "tags": ["rust"],
+      "description": "Example-based texture synthesis written in Rust",
+      "featured": true,
+      "extendedDescription": "A light Rust API for Multiresolution Stochastic Texture Synthesis, a non-parametric example-based algorithm for image generation.",
+      "featureImage": "https://camo.githubusercontent.com/c279dea27db2c10f64cd27563d8d7cc86048c5c1/68747470733a2f2f692e696d6775722e636f6d2f43735a6f5350532e6a7067"
+    },
+    {
+      "name": "cargo-deny",
+      "emoji": "❌",
+      "tags": ["rust", "tools"],
+      "description": "Cargo plugin to help you manage large dependency graphs",
+      "featured": true,
+      "featureImage": "https://camo.githubusercontent.com/fe000e383ffe85ed80a2fff1be630a6da4ae7070/68747470733a2f2f692e696d6775722e636f6d2f787461727a65552e706e67"
+    },
+    {
+      "name": "tame-oauth",
+      "emoji": "🔐",
+      "tags": ["rust"]
+    },
+    {
+      "name": "tame-gcs",
+      "emoji": "📁",
+      "tags": ["rust"]
+    },
+    {
+      "name": "ash-molten",
+      "emoji": "🌋",
+      "tags": ["rust"]
+    },
+    {
+      "name": "helix-oidc",
+      "emoji": "🧬",
+      "tags": ["go"]
+    },
+    {
+      "name": "buildkite-jobify",
+      "emoji": "👷‍♀️",
+      "tags": ["rust", "tools"]
+    },
+    {
+      "name": "cargo-fetcher",
+      "emoji": "🎁",
+      "tags": ["rust", "tools"],
+      "description": "Cargo plugin for quickly fetching dependencies"
+    },
+    {
+      "name": "physx-rs",
+      "emoji": "🎳",
+      "tags": ["rust"],
+      "featured": true,
+      "extendedDescription": "Rust binding and wrapper over NVIDIA PhysX, a popular and mature physics engine particularly well-suited for games.",
+      "featureImage": "https://raw.githubusercontent.com/EmbarkStudios/physx-rs/master/images/example-ball.png"
+    },
+    {
+      "name": "wireguard-ui",
+      "emoji": "",
+      "tags": ["go"]
+    },
+    {
+      "name": "container-packer-qemu",
+      "emoji": "📦",
+      "tags": ["docker"]
+    },
+    {
+      "name": "docker-windows",
+      "emoji": "🐳",
+      "tags": ["docker"]
+    },
+    {
+      "name": "gke-accelerated-xorg-example",
+      "emoji": "",
+      "tags": ["docker"]
+    }
+  ]
+}

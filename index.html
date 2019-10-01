@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Embark Studios Open Source | embark.dev</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import Vue -->
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.min.js"></script>
+    <script src="/script.js"></script>
+    <script src="/buttons.js"></script>
+        
+    
+  </head>  
+  <body>
+    
+    <header class="header">
+      <img id="logo" src="https://cdn.glitch.com/d956fe52-49a8-46a6-8326-ba6d03358ff4%2Fembark_logo_white_L.png?v=1569930222216"/>
+      <div>
+        <a href="https://embark-studios.com" class="fa fa-globe"></a>
+        <a href="https://twitter.com/EmbarkStudios" class="fa fa-twitter"></a>
+        <a href="https://github.com/EmbarkStudios" class="fa fa-github"></a>
+        <a href="#contribute" class="button-primary">
+          Contribute
+        </a>
+      </div>
+    </header>
+    
+    <div id="app">
+      
+      <section class="full-width-section" id="intro">
+        <h1>
+          Embark ❤️ Open Source
+        </h1>
+        <h2>
+          Empowering everyone to create
+        </h2>
+        <p>
+          Embark Studios is a Stockholm-based games studio, on a mission to blur the line between playing and making.
+        </p>
+        <p>
+          Technology is reshaping our industry. We want to be part of this change, by exploring and applying the latest technology, by being honest and transparent in our relationship with each other and our community, and by allowing our curiosity to lead us down unexpected paths.
+        </p>
+        <p>
+          In our open source work, we're exploring and pushing the boundaries of new technologies, and sharing our learnings with the community.
+        </p>
+        
+      </section>
+      
+      <h2>
+        Featured Open Source Projects
+      </h2>
+      <div class="projects-container">
+        <a v-bind:style="{ 'background-image': 'url(' + p.featureImage + ')' }" v-bind:href="repoUrl(p)" class="project project-featured" v-for="p in featuredProjects">
+          <h3 class="title">
+            <span class="emoji">{{ p.emoji }}</span>
+            {{ p.name }}
+          </h3>
+          <p>
+            {{ p.extendedDescription }}
+          </p>
+          <div>
+            <div>
+              <span class="tag" v-for="tag in p.tags">{{ tag }}</span>
+            </div>
+          </div> 
+        </a>
+      </div>
+      
+      <section id="rust" class="full-width-section background-grey">
+        <h1>
+          🦀 Rust at Embark
+        </h1>
+        <p>
+          When we started Embark, we chose Rust as our primary language for the long term future we are building. We love the safety and robustness of the language, the ability to write high performance, safe, and (mostly) bug free code and then fearlessly refactor and change it without common lifetime/ownership, memory safety or race condition problems.
+        </p>
+        <p>
+          Possibly even more important is the openness and collaborative nature of the quickly growing ecosystem and community around Rust. With tens of thousands of open source crates on crates.io and a best-in-class package system, cargo, we truly believe Rust is a language for the next 40 years.
+        </p>
+        <a href="https://embark.rs" class="button-primary background-red">Learn More</a>
+        
+        
+        <project-category
+          tag="rust"
+          v-bind:projects="projectsWithTag('rust')"
+        ></project-category>
+      </section>
+
+      <project-category
+        tag="go"
+        v-bind:projects="projectsWithTag('go')"
+      ></project-category>
+
+      <project-category
+        tag="docker"
+        v-bind:projects="projectsWithTag('docker')"
+      ></project-category>
+      
+      <section class="full-width-section background-grey" id="sponsorship">
+        <h1>
+          Sponsorship
+        </h1>
+        <p>
+          We believe that open source creators are integral to the success of the Rust ecosystem. We offer monetary sponsorship to several individuals and projects via Patreon, GitHub and OpenCollective. You can see who we're currently supporting below:
+        </p>
+        <div class="logo-container">
+          <a href="https://opencollective.com/embarkstudios"><img src="https://opencollective.com/static/images/opencollectivelogo.png"/></a>
+          <a href="https://www.patreon.com/embarkstudios/creators"><img src="https://cdn.glitch.com/d956fe52-49a8-46a6-8326-ba6d03358ff4%2FPatreon_Wordmark_Black.png?v=1569936497542"/></a>
+          <a href="https://github.com/embark-studios"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png"/></a>
+        </div>
+      </section>
+      
+      <h3>
+        Projects A-Z
+      </h3>
+      <ul class="projects-list">
+        <a v-for="p in alphabetisedProjects" v-bind:href="repoUrl(p)"><li><span>{{ p.emoji }} {{ p.name }}</span><span><span class="tag" v-for="tag in p.tags">{{ tag }}</span></span></li></a>
+      </ul>
+      
+      <section class="full-width-section" id="contribute">
+        <h1>
+          Want to get involved?
+        </h1>
+        <p>
+          All projects created at Embark Studios are .... We welcome contributions from people of all backgrounds who are interested in making great software with us. We need <b>you</b> to help us achieve our goal of empowering everyone to create.
+        </p>
+        <a href="https://github.com/EmbarkStudios/opensource-template/blob/master/CODE_OF_CONDUCT.md"><h3>Read our Code of Conduct →</h3></a>
+        <a href="https://github.com/EmbarkStudios/opensource-template/blob/master/CONTRIBUTING.md"><h3>Read our Contributor Guide →</h3></a>
+        <a href="https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+user%3AEmbarkStudios+is%3Apublic"><h3>Check out open issues →</h3></a>
+        <a href="#" class="button-primary background-blue">Get Started</a>
+      </section>
+
+    </div>
+
+  </body>
+</html>
