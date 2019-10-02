@@ -258,3 +258,16 @@ body > * > * {
   height: 50px;
   margin: 1em;
 }
+
+/* Dark mode */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background:  #222; color: white;
+  }
+
+  .background-grey {
+    background: #111;
+    color: white;
+  }
+}
