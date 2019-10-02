@@ -12,6 +12,8 @@ body {
   box-sizing: border-box;
 }
 
+/* Typography */
+
 a {
   color: inherit;
 }
@@ -29,9 +31,11 @@ h3 {
   line-height: 2rem;
 }
 
+/* Spacing */
+
 /* All 2nd level items (ie. sections) should have margins... */
 body > * > * {
-  margin: 5%;
+  margin: 3% 5%;
 }
 
 /* ...Except full-width sections */
@@ -39,7 +43,7 @@ body > * > * {
   background: black;
   color: white;
   margin: 0;
-  padding: 5%;
+  padding: 3% 5%;
 }
 
 .full-width-section p {
@@ -47,18 +51,25 @@ body > * > * {
   max-width: 1200px;
 }
 
+/* Embark theming */
+
 .button-primary {
   display: inline-block;
   font-size: 20px;
   background: var(--embark-blue);
   color: white;
   font-weight: bold;
+  text-decoration: none;
   border: none;
   border-radius: 1em;
   cursor: pointer;
   padding: 0.5em 2em;
-  text-decoration: none;
   margin: 1em 0;
+  transition: all .2s ease-in-out;
+}
+
+.button-primary:hover {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
 }
 
 .background-blue {
@@ -77,6 +88,8 @@ body > * > * {
   background: #eee;
   color: black;
 }
+
+/* Header and Intro */
 
 .header {
   display: flex;
@@ -125,9 +138,7 @@ body > * > * {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
 }
 
-.category-tag {
-  color: var(--embark-blue);
-}
+/* Project Cards */
 
 .projects-container {
   max-width: 1500px;
@@ -135,19 +146,23 @@ body > * > * {
   flex-wrap: wrap;
 }
 
+.category-tag {
+  color: var(--embark-blue);
+}
+
 .project {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 300px;
+  margin: 0.5rem;
   padding: 1.5rem;
   background: white;
   box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.1);
   border: 1px solid #ddd;
   border-radius: 10px;
-  width: 300px;
-  margin: 0.5rem;
-  text-decoration: none;
   color: black;
+  text-decoration: none;
   transition: all .2s ease-in-out;
 }
 
@@ -160,9 +175,9 @@ body > * > * {
 }
 
 .project-featured {
-  text-shadow: 1px 1px rgba(0,0,0,0.5);
   width: 400px;
   color: white;
+  text-shadow: 1px 1px rgba(0,0,0,0.5);
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
 }
@@ -179,6 +194,12 @@ body > * > * {
   font-size: 1.5em;
   padding-right: 5px;
 }
+
+.star-button {
+  margin-top: 1rem;
+}
+
+/* Projects A-Z Table */
 
 .projects-list {
   list-style:none; 
@@ -204,14 +225,16 @@ body > * > * {
   background: #eee;
 }
 
+/* Tags */
+
 .tag {
-  font-size: 12px;
   background: var(--embark-blue);
-  padding: 2px 6px;
   margin: 3px;
+  padding: 2px 6px;
   border-radius: 10px;
-  color: white;
+  font-size: 12px;
   font-weight: bold;
+  color: white;
   text-shadow: none;
 }
 
@@ -229,10 +252,6 @@ body > * > * {
 
 .tag-docker {
   background: #1E90FF;  
-}
-
-.star-button {
-  margin-top: 1rem;
 }
 
 .logo-container img {
