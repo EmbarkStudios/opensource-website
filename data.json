@@ -20,27 +20,32 @@
     {
       "name": "tame-oauth",
       "emoji": "🔐",
-      "tags": ["rust"]
+      "tags": ["rust"],
+      "description": "Small OAuth crate that follows the sans-io approach"
     },
     {
       "name": "tame-gcs",
       "emoji": "📁",
-      "tags": ["rust"]
+      "tags": ["rust", "gcp"],
+      "description": "A small library with a limited set of Google Cloud Storage operations"
     },
     {
       "name": "ash-molten",
       "emoji": "🌋",
-      "tags": ["rust"]
+      "tags": ["rust"],
+      "description": "Statically linked MoltenVK for Vulkan on Mac using Ash"
     },
     {
       "name": "helix-oidc",
       "emoji": "🧬",
-      "tags": ["go"]
+      "tags": ["go"],
+      "description": "Helix Perforce OIDC validator"
     },
     {
       "name": "buildkite-jobify",
-      "emoji": "👷‍♀️",
-      "tags": ["rust", "tools"]
+      "emoji": "👷",
+      "tags": ["rust", "tools"],
+      "description": "Kubekite, but in Rust, using configuration from your repos"
     },
     {
       "name": "cargo-fetcher",
@@ -52,6 +57,7 @@
       "name": "physx-rs",
       "emoji": "🎳",
       "tags": ["rust"],
+      "description": "Rust binding and wrapper over NVIDIA PhysX",
       "featured": true,
       "extendedDescription": "Rust binding and wrapper over NVIDIA PhysX, a popular and mature physics engine particularly well-suited for games.",
       "featureImage": "https://raw.githubusercontent.com/EmbarkStudios/physx-rs/master/images/example-ball.png"
@@ -59,22 +65,20 @@
     {
       "name": "wireguard-ui",
       "emoji": "",
-      "tags": ["go"]
-    },
-    {
-      "name": "container-packer-qemu",
-      "emoji": "📦",
-      "tags": ["docker"]
+      "tags": ["go", "web"],
+      "description": "A basic web UI for managing Wireguard clients."
     },
     {
       "name": "docker-windows",
       "emoji": "🐳",
-      "tags": ["docker"]
+      "tags": ["docker"],
+      "description": "Dockerfiles for Windows + rust CI"
     },
     {
       "name": "gke-accelerated-xorg-example",
       "emoji": "",
-      "tags": ["docker"]
+      "tags": ["docker", "gcp"],
+      "description": "Example project for running remote rendering on GKE"
     },
     {
       "name": "embarkstudios.github.io",

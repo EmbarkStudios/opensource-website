@@ -10,15 +10,12 @@ Vue.component('project-category', {
               <span class="emoji">{{ p.emoji }}</span>
               {{ p.name }}
             </h3>
+            <p>{{ p.description }}</p>
             <div>
               <span class="tag" v-for="tag in p.tags">{{ tag }}</span>
             </div>
-            <p>{{ p.description }}</p>
           </div>
-
-          <div>
-            <a class="github-button" v-bind:href="repoUrl(p)" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star</a>
-          </div>
+          <iframe class="star-button" v-bind:src="starButton(p)" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
         </a>
       </div>
     </section>
@@ -27,6 +24,9 @@ Vue.component('project-category', {
     repoUrl: function (project) {
       return "https://github.com/EmbarkStudios/" + project.name
     },
+    starButton: function(project) {
+      return `https://ghbtns.com/github-btn.html?user=EmbarkStudios&repo=${project.name}&type=star&count=true&size=large`;
+    }
   }
 })
 
