@@ -67,11 +67,7 @@
             <p>
               {{ p.extendedDescription }}
             </p>
-            <div>
-              <div>
-                <span class="tag" v-for="tag in p.tags">{{ tag }}</span>
-              </div>
-            </div> 
+            <tags v-bind:tags="p.tags"></tags>
           </a>
         </div>
       </section>
@@ -124,7 +120,7 @@
           Projects A-Z
         </h3>
         <ul class="projects-list">
-          <a v-for="p in alphabetisedProjects" v-bind:href="repoUrl(p)"><li><span>{{ p.emoji }} {{ p.name }}</span><span><span class="tag" v-for="tag in p.tags">{{ tag }}</span></span></li></a>
+          <a v-for="p in alphabetisedProjects" v-bind:href="repoUrl(p)"><li><span>{{ p.emoji }} {{ p.name }}</span><tags v-bind:tags="p.tags"></tags></li></a>
         </ul>
       </section>
       
