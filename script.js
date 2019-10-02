@@ -10,13 +10,12 @@ Vue.component('project-category', {
               <span class="emoji">{{ p.emoji }}</span>
               {{ p.name }}
             </h3>
+            <p>{{ p.description }}</p>
             <div>
               <span class="tag" v-for="tag in p.tags">{{ tag }}</span>
             </div>
-            <p>{{ p.description }}</p>
           </div>
-
-          <iframe v-bind:src="starButton(p)" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+          <iframe class="star-button" v-bind:src="starButton(p)" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
         </a>
       </div>
     </section>

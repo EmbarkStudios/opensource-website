@@ -23,52 +23,58 @@
         <a href="https://embark-studios.com" class="fa fa-globe"></a>
         <a href="https://twitter.com/EmbarkStudios" class="fa fa-twitter"></a>
         <a href="https://github.com/EmbarkStudios" class="fa fa-github"></a>
-        <a href="#contribute" class="button-primary">
-          Contribute
-        </a>
       </div>
     </header>
     
     <div id="app">
       
       <section class="full-width-section" id="intro">
-        <h1>
-          Embark ❤️ Open Source
-        </h1>
-        <h2>
-          Empowering everyone to create
-        </h2>
-        <p>
-          Embark Studios is a Stockholm-based games studio, on a mission to blur the line between playing and making.
-        </p>
-        <p>
-          Technology is reshaping our industry. We want to be part of this change, by exploring and applying the latest technology, by being honest and transparent in our relationship with each other and our community, and by allowing our curiosity to lead us down unexpected paths.
-        </p>
-        <p>
-          In our open source work, we're exploring and pushing the boundaries of new technologies, and sharing our learnings with the community.
-        </p>
+        <div>
+          <h1>
+            Embark ❤️ Open Source
+          </h1>
+          <h2>
+            Empowering everyone to create
+          </h2>
+        </div>
         
+        <div>
+          <p>
+            Embark Studios is a Stockholm-based games studio, on a mission to blur the line between playing and making.
+          </p>
+          <p>
+            Technology is reshaping our industry. We want to be part of this change, by exploring and applying the latest technology, by being honest and transparent in our relationship with each other and our community, and by allowing our curiosity to lead us down unexpected paths.
+          </p>
+          <p>
+            In our open source work, we're exploring and pushing the boundaries of new technologies, and sharing our learnings with the community.
+          </p>
+          <a href="#contribute" class="button-primary">
+            Contribute
+          </a>
+        </div>
       </section>
       
-      <h2>
-        Featured Open Source Projects
-      </h2>
-      <div class="projects-container">
-        <a v-bind:style="{ 'background-image': 'url(' + p.featureImage + ')' }" v-bind:href="repoUrl(p)" class="project project-featured" v-for="p in featuredProjects">
-          <h3 class="title">
-            <span class="emoji">{{ p.emoji }}</span>
-            {{ p.name }}
-          </h3>
-          <p>
-            {{ p.extendedDescription }}
-          </p>
-          <div>
+      <section>
+        <h2>
+          Featured Open Source Projects
+        </h2>
+        <div class="projects-container">
+          <a v-bind:style="{ 'background-image': 'url(' + p.featureImage + ')' }" v-bind:href="repoUrl(p)" class="project project-featured" v-for="p in featuredProjects">
+            <h3 class="title">
+              <span class="emoji">{{ p.emoji }}</span>
+              {{ p.name }}
+            </h3>
+            <p>
+              {{ p.extendedDescription }}
+            </p>
             <div>
-              <span class="tag" v-for="tag in p.tags">{{ tag }}</span>
-            </div>
-          </div> 
-        </a>
-      </div>
+              <div>
+                <span class="tag" v-for="tag in p.tags">{{ tag }}</span>
+              </div>
+            </div> 
+          </a>
+        </div>
+      </section>
       
       <section id="rust" class="full-width-section background-grey">
         <h1>
@@ -81,23 +87,23 @@
           Possibly even more important is the openness and collaborative nature of the quickly growing ecosystem and community around Rust. With tens of thousands of open source crates on crates.io and a best-in-class package system, cargo, we truly believe Rust is a language for the next 40 years.
         </p>
         <a href="https://embark.rs" class="button-primary background-red">Learn More</a>
-        
-        
         <project-category
           tag="rust"
           v-bind:projects="projectsWithTag('rust')"
         ></project-category>
       </section>
 
-      <project-category
-        tag="go"
-        v-bind:projects="projectsWithTag('go')"
-      ></project-category>
-
-      <project-category
-        tag="docker"
-        v-bind:projects="projectsWithTag('docker')"
-      ></project-category>
+      <section>
+        <project-category
+          tag="go"
+          v-bind:projects="projectsWithTag('go')"
+        ></project-category>
+  
+        <project-category
+          tag="web"
+          v-bind:projects="projectsWithTag('web')"
+        ></project-category>
+      </section>
       
       <section class="full-width-section background-grey" id="sponsorship">
         <h1>
@@ -113,12 +119,15 @@
         </div>
       </section>
       
-      <h3>
-        Projects A-Z
-      </h3>
-      <ul class="projects-list">
-        <a v-for="p in alphabetisedProjects" v-bind:href="repoUrl(p)"><li><span>{{ p.emoji }} {{ p.name }}</span><span><span class="tag" v-for="tag in p.tags">{{ tag }}</span></span></li></a>
-      </ul>
+      <section>
+        <h3>
+          Projects A-Z
+        </h3>
+        <ul class="projects-list">
+          <a v-for="p in alphabetisedProjects" v-bind:href="repoUrl(p)"><li><span>{{ p.emoji }} {{ p.name }}</span><span><span class="tag" v-for="tag in p.tags">{{ tag }}</span></span></li></a>
+        </ul>
+      </section>
+      
       
       <section class="full-width-section" id="contribute">
         <h1>

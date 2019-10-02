@@ -12,25 +12,26 @@ body {
   box-sizing: border-box;
 }
 
-/* All 2nd level items (ie. sections) should have margins... */
-body > * > * {
-  margin: 2em;
-}
-
 a {
   color: inherit;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 1.7em;
+  font-size: 1.7rem;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+/* All 2nd level items (ie. sections) should have margins... */
+body > * > * {
+  margin: 5%;
 }
 
 /* ...Except full-width sections */
@@ -38,12 +39,12 @@ h3 {
   background: black;
   color: white;
   margin: 0;
-  padding: 4em;
+  padding: 5%;
 }
 
-.full-width-section > p {
-  font-size: 1.2em;
-  max-width: 1400px;
+.full-width-section p {
+  font-size: 1.3rem;
+  max-width: 1200px;
 }
 
 .button-primary {
@@ -114,9 +115,13 @@ h3 {
 }
 
 #intro {
-  margin-top: 6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 6rem;
   background-image: url('https://res.cloudinary.com/teamtailor/image/upload/ar_3:2,c_fill,dpr_2,f_auto,g_faces:center,q_80,w_520/v1568294786/su9bqxhbthzo0go4af9y.jpg');
   background-size: cover;
+  min-height: 40vh;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
 }
 
@@ -125,7 +130,7 @@ h3 {
 }
 
 .projects-container {
-  max-width: 1600px;
+  max-width: 1500px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -134,17 +139,20 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  padding: 1.5rem;
   background: white;
   box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.1);
   border: 1px solid #ddd;
   border-radius: 10px;
   width: 300px;
-/*   height: 150px; */
-  margin: 10px;
+  margin: 0.5rem;
   text-decoration: none;
   color: black;
   transition: all .2s ease-in-out;
+}
+
+.project p {
+  font-size: 1rem;
 }
 
 .project:hover {
@@ -152,12 +160,15 @@ h3 {
 }
 
 .project-featured {
-  font-size: 1.1em;
   text-shadow: 1px 1px rgba(0,0,0,0.5);
-  width: 450px;
+  width: 400px;
   color: white;
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+
+.project-featured p {
+  font-size: 1.1rem;
 }
 
 .title {
@@ -202,6 +213,10 @@ h3 {
   color: white;
   font-weight: bold;
   text-shadow: none;
+}
+
+.star-button {
+  margin-top: 1rem;
 }
 
 .logo-container img {
