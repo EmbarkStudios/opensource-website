@@ -273,7 +273,7 @@ body > * > * {
   }
   
   .project {
-    background: inherit;
+    background-color: inherit;
     border-color: #444;
     color: white;
   }
