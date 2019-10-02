@@ -271,4 +271,14 @@ body > * > * {
     background: #111;
     color: white;
   }
+  
+  .project {
+    background: inherit;
+    border-color: #444;
+    color: white;
+  }
+  
+  .projects-list li:hover {
+    background-color: #444;
+  }
 }
