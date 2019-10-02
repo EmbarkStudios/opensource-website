@@ -1,3 +1,12 @@
+Vue.component('tags', {
+  props: ['tags'],
+  template: `
+    <div class="tags">
+      <span v-for="tag in tags" v-bind:class="'tag tag-' + tag">{{ tag }}</span>
+    </div>
+  `
+})
+
 Vue.component('project-category', {
   props: ['projects', 'tag'],
   template: `
@@ -11,9 +20,7 @@ Vue.component('project-category', {
               {{ p.name }}
             </h3>
             <p>{{ p.description }}</p>
-            <div>
-              <span class="tag" v-for="tag in p.tags">{{ tag }}</span>
-            </div>
+            <tags v-bind:tags="p.tags"></tags>
           </div>
           <iframe class="star-button" v-bind:src="starButton(p)" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
         </a>

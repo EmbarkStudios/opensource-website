@@ -215,6 +215,22 @@ body > * > * {
   text-shadow: none;
 }
 
+.tag-rust {
+  background: #FF4500;
+}
+
+.tag-web {
+  background: #ffc30b;
+}
+
+.tag-go {
+  background: #00CED1;
+}
+
+.tag-docker {
+  background: #1E90FF;  
+}
+
 .star-button {
   margin-top: 1rem;
 }
