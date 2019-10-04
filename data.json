@@ -81,10 +81,16 @@
       "description": "Example project for running remote rendering on GKE"
     },
     {
-      "name": "embarkstudios.github.io",
+      "name": "opensource-website",
       "emoji": "🌐",
       "tags": ["web"],
       "description": "The webpage you're looking at right now"
+    },
+    {
+      "name": "spdx",
+      "emoji": "🆔",
+      "tags": ["rust"],
+      "description": "Helper crate for SPDX expressions"
     }
   ]
 }
