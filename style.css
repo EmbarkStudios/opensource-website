@@ -264,21 +264,22 @@ body > * > * {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background:  #222; color: white;
+    background: #222;
+    color: white;
   }
 
   .background-grey {
-    background: #111;
+    background: #1a1a1a;
     color: white;
   }
   
   .project {
-    background-color: inherit;
-    border-color: #444;
+    background-color: #333;
+    border-color: #333;
     color: white;
   }
   
   .projects-list li:hover {
-    background-color: #444;
+    background-color: #333;
   }
 }
