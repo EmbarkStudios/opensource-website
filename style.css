@@ -258,9 +258,14 @@ body > * > * {
   background: #1E90FF;  
 }
 
-.logo-container img {
-  height: 50px;
+.logo-container a {
+  text-decoration: none;
+}
+
+.logo-image {
+  height: 70px;
   margin: 1em;
+  fill: #111;
 }
 
 /* Dark mode */
@@ -284,5 +289,9 @@ body > * > * {
   
   .projects-list li:hover {
     background-color: #333;
+  }
+
+  .logo-image {
+    fill: white;
   }
 }
