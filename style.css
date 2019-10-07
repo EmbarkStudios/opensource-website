@@ -48,7 +48,12 @@ body > * > * {
 
 .full-width-section p {
   font-size: 1.3rem;
+}
+
+.container {
+  width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Embark theming */
@@ -101,9 +106,9 @@ body > * > * {
   font-size: 1.5em;
   position: fixed;
   top: 0px;
-  padding: 1em 2em;
-  width: calc(100% - 4em);
-  height: 60px;
+  padding: 0 5%;
+  width: 90%;
+  height: 90px;
   z-index: 100;
 }
 
@@ -131,7 +136,7 @@ body > * > * {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 6rem;
+  margin-top: 90px;
   background-image: url('https://res.cloudinary.com/teamtailor/image/upload/ar_3:2,c_fill,dpr_2,f_auto,g_faces:center,q_80,w_520/v1568294786/su9bqxhbthzo0go4af9y.jpg');
   background-size: cover;
   min-height: 40vh;
@@ -141,7 +146,6 @@ body > * > * {
 /* Project Cards */
 
 .projects-container {
-  max-width: 1500px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -175,7 +179,7 @@ body > * > * {
 }
 
 .project-featured {
-  width: 400px;
+  width: 500px;
   color: white;
   text-shadow: 1px 1px rgba(0,0,0,0.5);
   border: none;
@@ -203,8 +207,9 @@ body > * > * {
 /* Projects A-Z Table */
 
 .projects-list {
-  list-style:none; 
-  padding-left:0; 
+  list-style: none; 
+  padding-left: 0;
+  max-width: 1000px;
 }
 
 .projects-list a {
@@ -215,8 +220,6 @@ body > * > * {
 .projects-list li {
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  max-width: 1000px;
   padding: 1em 2em;
   border-bottom: 1px #ccc solid;
   transition: all .2s ease-in-out;

@@ -14,7 +14,7 @@
       "emoji": "❌",
       "tags": ["rust", "tools"],
       "description": "Cargo plugin to help you manage large dependency graphs",
-      "featured": true,
+      "featured": false,
       "featureImage": "https://camo.githubusercontent.com/fe000e383ffe85ed80a2fff1be630a6da4ae7070/68747470733a2f2f692e696d6775722e636f6d2f787461727a65552e706e67"
     },
     {
