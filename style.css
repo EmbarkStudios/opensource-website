@@ -137,7 +137,7 @@ body > * > * {
   flex-direction: column;
   justify-content: center;
   margin-top: 90px;
-  background-image: url('https://res.cloudinary.com/teamtailor/image/upload/ar_3:2,c_fill,dpr_2,f_auto,g_faces:center,q_80,w_520/v1568294786/su9bqxhbthzo0go4af9y.jpg');
+  background-image: url('./img/code.jpg');
   background-size: cover;
   min-height: 40vh;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
