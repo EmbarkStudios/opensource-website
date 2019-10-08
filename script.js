@@ -40,8 +40,6 @@ Vue.component('project-category', {
 fetch('./data.json').then(response => {
   return response.json();
 }).then(data => {
-  console.log(data)
-
   new Vue({  
     el: '#app',
     data: data,
@@ -67,7 +65,6 @@ fetch('./data.json').then(response => {
       }
     }  
   })
-
 }).catch(err => {
   console.log('Failed to get project data'); 
 });
