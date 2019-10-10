@@ -124,7 +124,7 @@ body > * > * {
   transition: all .2s ease-in-out;
 }
 
-.header a:hover {
+.header .fa:hover {
   transform: scale(1.1);
 }
 
