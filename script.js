@@ -15,9 +15,14 @@ Vue.component('tags', {
   props: ['tags'],
   template: `
     <div class="tags">
-      <span v-for="tag in tags" v-bind:class="'tag tag-' + tag">{{ tag }}</span>
+      <a v-bind:href="tagUrl(tag)" v-for="tag in tags" v-bind:class="'tag tag-' + tag">{{ tag }}</a>
     </div>
   `,
+  methods: {
+    tagUrl(tag) {
+      return `/tags?tag=${tag}#projects`;
+    },
+  },
 });
 
 Vue.component('project-category', {
@@ -72,6 +77,9 @@ fetch('./data.json').then((response) => response.json()).then((data) => {
       // Return a filtered array of all projects with a tag
       projectsWithTag(tag) {
         return this.projects.filter((p) => p.tags.includes(tag));
+      },
+      getTagFromUrl() {
+        return new URL(document.location).searchParams.get('tag');
       },
       openSearch() {
         document.body.classList.add('search-open');
