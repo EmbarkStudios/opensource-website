@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap');
 
 :root {
-  --embark-blue: #0fa0b4;
   --embark-red: #b40000;
+  --embark-blue: #0fa0b4;
+  
 }
 
 body {
@@ -19,7 +20,7 @@ a {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 h2 {
