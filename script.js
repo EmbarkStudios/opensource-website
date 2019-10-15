@@ -44,6 +44,7 @@ fetch('./data.json').then(response => {
     el: '#app',
     data: {
       showSearch: false,
+      search: '',
       ...data
     },
 
@@ -53,12 +54,20 @@ fetch('./data.json').then(response => {
       },
       alphabetisedProjects: function() {
         return this.projects.sort((a, b) => a.name.localeCompare(b.name));
+      },
+      searchedProjects: function () {
+        return this.projects.filter(p => {
+          return JSON.stringify(p).toLowerCase().includes(this.search.toLowerCase());
+        })
       }
     },
 
     methods: {
       repoUrl: function (project) {
         return "https://github.com/EmbarkStudios/" + project.name
+      },
+      starButton: function(project) {
+        return `https://ghbtns.com/github-btn.html?user=EmbarkStudios&repo=${project.name}&type=star&count=true&size=large`;
       },
       // Return a filtered array of all projects with a tag
       projectsWithTag: function (tag) {
@@ -67,12 +76,14 @@ fetch('./data.json').then(response => {
         })
       },
       openSearch: function () {
-        document.body.classList.add('search-open')
-        this.showSearch = true
+        document.body.classList.add('search-open');
+        this.showSearch = true;
+        this.$nextTick(() => this.$refs.search.focus())
       },
       closeSearch: function () {
-        document.body.classList.remove('search-open')
-        this.showSearch = false
+        document.body.classList.remove('search-open');
+        this.search = '';
+        this.showSearch = false;
       }
     }
   })

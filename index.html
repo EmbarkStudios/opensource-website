@@ -45,17 +45,18 @@
       <div class="search-overlay" v-if="showSearch" :style="showSearch ? {display: 'block'} : false">
         <div class="search-overlay__content">
           <span class="fa fa-close search-overlay__close" @click="closeSearch"></span>
-          <input id="search-input" type="text" placeholder="Start typing...">
+          <input id="search-input" type="text" placeholder="Start typing..." v-model="search" ref="search">
           <div class="search-overlay__results">
-            <a v-bind:style="{ 'background-image': 'url(' + p.featureImage + ')' }" v-bind:href="repoUrl(p)" class="project" v-for="p in featuredProjects">
-              <h3 class="title">
-                <span class="emoji">{{ p.emoji }}</span>
-                {{ p.name }}
-              </h3>
-              <p>
-                {{ p.extendedDescription }}
-              </p>
-              <tags v-bind:tags="p.tags"></tags>
+            <a v-bind:href="repoUrl(p)" class="project" v-for="p in searchedProjects">
+              <div>
+                <h3 class="title">
+                  <span class="emoji">{{ p.emoji }}</span>
+                  {{ p.name }}
+                </h3>
+                <p>{{ p.description }}</p>
+                <tags v-bind:tags="p.tags"></tags>
+                <iframe class="star-button" v-bind:src="starButton(p)" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+              </div>
             </a>
           </div>
         </div>

@@ -314,9 +314,9 @@ body > * > * {
 }
 
 .search-overlay__content {
-  max-width: 720px;
+  max-width: 1140px;
   margin: auto;
-  padding-top: 2rem;
+  padding: 2rem;
   color: #fff;
 }
 
@@ -337,6 +337,7 @@ body > * > * {
   font-weight: bold;
   color: #fff;
   background-color: transparent;
+  margin-bottom: 4rem;
 }
 
 #search-input::placeholder {
@@ -349,7 +350,11 @@ body > * > * {
 
 .search-overlay__results {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: baseline;
   padding-top: 1rem;
+  overflow-y: scroll;
+  height: 60vh;
+  min-height: 380px;
+  max-height: 640px;
 }
