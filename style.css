@@ -207,7 +207,7 @@ body > * > * {
 /* Projects A-Z Table */
 
 .projects-list {
-  list-style: none; 
+  list-style: none;
   padding-left: 0;
   max-width: 1000px;
 }
@@ -255,7 +255,7 @@ body > * > * {
 }
 
 .tag-docker {
-  background: #1E90FF;  
+  background: #1E90FF;
 }
 
 .logo-container a {
@@ -280,13 +280,13 @@ body > * > * {
     background: #1a1a1a;
     color: white;
   }
-  
+
   .project {
     background-color: #333;
     border-color: #333;
     color: white;
   }
-  
+
   .projects-list li:hover {
     background-color: #333;
   }
