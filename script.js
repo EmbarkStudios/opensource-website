@@ -1,3 +1,14 @@
+var sharedMethods = {
+  methods: {
+    repoUrl: function (project) {
+      return "https://github.com/EmbarkStudios/" + project.name
+    },
+    starButton: function(project) {
+      return `https://ghbtns.com/github-btn.html?user=EmbarkStudios&repo=${project.name}&type=star&count=true&size=large`;
+    }
+  }
+}
+
 Vue.component('tags', {
   props: ['tags'],
   template: `
@@ -8,6 +19,7 @@ Vue.component('tags', {
 })
 
 Vue.component('project-category', {
+  mixins: [sharedMethods],
   props: ['projects', 'tag'],
   template: `
     <section class="category">
@@ -26,15 +38,7 @@ Vue.component('project-category', {
         </a>
       </div>
     </section>
-  `,
-  methods: {
-    repoUrl: function (project) {
-      return "https://github.com/EmbarkStudios/" + project.name
-    },
-    starButton: function(project) {
-      return `https://ghbtns.com/github-btn.html?user=EmbarkStudios&repo=${project.name}&type=star&count=true&size=large`;
-    }
-  }
+  `
 })
 
 fetch('./data.json').then(response => {
@@ -42,6 +46,7 @@ fetch('./data.json').then(response => {
 }).then(data => {
   new Vue({
     el: '#app',
+    mixins: [sharedMethods],
     data: {
       showSearch: false,
       search: '',
@@ -63,12 +68,6 @@ fetch('./data.json').then(response => {
     },
 
     methods: {
-      repoUrl: function (project) {
-        return "https://github.com/EmbarkStudios/" + project.name
-      },
-      starButton: function(project) {
-        return `https://ghbtns.com/github-btn.html?user=EmbarkStudios&repo=${project.name}&type=star&count=true&size=large`;
-      },
       // Return a filtered array of all projects with a tag
       projectsWithTag: function (tag) {
         return this.projects.filter(function (p) {
