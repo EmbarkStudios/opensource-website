@@ -31,17 +31,35 @@
   </head>
 
   <body>
-
-    <header class="header">
-      <a href="https://embark-studios.com"><img id="logo" src="./img/logo.png"/></a>
-      <div>
-        <a href="https://embark-studios.com" class="fa fa-globe"></a>
-        <a href="https://twitter.com/EmbarkStudios" class="fa fa-twitter"></a>
-        <a href="https://github.com/EmbarkStudios" class="fa fa-github"></a>
-      </div>
-    </header>
-
     <div id="app">
+      <header class="header">
+        <a href="https://embark-studios.com"><img id="logo" src="./img/logo.png"/></a>
+        <div>
+          <a href="#" class="fa fa-search" @click.prevent="openSearch"></a>
+          <a href="https://embark-studios.com" class="fa fa-globe"></a>
+          <a href="https://twitter.com/EmbarkStudios" class="fa fa-twitter"></a>
+          <a href="https://github.com/EmbarkStudios" class="fa fa-github"></a>
+        </div>
+      </header>
+
+      <div class="search-overlay" v-if="showSearch" :style="showSearch ? {display: 'block'} : false">
+        <div class="search-overlay__content">
+          <span class="fa fa-close search-overlay__close" @click="closeSearch"></span>
+          <input id="search-input" type="text" placeholder="Start typing...">
+          <div class="search-overlay__results">
+            <a v-bind:style="{ 'background-image': 'url(' + p.featureImage + ')' }" v-bind:href="repoUrl(p)" class="project" v-for="p in featuredProjects">
+              <h3 class="title">
+                <span class="emoji">{{ p.emoji }}</span>
+                {{ p.name }}
+              </h3>
+              <p>
+                {{ p.extendedDescription }}
+              </p>
+              <tags v-bind:tags="p.tags"></tags>
+            </a>
+          </div>
+        </div>
+      </div>
 
       <section class="full-width-section" id="intro">
         <div class="container">

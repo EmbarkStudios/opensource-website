@@ -42,7 +42,10 @@ fetch('./data.json').then(response => {
 }).then(data => {
   new Vue({
     el: '#app',
-    data: data,
+    data: {
+      showSearch: false,
+      ...data
+    },
 
     computed: {
       featuredProjects: function() {
@@ -62,6 +65,14 @@ fetch('./data.json').then(response => {
         return this.projects.filter(function (p) {
           return p.tags.includes(tag)
         })
+      },
+      openSearch: function () {
+        document.body.classList.add('search-open')
+        this.showSearch = true
+      },
+      closeSearch: function () {
+        document.body.classList.remove('search-open')
+        this.showSearch = false
       }
     }
   })
