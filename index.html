@@ -42,7 +42,7 @@
         </div>
       </header>
 
-      <div class="search-overlay" v-if="showSearch" :style="showSearch ? {display: 'block'} : false">
+      <div class="search-overlay" v-show="showSearch" @keyup.esc="closeSearch" style="display: none;">
         <div class="search-overlay__content">
           <span class="fa fa-close search-overlay__close" @click="closeSearch"></span>
           <input id="search-input" type="text" placeholder="Start typing..." v-model="search" ref="search">

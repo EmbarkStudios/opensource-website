@@ -301,7 +301,6 @@ body > * > * {
 }
 
 .search-overlay {
-  display: none;
   position: fixed;
   z-index: 101;
   top: 0;
@@ -310,7 +309,7 @@ body > * > * {
   overflow: hidden;
   height: 100%;
   width: 100%;
-  background-color: #000;
+  background-color: rgba(0,0,0,.92);
 }
 
 .search-overlay__content {
@@ -337,7 +336,7 @@ body > * > * {
   font-weight: bold;
   color: #fff;
   background-color: transparent;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 #search-input::placeholder {
@@ -351,10 +350,12 @@ body > * > * {
 .search-overlay__results {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  padding-top: 1rem;
   overflow-y: scroll;
   height: 60vh;
   min-height: 380px;
   max-height: 640px;
+}
+
+.search-overlay__results .project {
+  max-height: 200px;
 }
