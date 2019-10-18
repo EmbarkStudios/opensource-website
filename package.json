@@ -4,7 +4,8 @@
   "description": "Hub for Embark's open source efforts",
   "main": "script.js",
   "scripts": {
-    "test": "eslint script.js"
+    "test": "eslint script.js",
+    "eslint:github-action": "eslint script.js"
   },
   "repository": {
     "type": "git",
