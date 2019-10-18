@@ -1,0 +1,28 @@
+{
+  "name": "opensource-website",
+  "version": "1.0.0",
+  "description": "Hub for Embark's open source efforts",
+  "main": "script.js",
+  "scripts": {
+    "test": "eslint script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmbarkStudios/opensource-website.git"
+  },
+  "author": "EmbarkStudios",
+  "license": "(MIT OR Apache-2.0)",
+  "bugs": {
+    "url": "https://github.com/EmbarkStudios/opensource-website/issues"
+  },
+  "homepage": "https://github.com/EmbarkStudios/opensource-website#readme",
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-vue": "^5.2.3"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
+}
