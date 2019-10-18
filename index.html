@@ -20,29 +20,48 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@EmbarkStudios" />
     <meta name="twitter:image" content="https://embark.dev/img/code.jpg">
-    
+
     <!-- import CSS -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
-    
+
     <!-- import JS -->
     <script src="https://unpkg.com/vue@2.6.10/dist/vue.min.js"></script>
-    <script src="./script.js"></script>   
-  </head>  
-  
+    <script src="./script.js"></script>
+  </head>
+
   <body>
-    
-    <header class="header">
-      <a href="https://embark-studios.com"><img id="logo" src="./img/logo.png"/></a>
-      <div>
-        <a href="https://embark-studios.com" class="fa fa-globe"></a>
-        <a href="https://twitter.com/EmbarkStudios" class="fa fa-twitter"></a>
-        <a href="https://github.com/EmbarkStudios" class="fa fa-github"></a>
-      </div>
-    </header>
-    
     <div id="app">
-      
+      <header class="header">
+        <a href="https://embark-studios.com"><img id="logo" src="./img/logo.png"/></a>
+        <div>
+          <a href="#" class="fa fa-search" @click.prevent="openSearch"></a>
+          <a href="https://embark-studios.com" class="fa fa-globe"></a>
+          <a href="https://twitter.com/EmbarkStudios" class="fa fa-twitter"></a>
+          <a href="https://github.com/EmbarkStudios" class="fa fa-github"></a>
+        </div>
+      </header>
+
+      <div class="search-overlay" v-show="showSearch" @keyup.esc="closeSearch" style="display: none;">
+        <div class="search-overlay__content">
+          <span class="fa fa-close search-overlay__close" @click="closeSearch"></span>
+          <input id="search-input" type="text" placeholder="Start typing..." v-model="search" ref="search">
+          <div class="search-overlay__results">
+            <a v-bind:href="repoUrl(p)" class="project" v-for="p in searchedProjects">
+              <div>
+                <h3 class="title">
+                  <span class="emoji">{{ p.emoji }}</span>
+                  {{ p.name }}
+                </h3>
+                <p>{{ p.description }}</p>
+                <tags v-bind:tags="p.tags"></tags>
+                <iframe class="star-button" v-bind:src="starButton(p)" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <section class="full-width-section" id="intro">
         <div class="container">
           <div>
@@ -53,7 +72,7 @@
               Empowering everyone to create
             </h2>
           </div>
-          
+
           <div>
             <p>
               Embark Studios is a Stockholm-based games studio, on a mission to blur the line between playing and making.
@@ -70,7 +89,7 @@
           </div>
         </div>
       </section>
-      
+
       <section id="featured">
         <div class="container">
           <h2>
@@ -90,7 +109,7 @@
           </div>
         </div>
       </section>
-      
+
       <section id="rust" class="full-width-section background-grey">
         <div class="container">
           <h1>
@@ -116,14 +135,14 @@
             tag="go"
             v-bind:projects="projectsWithTag('go')"
           ></project-category>
-    
+
           <project-category
             tag="web"
             v-bind:projects="projectsWithTag('web')"
           ></project-category>
         </div>
       </section>
-      
+
       <section class="full-width-section background-grey" id="sponsorship">
         <div class="container">
           <h1>
@@ -145,7 +164,7 @@
           </div>
         </div>
       </section>
-      
+
       <section>
         <div class="container">
           <h3>
@@ -156,7 +175,7 @@
           </ul>
         </div>
       </section>
-      
+
       <section class="full-width-section" id="contribute">
         <div class="container">
           <h1>

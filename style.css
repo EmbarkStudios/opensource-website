@@ -207,7 +207,7 @@ body > * > * {
 /* Projects A-Z Table */
 
 .projects-list {
-  list-style: none; 
+  list-style: none;
   padding-left: 0;
   max-width: 1000px;
 }
@@ -255,7 +255,7 @@ body > * > * {
 }
 
 .tag-docker {
-  background: #1E90FF;  
+  background: #1E90FF;
 }
 
 .logo-container a {
@@ -280,13 +280,13 @@ body > * > * {
     background: #1a1a1a;
     color: white;
   }
-  
+
   .project {
     background-color: #333;
     border-color: #333;
     color: white;
   }
-  
+
   .projects-list li:hover {
     background-color: #333;
   }
@@ -294,4 +294,68 @@ body > * > * {
   .logo-image {
     fill: white;
   }
+}
+
+.search-open {
+  overflow: hidden;
+}
+
+.search-overlay {
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.92);
+}
+
+.search-overlay__content {
+  max-width: 1140px;
+  margin: auto;
+  padding: 2rem;
+  color: #fff;
+}
+
+.search-overlay__close {
+  float: right;
+  font-size: 2rem;
+}
+
+#search-input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: transparent;
+  margin-bottom: 2rem;
+}
+
+#search-input::placeholder {
+  color: rgba(255,255,255,.7)
+}
+
+#search-input:focus::placeholder {
+  color: rgba(255,255,255,.9)
+}
+
+.search-overlay__results {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  height: 60vh;
+  min-height: 380px;
+  max-height: 640px;
+}
+
+.search-overlay__results .project {
+  max-height: 200px;
 }
