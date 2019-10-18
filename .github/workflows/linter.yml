@@ -1,12 +1,25 @@
-name: ESLint Action
+name: ESLint
 
-on: [push]
+on:
+  - pull_request
+  - push
 
 jobs:
   build:
-
+    name: Run ESLint
     runs-on: ubuntu-latest
-    
     steps:
-      - name: ESLint check
-        uses: gimenete/eslint-action@1.0
+      
+      # Check out the repository
+      - uses: actions/checkout@v1
+
+      # Install Node.js
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      # Install your dependencies
+      - run: npm ci
+
+      # Run ESLint
+      - uses: eslint/github-action@v0
