@@ -1,13 +1,15 @@
-var sharedMethods = {
+const { Vue } = window;
+
+const sharedMethods = {
   methods: {
-    repoUrl: function (project) {
-      return "https://github.com/EmbarkStudios/" + project.name
+    repoUrl(project) {
+      return `https://github.com/EmbarkStudios/${project.name}`;
     },
-    starButton: function(project) {
+    starButton(project) {
       return `https://ghbtns.com/github-btn.html?user=EmbarkStudios&repo=${project.name}&type=star&count=true&size=large`;
-    }
-  }
-}
+    },
+  },
+};
 
 Vue.component('tags', {
   props: ['tags'],
@@ -15,8 +17,8 @@ Vue.component('tags', {
     <div class="tags">
       <span v-for="tag in tags" v-bind:class="'tag tag-' + tag">{{ tag }}</span>
     </div>
-  `
-})
+  `,
+});
 
 Vue.component('project-category', {
   mixins: [sharedMethods],
@@ -38,54 +40,51 @@ Vue.component('project-category', {
         </a>
       </div>
     </section>
-  `
-})
+  `,
+});
 
-fetch('./data.json').then(response => {
-  return response.json();
-}).then(data => {
-  new Vue({
+fetch('./data.json').then((response) => response.json()).then((data) => {
+  new Vue({ // eslint-disable-line no-new
     el: '#app',
     mixins: [sharedMethods],
     data: {
       showSearch: false,
       search: '',
-      ...data
+      ...data,
     },
 
     computed: {
-      featuredProjects: function() {
-        return this.projects.filter(p => p.featured);
+      featuredProjects() {
+        return this.projects.filter((p) => p.featured);
       },
-      alphabetisedProjects: function() {
-        return this.projects.sort((a, b) => a.name.localeCompare(b.name));
+      alphabetisedProjects() {
+        const { projects } = this;
+        return projects.sort((a, b) => a.name.localeCompare(b.name));
       },
-      searchedProjects: function () {
-        return this.projects.filter(p => {
-          return JSON.stringify(p).toLowerCase().includes(this.search.toLowerCase());
-        })
-      }
+      searchedProjects() {
+        return this.projects.filter(
+          (p) => JSON.stringify(p).toLowerCase().includes(this.search.toLowerCase()),
+        );
+      },
     },
 
     methods: {
       // Return a filtered array of all projects with a tag
-      projectsWithTag: function (tag) {
-        return this.projects.filter(function (p) {
-          return p.tags.includes(tag)
-        })
+      projectsWithTag(tag) {
+        return this.projects.filter((p) => p.tags.includes(tag));
       },
-      openSearch: function () {
+      openSearch() {
         document.body.classList.add('search-open');
         this.showSearch = true;
-        this.$nextTick(() => this.$refs.search.focus())
+        this.$nextTick(() => this.$refs.search.focus());
       },
-      closeSearch: function () {
+      closeSearch() {
         document.body.classList.remove('search-open');
         this.search = '';
         this.showSearch = false;
-      }
-    }
-  })
-}).catch(err => {
-  console.log('Failed to get project data');
+      },
+    },
+  });
+}).catch((err) => {
+  console.log(`Failed to get project data: ${err}`); // eslint-disable-line no-console
 });
