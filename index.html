@@ -109,6 +109,31 @@
           </div>
         </div>
       </section>
+      
+      <section id="rust" class="full-width-section background-blue">
+        <div class="container">
+          <h1>
+            Embark + Blender
+          </h1>
+          <p>
+            We [recently announced](#) that Embark has become a corporate sponsor of Blender, a free and open source 3D creation software.
+          </p>
+          <p>
+            We also released a set of tools for Blender that we use here at Embark
+          </p>
+          <a href="#" class="button-primary background-grey">Learn More</a>
+          <a class="project" v-for="p in projectsWithTag('blender')">
+            <div>
+              <h3 class="title">
+                <span class="emoji">{{ p.emoji }}</span>
+                {{ p.name }}
+              </h3>
+              <p>{{ p.description }}</p>
+              <tags v-bind:tags="p.tags"></tags>
+            </div>
+          </a>
+        </div>
+      </section>[WIP] add blender feature
 
       <section id="rust" class="full-width-section background-grey">
         <div class="container">
