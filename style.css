@@ -81,6 +81,10 @@ body > * > * {
   background: var(--embark-blue);
 }
 
+.background-blue-dark {
+  background: rgba(15, 160, 180, 0.8);
+}
+
 .background-red {
   background: var(--embark-red);
 }
@@ -270,6 +274,12 @@ body > * > * {
   height: 70px;
   margin: 1em;
   fill: #111;
+}
+
+.feature-logo {
+  fill: white;
+  height: 100px;
+  margin-bottom: -20px;
 }
 
 /* Dark mode */
