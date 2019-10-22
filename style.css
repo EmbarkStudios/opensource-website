@@ -70,7 +70,7 @@ body > * > * {
   cursor: pointer;
   padding: 0.5em 2em;
   margin: 1em 0;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .button-primary:hover {
@@ -105,7 +105,7 @@ body > * > * {
   margin: 0;
   font-size: 1.5em;
   position: fixed;
-  top: 0px;
+  top: 0;
   padding: 0 5%;
   width: 90%;
   height: 90px;
@@ -121,7 +121,7 @@ body > * > * {
   text-decoration: none;
   margin: 0 0.2em;
   display: inline-block;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .header .fa:hover {
@@ -162,12 +162,12 @@ body > * > * {
   margin: 0.5rem;
   padding: 1.5rem;
   background: white;
-  box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
   border-radius: 10px;
   color: black;
   text-decoration: none;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .project p {
@@ -181,7 +181,7 @@ body > * > * {
 .project-featured {
   width: 500px;
   color: white;
-  text-shadow: 1px 1px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
   border: none;
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
@@ -222,7 +222,7 @@ body > * > * {
   justify-content: space-between;
   padding: 1em 2em;
   border-bottom: 1px #ccc solid;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .projects-list li:hover {
@@ -243,7 +243,7 @@ body > * > * {
 }
 
 .tag-rust {
-  background: #FF4500;
+  background: #ff4500;
 }
 
 .tag-web {
@@ -251,11 +251,11 @@ body > * > * {
 }
 
 .tag-go {
-  background: #00CED1;
+  background: #00ced1;
 }
 
 .tag-docker {
-  background: #1E90FF;
+  background: #1e90ff;
 }
 
 .logo-container a {
@@ -309,7 +309,7 @@ body > * > * {
   overflow: hidden;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,.92);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .search-overlay__content {
@@ -340,11 +340,11 @@ body > * > * {
 }
 
 #search-input::placeholder {
-  color: rgba(255,255,255,.7)
+  color: rgba(255, 255, 255, 0.7);
 }
 
 #search-input:focus::placeholder {
-  color: rgba(255,255,255,.9)
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .search-overlay__results {
