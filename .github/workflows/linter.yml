@@ -1,4 +1,4 @@
-name: ESLint
+name: Linting
 
 on:
   - pull_request
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Run ESLint
+    name: Run ESLint & Stylelint
     runs-on: ubuntu-latest
     steps:
       
@@ -23,3 +23,6 @@ jobs:
 
       # Run ESLint
       - uses: eslint/github-action@v0
+      
+      # Run Stylelint
+      - uses: exelban/stylelint@v1.0.0
