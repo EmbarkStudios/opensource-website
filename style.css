@@ -243,7 +243,11 @@ body > * > * {
 }
 
 .tag-rust {
-  background: #ff4500;
+  background: #731b00;
+}
+
+.tag-blender {
+  background: #e08210;
 }
 
 .tag-web {
@@ -268,6 +272,12 @@ body > * > * {
   fill: #111;
 }
 
+.feature-logo {
+  fill: white;
+  height: 100px;
+  margin-bottom: -20px;
+}
+
 /* Dark mode */
 
 @media (prefers-color-scheme: dark) {
@@ -279,6 +289,11 @@ body > * > * {
   .background-grey {
     background: #1a1a1a;
     color: white;
+  }
+
+  .background-blue {
+    /* Embark blue looks way too bright in dark mode, so make it 70% opacity */
+    background: rgba(15, 160, 180, 0.7);
   }
 
   .project {
