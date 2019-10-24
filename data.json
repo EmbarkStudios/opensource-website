@@ -91,12 +91,6 @@
       "emoji": "🆔",
       "tags": ["rust"],
       "description": "Helper crate for SPDX expressions"
-    },
-    {
-      "name": "blender-tools",
-      "emoji": "🐵",
-      "tags": ["blender", "tools"],
-      "description": "Embark Studios' custom tools and add-ons for Blender"
     }
   ]
 }
