@@ -15,7 +15,9 @@ Vue.component('tags', {
   props: ['tags'],
   template: `
     <div class="tags">
-      <a v-bind:href="tagUrl(tag)" v-for="tag in tags" v-bind:class="'tag tag-' + tag">{{ tag }}</a>
+      <div v-for="tag in tags" v-bind:class="'tag tag-' + tag">
+        <a v-bind:href="tagUrl(tag)">{{ tag }}</a>
+      </div>
     </div>
   `,
   methods: {

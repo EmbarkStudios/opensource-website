@@ -154,7 +154,7 @@ body > * > * {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
 }
 
-#back a {
+#back #return {
   text-decoration: none;
 }
 
@@ -247,6 +247,7 @@ body > * > * {
 /* Tags */
 
 .tag {
+  display: inline-block;
   background: var(--embark-blue);
   margin: 3px;
   padding: 2px 6px;
@@ -258,12 +259,12 @@ body > * > * {
   transition: all 0.2s ease-in-out;
 }
 
-a.tag {
+.tag a {
   text-decoration: none;
 }
 
 .tag:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
 }
 
 .tag-rust {
