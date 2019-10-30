@@ -22,7 +22,7 @@ Vue.component('tags', {
   `,
   methods: {
     tagUrl(tag) {
-      return `/tags?tag=${tag}#projects`;
+      return `/tags?tag=${tag}`;
     },
   },
 });
