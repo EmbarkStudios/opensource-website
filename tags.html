@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Standard Metadata -->
+    <title>Embark Studios Open Source | embark.dev</title>
+    <meta name="description" content="Discover open source repositories in Rust, Go, and more from Embark Studios">
+    <meta name="keywords" content="open source, sponsorship, rust">
+    <link rel="icon" href="./favicon.ico">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Embark Studios Open Source" />
+    <meta property="og:description" content="Discover open source repositories in Rust, Go, and more from Embark Studios" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://embark.dev" />
+    <meta property="og:image" content="https://embark.dev/img/code.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@EmbarkStudios" />
+    <meta name="twitter:image" content="https://embark.dev/img/code.jpg">
+
+    <!-- import CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- import JS -->
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.min.js"></script>
+    <script src="./script.js"></script>
+  </head>
+
+  <body>
+
+    <header class="header">
+      <a href="https://embark-studios.com"><img id="logo" src="./img/logo.png"/></a>
+      <div>
+        <a href="https://embark-studios.com" class="fa fa-globe"></a>
+        <a href="https://twitter.com/EmbarkStudios" class="fa fa-twitter"></a>
+        <a href="https://github.com/EmbarkStudios" class="fa fa-github"></a>
+      </div>
+    </header>
+
+    <div id="app">
+
+      <section class="full-width-section" id="back">
+        <div class="container">
+          <div>
+            <a id="return" href="/">
+              <h1>
+                <i class="fa fa-long-arrow-left"></i>
+                &nbsp;Back
+              </h1>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <project-category
+            v-bind:tag="getTagFromUrl()"
+            v-bind:projects="projectsWithTag(getTagFromUrl())"
+            ></project-category>
+        </div>
+      </section>
+
+      <section class="full-width-section" id="contribute">
+        <div class="container">
+          <h1>
+            Want to get involved?
+          </h1>
+          <p>All projects created at Embark Studios are open for contribution. We welcome contributions from people of all backgrounds who are interested in making great software with us. We need <b>you</b> to help us achieve our goal of empowering everyone to create.</p>
+          <a href="https://github.com/EmbarkStudios/opensource-website/blob/master/CODE_OF_CONDUCT.md"><h3>Read our Code of Conduct →</h3></a>
+          <a href="https://github.com/search?q=user:EmbarkStudios+state:open"><h3>Check out open issues →</h3></a>
+          <a href="https://github.com/EmbarkStudios/opensource-website/blob/master/CONTRIBUTING.md" class="button-primary background-blue">Get Started!</a>
+          <p>If you want to collaborate with Embark, you can reach out to us at <a href="mailto:opensource@embark-studios.com">opensource@embark-studios.com</a>.</p>
+          <p>We're also looking for passionate people to <a href="https://embark-studios.com/jobs">join our team</a> in Stockholm!</p>
+        </div>
+      </section>
+
+    </div>
+  </body>
+</html>
