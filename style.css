@@ -5,11 +5,14 @@
   --embark-red: #b40000;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 /* Typography */
@@ -107,7 +110,7 @@ body > * > * {
   position: fixed;
   top: 0;
   padding: 0 5%;
-  width: 90%;
+  width: 100vw;
   height: 90px;
   z-index: 100;
 }
@@ -132,30 +135,26 @@ body > * > * {
   width: 200px;
 }
 
-#intro {
+.cover {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 90px;
   background-image: url('./img/code.jpg');
   background-size: cover;
-  min-height: 40vh;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
 }
 
-#back {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 90px;
-  background-image: url('./img/code.jpg');
-  background-size: cover;
-  min-height: 10vh;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+.cover i {
+  margin-right: 10px;
 }
 
-#back #return {
+.cover a {
   text-decoration: none;
+}
+
+#hero {
+  min-height: 40vh;
 }
 
 /* Project Cards */
@@ -173,7 +172,7 @@ body > * > * {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 300px;
+  width: 350px;
   margin: 0.5rem;
   padding: 1.5rem;
   background: white;
@@ -189,12 +188,16 @@ body > * > * {
   font-size: 1rem;
 }
 
+.project p a:hover {
+  opacity: 0.6;
+}
+
 .project:hover {
   transform: scale(1.05);
 }
 
 .project-featured {
-  width: 500px;
+  width: 550px;
   color: white;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
   border: none;
@@ -334,68 +337,4 @@ body > * > * {
   .logo-image {
     fill: white;
   }
-}
-
-.search-open {
-  overflow: hidden;
-}
-
-.search-overlay {
-  position: fixed;
-  z-index: 101;
-  top: 0;
-  left: 0;
-  margin: 0;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.search-overlay__content {
-  max-width: 1140px;
-  margin: auto;
-  padding: 2rem;
-  color: #fff;
-}
-
-.search-overlay__close {
-  float: right;
-  font-size: 2rem;
-}
-
-#search-input {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  padding: 2rem;
-  border: none;
-  border-bottom: 1px solid #fff;
-  font-family: inherit;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: transparent;
-  margin-bottom: 2rem;
-}
-
-#search-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-#search-input:focus::placeholder {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.search-overlay__results {
-  display: flex;
-  flex-wrap: wrap;
-  overflow-y: scroll;
-  height: 60vh;
-  min-height: 380px;
-  max-height: 640px;
-}
-
-.search-overlay__results .project {
-  max-height: 200px;
 }
