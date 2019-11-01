@@ -91,6 +91,12 @@
       "emoji": "🆔",
       "tags": ["rust"],
       "description": "Helper crate for SPDX expressions"
+    },
+    {
+      "name": "rpmalloc-rs",
+      "emoji": "🐏",
+      "tags": ["rust"],
+      "description": "Cross-platform Rust memory allocator using rpmalloc"
     }
   ]
 }
