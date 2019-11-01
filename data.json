@@ -96,7 +96,7 @@
       "name": "rpmalloc-rs",
       "emoji": "🐏",
       "tags": ["rust"],
-      "description": "Cross-platform Rust memory allocator using rpmalloc"
+      "description": "Cross-platform Rust memory allocator using <a href=\"https://github.com/rampantpixels/rpmalloc\">rpmalloc</a>"
     }
   ]
 }
