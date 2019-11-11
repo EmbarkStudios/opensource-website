@@ -131,6 +131,10 @@ body > * > * {
   transform: scale(1.1);
 }
 
+.search-icon {
+  padding-left: 0.7em;
+}
+
 #logo {
   width: 200px;
 }
