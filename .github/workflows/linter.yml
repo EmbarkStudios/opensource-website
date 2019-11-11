@@ -25,4 +25,4 @@ jobs:
       - uses: eslint/github-action@v0
       
       # Run Stylelint
-      - uses: actions-hub/stylelint@v1
+      - uses: actions-hub/stylelint@v1.1.2
