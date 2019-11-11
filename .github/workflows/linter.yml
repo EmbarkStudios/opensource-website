@@ -23,3 +23,6 @@ jobs:
 
       # Run ESLint
       - uses: eslint/github-action@v0
+      
+      # Run Stylelint
+      - uses: exelban/stylelint@v1.1.2
