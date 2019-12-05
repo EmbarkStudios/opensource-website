@@ -97,6 +97,12 @@
       "emoji": "🐏",
       "tags": ["rust"],
       "description": "Cross-platform Rust memory allocator using <a href=\"https://github.com/rampantpixels/rpmalloc\">rpmalloc</a>"
+    },
+    {
+      "name": "k8s-buildkite-plugin",
+      "emoji": "",
+      "tags": ["kubernetes", "buildkite"],
+      "description": "Run any buildkite build step as a Kubernetes Job"
     }
   ]
 }
