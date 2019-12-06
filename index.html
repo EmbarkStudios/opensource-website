@@ -122,6 +122,20 @@
           <p> 
             We think Blender is a great example of what happens when powerful software is made available for everyone to use, and communities start to work together to change the status quo.
           </p>
+          <p> 
+            We have also released an open source add-on featuring some of our day-to-day studio tools.
+          </p>
+          <a v-bind:href="repoUrl(p)" class="project" v-for="p in projectsWithTag('blender')">
+            <div>
+              <h3 class="title">
+                <span class="emoji">{{ p.emoji }}</span>
+                {{ p.name }}
+              </h3>
+              <p v-html="p.description"></p>
+              <tags v-bind:tags="p.tags"></tags>
+            </div>
+            <iframe class="star-button" v-bind:src="starButton(p)" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+          </a>
           <a href="https://medium.com/embarkstudios/a-love-letter-to-blender-e54167c22193" class="button-primary background-grey">Learn More</a>
         </div>
       </section>

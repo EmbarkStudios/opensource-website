@@ -103,6 +103,18 @@
       "emoji": "",
       "tags": ["kubernetes", "buildkite"],
       "description": "Run any buildkite build step as a Kubernetes Job"
+    },
+    {
+      "name": "cargo-about",
+      "emoji": "📜",
+      "tags": ["rust", "tools"],
+      "description": "Cargo plugin to generate list of all licenses for a crate"
+    },
+    {
+      "name": "blender-tools",
+      "emoji": "🐵",
+      "tags": ["python", "blender"],
+      "description": "A Blender add-on containing workflow tools for game development"
     }
   ]
 }
