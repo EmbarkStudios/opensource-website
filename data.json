@@ -115,6 +115,12 @@
       "emoji": "🐵",
       "tags": ["python", "blender"],
       "description": "A Blender add-on containing workflow tools for game development"
+    },
+    {
+      "name": "krates",
+      "emoji": "📦",
+      "tags": ["rust", "tools"],
+      "description": "Creates graphs of crates from cargo_metadata metadata."
     }
   ]
 }
