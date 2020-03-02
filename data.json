@@ -123,7 +123,7 @@
       "description": "Creates graphs of crates from cargo_metadata metadata."
     },
     {
-      "name": "superluminal-perf",
+      "name": "superluminal-perf-rs",
       "emoji": "🔆",
       "tags": ["rust", "tools"],
       "description": "Superluminal Performance profiler Rust API for adding user events to captures."
