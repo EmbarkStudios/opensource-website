@@ -127,6 +127,12 @@
       "emoji": "🔆",
       "tags": ["rust", "tools"],
       "description": "Superluminal Performance profiler Rust API for adding user events to captures."
+    },
+    {
+      "name": "puffin",
+      "emoji": "🐦",
+      "tags": ["rust", "tools"],
+      "description": "Simple instrumentation profiler for Rust."
     }
   ]
 }
