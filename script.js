@@ -5,10 +5,9 @@ const sharedMethods = {
     repoUrl(project) {
       return `https://github.com/EmbarkStudios/${project.name}`;
     },
-    // starButton(project) {
-    //   return '';
-    //   return `https://ghbtns.com/github-btn.html?user=EmbarkStudios&repo=${project.name}&type=star&count=true&size=large`;
-    // },
+    stargazersUrl(project) {
+      return `https://github.com/EmbarkStudios/${project.name}/stargazers`;
+    },
   },
 };
 
@@ -28,6 +27,20 @@ Vue.component('tags', {
   },
 });
 
+Vue.component('star-count', {
+  mixins: [sharedMethods],
+  props: ['project'],
+  template: `
+    <div class="github-btn github-stargazers github-btn-large">
+      <a class="gh-btn" :href="repoUrl(project)" rel="noopener noreferrer" target="_blank">
+        <span class="gh-ico" aria-hidden="true"></span>
+        <span class="gh-text">Star</span>
+      </a>
+      <a class="gh-count" :href="stargazersUrl(project)" rel="noopener noreferrer" target="_blank" aria-hidden="true">{{project.stargazers_count}}</a>
+    </div>
+  `,
+});
+
 Vue.component('project-category', {
   mixins: [sharedMethods],
   props: ['projects', 'tag'],
@@ -43,6 +56,7 @@ Vue.component('project-category', {
             </h3>
             <p v-html="p.description"></p>
             <tags v-bind:tags="p.tags"></tags>
+            <star-count :project="p" />
           </div>
           <!-- <iframe class="star-button" v-bind:src="starButton(p)" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> -->
         </a>
