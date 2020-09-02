@@ -91,19 +91,52 @@ Vue.component('project-category', {
   `,
 });
 
-/**
- * Loads the Vue instance with the projects array
- */
-function loadVue(projects) {
+window.addEventListener('load', () => {
   new Vue({ // eslint-disable-line no-new
     el: '#app',
     mixins: [sharedMethods],
     data: {
       showSearch: false,
       search: '',
-      projects,
+      projects: [],
     },
+    async mounted() {
+      const [
+        fetchedData,
+        fetchedRepos,
+      ] = await Promise.allSettled([
+        fetch('./data.json'),
+        fetch('https://api.github.com/search/repositories?q=+org:EmbarkStudios+is:public&sort=created&order=asc&per_page=100'),
+        // Currently there are less than 100 repos.
+        // If the number exceeds it some time in the future, pagination should be implemented
+      ]);
 
+      try {
+        if (fetchedData.status === 'rejected') throw Error(fetchedData.reason);
+        const { projects } = await fetchedData.value.json();
+
+        // If GitHub API request succeeded, we add the extra data to the projects array
+        if (fetchedRepos.status === 'fulfilled') {
+          const jsonRepos = await fetchedRepos.value.json();
+          const repos = jsonRepos.items;
+          for (let i = 0; i < projects.length; i += 1) {
+            const project = projects[i];
+            const repo = repos.find((el) => el.name === project.name);
+            if (repo) {
+              project.description = repo.description;
+              project.stargazers_count = repo.stargazers_count;
+              project.language = repo.language;
+              project.forks_count = repo.forks_count;
+              project.open_issues_count = repo.open_issues_count;
+            }
+          }
+        }
+
+        this.projects = projects;
+      } catch (err) {
+        console.log(`Failed to get project data: ${err}`); // eslint-disable-line no-console
+      }
+    },
     computed: {
       featuredProjects() {
         return this.projects.filter((p) => p.featured);
@@ -139,47 +172,4 @@ function loadVue(projects) {
       },
     },
   });
-}
-
-/**
- * Loads the data from json and GitHub API, then initializes Vue
- */
-async function main() {
-  const [
-    fetchedData,
-    fetchedRepos,
-  ] = await Promise.allSettled([
-    fetch('./data.json'),
-    fetch('https://api.github.com/search/repositories?q=+org:EmbarkStudios+is:public&sort=created&order=asc&per_page=100'),
-    // TODO Currently there are less than 100 repos.
-    // If the number exceeds it some time in the future, pagination should be implemented
-  ]);
-
-  try {
-    if (fetchedData.status === 'rejected') throw Error(fetchedData.reason);
-    const { projects } = await fetchedData.value.json();
-
-    // If GitHub API request succeeded, we add the extra data to the projects array
-    if (fetchedRepos.status === 'fulfilled') {
-      const jsonRepos = await fetchedRepos.value.json();
-      const repos = jsonRepos.items;
-      for (let i = 0; i < projects.length; i += 1) {
-        const project = projects[i];
-        const repo = repos.find((el) => el.name === project.name);
-        if (repo) {
-          project.description = repo.description;
-          project.stargazers_count = repo.stargazers_count;
-          project.language = repo.language;
-          project.forks_count = repo.forks_count;
-          project.open_issues_count = repo.open_issues_count;
-        }
-      }
-    }
-
-    loadVue(projects);
-  } catch (err) {
-    console.log(`Failed to get project data: ${err}`); // eslint-disable-line no-console
-  }
-}
-
-main();
+});
