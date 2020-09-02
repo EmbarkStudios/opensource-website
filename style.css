@@ -343,6 +343,15 @@ body > * > * {
   }
 }
 
+.github-buttons-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.github-buttons-container > div:not(:first-child) {
+  margin-left: 0.5rem;
+}
+
 /* From https://github.com/mdo/github-buttons/blob/master/src/styles.css */
 .github-btn {
   height: 20px;

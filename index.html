@@ -55,7 +55,7 @@
                 </h3>
                 <p>{{ p.description }}</p>
                 <tags v-bind:tags="p.tags"></tags>
-                <star-count :project="p" />
+                <github-stats v-bind:project="p" />
               </div>
             </a>
           </div>
@@ -133,7 +133,7 @@
               </h3>
               <p v-html="p.description"></p>
               <tags v-bind:tags="p.tags"></tags>
-              <star-count :project="p" />
+              <github-stats v-bind:project="p" />
             </div>
           </a>
           <a href="https://medium.com/embarkstudios/a-love-letter-to-blender-e54167c22193" class="button-primary background-grey">Learn More</a>
