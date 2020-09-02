@@ -343,9 +343,17 @@ body > * > * {
   }
 }
 
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
 .github-buttons-container {
   display: flex;
   flex-direction: row;
+  text-shadow: none;
 }
 
 .github-buttons-container > div:not(:first-child) {

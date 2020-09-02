@@ -76,7 +76,7 @@ Vue.component('project-category', {
       <h2 class="category-title">Our <span class="category-tag">{{ tag }}</span> projects</h2>
       <div class="projects-container" v-bind:id="tag">
         <a v-bind:href="repoUrl(p)" class="project" v-for="p in projects">
-          <div>
+          <div class="project-card">
             <h3 class="title">
               <span class="emoji">{{ p.emoji }}</span>
               {{ p.name }}

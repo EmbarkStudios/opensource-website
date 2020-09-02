@@ -48,7 +48,7 @@
           <input id="search-input" type="text" placeholder="Start typing..." v-model="search" ref="search">
           <div class="search-overlay__results">
             <a v-bind:href="repoUrl(p)" class="project" v-for="p in searchedProjects">
-              <div>
+              <div class="project-card">
                 <h3 class="title">
                   <span class="emoji">{{ p.emoji }}</span>
                   {{ p.name }}
@@ -126,7 +126,7 @@
             We have also released an open source add-on featuring some of our day-to-day studio tools.
           </p>
           <a v-bind:href="repoUrl(p)" class="project" v-for="p in projectsWithTag('blender')">
-            <div>
+            <div class="project-card">
               <h3 class="title">
                 <span class="emoji">{{ p.emoji }}</span>
                 {{ p.name }}
