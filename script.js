@@ -49,7 +49,7 @@ Vue.component('issues-count', {
   props: ['project'],
   template: `
     <div class="github-btn github-stargazers github-btn-large" v-if="project.open_issues_count != undefined">
-      <a class="gh-btn" :href="repoUrl(project)" rel="noopener noreferrer" target="_blank">
+      <a class="gh-btn" :href="issuesUrl(project)" rel="noopener noreferrer" target="_blank">
         <span class="gh-ico" aria-hidden="true"></span>
         <span class="gh-text">Issues</span>
       </a>
@@ -101,24 +101,28 @@ window.addEventListener('load', () => {
       projects: [],
     },
     async mounted() {
-      const [
-        fetchedData,
-        fetchedRepos,
-      ] = await Promise.allSettled([
-        fetch('./data.json'),
-        fetch('https://api.github.com/search/repositories?q=+org:EmbarkStudios+is:public&sort=created&order=asc&per_page=100'),
-        // Currently there are less than 100 repos.
-        // If the number exceeds it some time in the future, pagination should be implemented
-      ]);
-
       try {
-        if (fetchedData.status === 'rejected') throw Error(fetchedData.reason);
-        const { projects } = await fetchedData.value.json();
+        const dataPromise = fetch('./data.json');
+
+        // We don't want the whole website to break if the GH API is down or rate limit is hit
+        // so it's wrapped in a different try/catch
+        let fetchedRepos;
+        try {
+          const reposPromise = fetch('https://api.github.com/search/repositories?q=+org:EmbarkStudios+is:public&sort=created&order=asc&per_page=100');
+          fetchedRepos = await reposPromise;
+        } catch (err) {
+          console.log(`Failed to get repos info: ${err}`); // eslint-disable-line no-console
+        }
+
+
+        // data is awaited here instead of in the fetch, so the GitHub request can start in parallel
+        const fetchedData = await dataPromise;
+        const { projects } = await fetchedData.json();
 
         // If GitHub API request succeeded, we add the extra data to the projects array
-        if (fetchedRepos.status === 'fulfilled') {
-          const jsonRepos = await fetchedRepos.value.json();
-          const repos = jsonRepos.items;
+        if (fetchedRepos && fetchedRepos.ok) {
+          const { items: repos } = await fetchedRepos.json();
+
           for (let i = 0; i < projects.length; i += 1) {
             const project = projects[i];
             const repo = repos.find((el) => el.name === project.name);
