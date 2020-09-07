@@ -48,14 +48,14 @@
           <input id="search-input" type="text" placeholder="Start typing..." v-model="search" ref="search">
           <div class="search-overlay__results">
             <a v-bind:href="repoUrl(p)" class="project" v-for="p in searchedProjects">
-              <div>
+              <div class="project-card">
                 <h3 class="title">
                   <span class="emoji">{{ p.emoji }}</span>
                   {{ p.name }}
                 </h3>
                 <p>{{ p.description }}</p>
                 <tags v-bind:tags="p.tags"></tags>
-                <iframe class="star-button" v-bind:src="starButton(p)" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                <github-stats v-bind:project="p" />
               </div>
             </a>
           </div>
@@ -126,15 +126,15 @@
             We have also released an open source add-on featuring some of our day-to-day studio tools.
           </p>
           <a v-bind:href="repoUrl(p)" class="project" v-for="p in projectsWithTag('blender')">
-            <div>
+            <div class="project-card">
               <h3 class="title">
                 <span class="emoji">{{ p.emoji }}</span>
                 {{ p.name }}
               </h3>
               <p v-html="p.description"></p>
               <tags v-bind:tags="p.tags"></tags>
+              <github-stats v-bind:project="p" />
             </div>
-            <iframe class="star-button" v-bind:src="starButton(p)" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
           </a>
           <a href="https://medium.com/embarkstudios/a-love-letter-to-blender-e54167c22193" class="button-primary background-grey">Learn More</a>
         </div>
