@@ -165,6 +165,11 @@ body > * > * {
   padding-left: 0.7em;
 }
 
+.search-overlay__results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 #logo {
   width: 200px;
 }
