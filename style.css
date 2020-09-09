@@ -131,6 +131,36 @@ body > * > * {
   transform: scale(1.1);
 }
 
+.search-overlay {
+  margin-top: 90px;
+}
+
+.search-overlay h2 {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.search-input-group {
+  margin-bottom: 30px;
+}
+
+.search-input-group > input {
+  padding: 5px 5px;
+  width: 200px;
+  font-size: 1rem;
+}
+
+.search-close-button {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0;
+}
+
 .search-icon {
   padding-left: 0.7em;
 }

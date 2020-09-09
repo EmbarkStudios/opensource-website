@@ -38,14 +38,19 @@
           <a href="https://embark-studios.com" class="fa fa-globe"></a>
           <a href="https://twitter.com/EmbarkStudios" class="fa fa-twitter"></a>
           <a href="https://github.com/EmbarkStudios" class="fa fa-github"></a>
-          <a href="#" class="fa fa-search search-icon" @click.prevent="openSearch"></a>
+          <a href="#" class="fa fa-search search-icon" @click.prevent="toggleSearch"></a>
         </div>
       </header>
 
-      <div class="search-overlay" v-show="showSearch" @keyup.esc="closeSearch" style="display: none;">
+      <div class="search-overlay" v-show="showSearch" @keyup.esc="toggleSearch" style="display: none;">
         <div class="search-overlay__content">
-          <span class="fa fa-close search-overlay__close" @click="closeSearch"></span>
-          <input id="search-input" type="text" placeholder="Start typing..." v-model="search" ref="search">
+          <h2>Search packages:</h2>
+          <div class="search-input-group">
+            <button @click="toggleSearch" class="search-close-button">
+                <span class="fa fa-close search-overlay__close" ></span>
+            </button>
+            <input id="search-input" type="text" placeholder="Start typing..." v-model="search" ref="search">
+          </div>
           <div class="search-overlay__results">
             <a v-bind:href="repoUrl(p)" class="project" v-for="p in searchedProjects">
               <div class="project-card">
