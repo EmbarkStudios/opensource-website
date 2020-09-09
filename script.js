@@ -164,15 +164,15 @@ window.addEventListener('load', () => {
       getTagFromUrl() {
         return new URL(document.location).searchParams.get('tag');
       },
-      openSearch() {
-        document.body.classList.add('search-open');
-        this.showSearch = true;
-        this.$nextTick(() => this.$refs.search.focus());
-      },
-      closeSearch() {
-        document.body.classList.remove('search-open');
-        this.search = '';
-        this.showSearch = false;
+      toggleSearch() {
+        this.showSearch = !this.showSearch;
+        if (this.showSearch) {
+          document.body.classList.add('search-open');
+          this.$nextTick(() => this.$refs.search.focus());
+        } else {
+          document.body.classList.remove('search-open');
+          this.search = '';
+        }
       },
     },
   });
