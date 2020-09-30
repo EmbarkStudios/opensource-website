@@ -13,7 +13,7 @@ This is a static site made using Vue.js.
 
 Project data is provided by a small JSON file, but in the future this should be grabbed from an API.
 
-All non-project data and text is hardcoded for now, but in the future this should be provided by a CMS.
+All non-project data and text are hardcoded for now, but in the future this should be provided by a CMS.
 
 We should also add routing, multiple pages, and all sorts of other things 🙂
 
@@ -25,7 +25,7 @@ The site's data comes from `data.json`. You can add a new project by adding its 
 
 ```javascript
 {
-  // Make sure the name is exactly the same as the GitHub repo name
+  // Make sure the name is exactly the same as that of the GitHub repo name
   "name": "texture-synthesis",
   // The most important part
   "emoji": "🎨",
