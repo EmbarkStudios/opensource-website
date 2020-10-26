@@ -1,6 +1,15 @@
 {
   "projects": [
     {
+      "name": "rust-gpu",
+      "emoji": "🐉",
+      "tags": ["rust", "gpu"],
+      "description": "Making Rust a first-class language and ecosystem for GPU code",
+      "featured": true,
+      "extendedDescription": "This is a very early stage project to make Rust a first-class language and ecosystem for building GPU code.",
+      "featureImage": "https://github.com/EmbarkStudios/rust-gpu/blob/main/assets/sky.jpg?raw=true"
+    },
+    {
       "name": "texture-synthesis",
       "emoji": "🎨",
       "tags": ["rust"],
