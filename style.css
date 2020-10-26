@@ -127,10 +127,9 @@ body > * > * {
   transition: all 0.2s ease-in-out;
 }
 
-.header,
-.fa:hover,
-.fab:hover,
-.fas:hover {
+.header .fa:hover,
+.header .fab:hover,
+.header .fas:hover {
   transform: scale(1.1);
 }
 
