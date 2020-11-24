@@ -2,7 +2,7 @@
 =================
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a509a033-951d-4d9b-a2c0-3702a8cf9107/deploy-status)](https://app.netlify.com/sites/embark-dev-opensource/deploys)
-[![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
+[![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 [![Embark](https://img.shields.io/badge/embark-open%20source-blueviolet.svg)](https://github.com/EmbarkStudios)
 
 Hub for Embark's open source efforts.
