@@ -142,6 +142,12 @@
       "emoji": "🐦",
       "tags": ["rust", "tools"],
       "description": "Simple instrumentation profiler for Rust."
+    },
+    {
+      "name": "tryhard",
+      "emoji": "💫",
+      "tags": ["rust"],
+      "description": "Easily retry futures"
     }
   ]
 }
