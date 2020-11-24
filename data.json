@@ -148,6 +148,12 @@
       "emoji": "💫",
       "tags": ["rust"],
       "description": "Easily retry futures"
+    },
+    {
+      "name": "spirv-tools-rs",
+      "emoji": "🛠",
+      "tags": ["rust", "tools", "gpu"],
+      "description": "Wrapper crate for SPIRV-Tools"
     }
   ]
 }
