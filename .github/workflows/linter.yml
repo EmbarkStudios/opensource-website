@@ -11,7 +11,7 @@ jobs:
     steps:
       
       # Check out the repository
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       # Install Node.js
       - uses: actions/setup-node@v1
@@ -25,4 +25,5 @@ jobs:
       - uses: eslint/github-action@v0
       
       # Run Stylelint
-      - uses: actions-hub/stylelint@v1.1.2
+      # https://github.com/actions-hub/stylelint/issues/8
+      - uses: actions-hub/stylelint@f7f2ea6
