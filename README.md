@@ -19,6 +19,18 @@ We should also add routing, multiple pages, and all sorts of other things 🙂
 
 ## User Guide
 
+### Running the site locally
+
+The site is all front-end code and doesn't require a built tool or compile step. There is however a development server you can use if you don't have one you would prefer to use.
+
+```shell
+# Install the deps
+npm install
+
+# Run the development server
+npm start
+```
+
 ### Adding or Changing Projects
 
 The site's data comes from `data.json`. You can add a new project by adding its info to this file.
