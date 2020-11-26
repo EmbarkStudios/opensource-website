@@ -114,7 +114,6 @@ window.addEventListener('load', () => {
           console.log(`Failed to get repos info: ${err}`); // eslint-disable-line no-console
         }
 
-
         // data is awaited here instead of in the fetch, so the GitHub request can start in parallel
         const fetchedData = await dataPromise;
         const { projects } = await fetchedData.json();
