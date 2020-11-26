@@ -19,16 +19,16 @@
   },
   "homepage": "https://github.com/EmbarkStudios/opensource-website#readme",
   "devDependencies": {
-    "alex": "^8.1.1",
-    "eslint": "^6.8.0",
+    "alex": "^8.2.0",
+    "eslint": "^7.14.0",
     "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-vue": "^5.2.3",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^7.1.0",
     "live-server": "^1.2.1",
-    "stylelint": "^11.1.1",
-    "stylelint-config-standard": "^19.0.0"
+    "stylelint": "^13.8.0",
+    "stylelint-config-standard": "^20.0.0"
   },
   "dependencies": {
-    "vue": "^2.6.11"
+    "vue": "^2.6.12"
   }
 }
