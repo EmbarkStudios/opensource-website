@@ -538,18 +538,23 @@ details {
 }
 
 details > summary {
-  padding: 2px 6px;
-  width: 15em;
-  background-color: var(--embark-blue);
+  display: inline-block;
+  font-size: 20px;
+  background: var(--embark-blue);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
   border: none;
+  border-radius: 1em;
   cursor: pointer;
-  list-style: none;
+  padding: 0.5em 2em;
+  margin: 1em 0;
+  transition: all 0.2s ease-in-out;
 }
 
 details > summary::-webkit-details-marker {
   display: none;
 }
-
 details > p {
   border-radius: 0 0 10px 10px;
   background-color: #ddd;
