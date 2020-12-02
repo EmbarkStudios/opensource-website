@@ -533,7 +533,7 @@ body > * > * {
 }
 
 details {
-  font: 16px;
+  font-size: 16px;
   width: 1000px;
 }
 
@@ -554,10 +554,4 @@ details > summary {
 
 details > summary::-webkit-details-marker {
   display: none;
-}
-details > p {
-  border-radius: 0 0 10px 10px;
-  background-color: #ddd;
-  padding: 2px 6px;
-  margin: 0;
 }
