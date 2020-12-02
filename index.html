@@ -181,12 +181,12 @@
 
       <section>
         <div class="container">
-          <h3>
-            More projects can be found here
-          </h3>
+        <details>
+          <summary>See all Projects</summary>
           <ul class="projects-list">
             <a v-for="p in alphabetisedProjects" v-bind:href="repoUrl(p)"><li><span>{{ p.emoji }} {{ p.name }}</span><tags v-bind:tags="p.tags"></tags></li></a>
           </ul>
+        </details>
         </div>
       </section>
 

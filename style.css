@@ -531,3 +531,28 @@ body > * > * {
   margin-top: -7px;
   border-width: 7px 7px 7px 0;
 }
+
+details {
+  font: 16px;
+  width: 620px;
+}
+
+details > summary {
+  padding: 2px 6px;
+  width: 15em;
+  background-color: var(--embark-blue);
+  border: none;
+  cursor: pointer;
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > p {
+  border-radius: 0 0 10px 10px;
+  background-color: #ddd;
+  padding: 2px 6px;
+  margin: 0;
+}
