@@ -531,3 +531,27 @@ body > * > * {
   margin-top: -7px;
   border-width: 7px 7px 7px 0;
 }
+
+details {
+  font-size: 16px;
+  width: 1000px;
+}
+
+details > summary {
+  display: inline-block;
+  font-size: 20px;
+  background: var(--embark-blue);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+  padding: 0.5em 2em;
+  margin: 1em 0;
+  transition: all 0.2s ease-in-out;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
