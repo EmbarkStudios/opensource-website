@@ -78,12 +78,6 @@
       "description": "A basic web UI for managing WireGuard clients."
     },
     {
-      "name": "docker-windows",
-      "emoji": "🐳",
-      "tags": ["docker"],
-      "description": "Dockerfiles for Windows + rust CI"
-    },
-    {
       "name": "gke-accelerated-xorg-example",
       "emoji": "",
       "tags": ["docker", "gcp"],
