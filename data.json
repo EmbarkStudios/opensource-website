@@ -148,6 +148,26 @@
       "emoji": "🛠",
       "tags": ["rust", "tools", "gpu"],
       "description": "Wrapper crate for SPIRV-Tools"
+    },
+    {
+      "name": "review-action",
+      "emoji": "🏷️",
+      "tags": ["github-actions", "tools"],
+      "description": "Github Action that adds and removes labels based on PR review state"
+    },
+    {
+      "name": "nfd2",
+      "hidden": "This is a temporary fork so we are not showing it on the website"
+    },
+    {
+      "name": "cargo-deny-action",
+      "hidden": "This is not as much a separate project but part of cargo-deny, but has to be its own repo to be a clean GitHub Action."
+    },
+    {
+      "name": "cfg-expr",
+      "emoji": "⚙️",
+      "tags": ["rust"],
+      "description": "A parser and evaluator for Rust cfg() expressions"
     }
   ]
 }
