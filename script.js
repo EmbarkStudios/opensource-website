@@ -113,7 +113,7 @@ window.addEventListener('load', () => {
           );
           fetchedRepos = await reposPromise;
         } catch (err) {
-          console.log(`Failed to get repos info: ${err}`);
+          console.error(`Failed to get repos info: ${err}`);
         }
 
         // data is awaited here instead of in the fetch, so the GitHub request can start in parallel
