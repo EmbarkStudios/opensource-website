@@ -92,7 +92,7 @@ Vue.component('project-category', {
 });
 
 window.addEventListener('load', () => {
-  new Vue({ // eslint-disable-line no-new
+  new Vue({
     el: '#app',
     mixins: [sharedMethods],
     data: {
@@ -108,10 +108,12 @@ window.addEventListener('load', () => {
         // so it's wrapped in a different try/catch
         let fetchedRepos;
         try {
-          const reposPromise = fetch('https://api.github.com/search/repositories?q=+org:EmbarkStudios+is:public&sort=created&order=asc&per_page=100');
+          const reposPromise = fetch(
+            'https://api.github.com/search/repositories?q=+org:EmbarkStudios+is:public&sort=created&order=asc&per_page=100',
+          );
           fetchedRepos = await reposPromise;
         } catch (err) {
-          console.log(`Failed to get repos info: ${err}`); // eslint-disable-line no-console
+          console.error(`Failed to get repos info: ${err}`);
         }
 
         // data is awaited here instead of in the fetch, so the GitHub request can start in parallel
@@ -135,9 +137,9 @@ window.addEventListener('load', () => {
           }
         }
 
-        this.projects = projects;
+        this.projects = projects.filter((project) => !project.hidden);
       } catch (err) {
-        console.log(`Failed to get project data: ${err}`); // eslint-disable-line no-console
+        console.error(`Failed to get project data: ${err}`);
       }
     },
     computed: {
@@ -149,8 +151,8 @@ window.addEventListener('load', () => {
         return unsortedProjects.sort((a, b) => a.name.localeCompare(b.name));
       },
       searchedProjects() {
-        return this.projects.filter(
-          (p) => JSON.stringify(p).toLowerCase().includes(this.search.toLowerCase()),
+        return this.projects.filter((p) =>
+          JSON.stringify(p).toLowerCase().includes(this.search.toLowerCase()),
         );
       },
     },
