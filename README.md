@@ -51,7 +51,11 @@ The site's data comes from `data.json`. You can add a new project by adding its 
   // Longer description, displayed on the featured card
   "extendedDescription": "A light Rust API for Multiresolution Stochastic Texture Synthesis, a non-parametric example-based algorithm for image generation.",
   // URL to an image to display on the featured card
-  "featureImage": "https://camo.githubusercontent.com/c279dea27db2c10f64cd27563d8d7cc86048c5c1/68747470733a2f2f692e696d6775722e636f6d2f43735a6f5350532e6a7067"
+  "featureImage": "https://camo.githubusercontent.com/c279dea27db2c10f64cd27563d8d7cc86048c5c1/68747470733a2f2f692e696d6775722e636f6d2f43735a6f5350532e6a7067",
+
+  // Lastly, if this property is included the project will be hidden 
+  // from the website.
+  "hidden": "This project is being soft-launched, so don't show it on the website"
 }
 ```
 
