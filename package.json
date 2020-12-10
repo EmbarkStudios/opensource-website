@@ -6,7 +6,8 @@
   "scripts": {
     "start": "live-server",
     "test": "prettier --write **/*.js && stylelint style.css && alex && alex --html",
-    "lint": "prettier --check **/*.js"
+    "lint": "prettier --check **/*.js",
+    "format": "prettier --write **/*.js"
   },
   "repository": {
     "type": "git",
@@ -18,10 +19,6 @@
     "url": "https://github.com/EmbarkStudios/opensource-website/issues"
   },
   "homepage": "https://github.com/EmbarkStudios/opensource-website#readme",
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "all"
-  },
   "devDependencies": {
     "alex": "^8.2.0",
     "live-server": "^1.2.1",
