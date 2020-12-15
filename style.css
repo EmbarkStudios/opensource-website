@@ -198,9 +198,10 @@ body > * > * {
   min-height: 40vh;
 }
 
-/* Project Cards */
+/* Project and Newsletter Cards */
 
-.projects-container {
+.projects-container,
+.newsletter-container {
   display: flex;
   flex-wrap: wrap;
 }
@@ -380,7 +381,8 @@ body > * > * {
   }
 }
 
-.project-card {
+.project-card,
+.newsletter-card {
   display: flex;
   flex-direction: column;
   height: 100%;
