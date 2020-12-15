@@ -9,7 +9,7 @@
     <title>Embark Studios Open Source Newsletter | embark.dev</title>
     <meta name="description" content="Discover open source repositories in Rust, Go, and more from Embark Studios">
     <meta name="keywords" content="open source, sponsorship, rust, newsletter">
-    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="../favicon.ico">
 
     <!-- Open Graph Metadata -->
     <meta property="og:title" content="Embark Studios Open Source Newsletter" />
@@ -32,7 +32,7 @@
 <body>
   <div id="app">
     <header class="header">
-      <a href="https://embark-studios.com"><img id="logo" src="/img/logo.png"/></a>
+      <a href="https://embark-studios.com"><img id="logo" src="../img/logo.png"/></a>
       <div>
         <a href="https://embark-studios.com" class="fas fa-globe-americas"></a>
         <a href="https://twitter.com/EmbarkStudios" class="fa fa-twitter"></a>
@@ -40,7 +40,6 @@
         <a href="https://discord.gg/8TW9nfF" class="fab fa-discord"></a>
       </div>
     </header>
-    </div>
 
   <div class="container">
     <h1>
@@ -53,8 +52,9 @@
         <li class="campaign">06/11/2020 - <a href="http://eepurl.com/hhPibj" title="Bringing Rust to the GPU - Embark Dev Newsletter 006" target="_blank">Bringing Rust to the GPU - Embark Dev Newsletter 006</a></li>
       </div>
     </ul>
+  </div>
 
-    <h2>Previous Editions:</h2>
+    <!--<h2>Previous Editions:</h2>
     <ul id="archive-list">
       <div class="display_archive">
         <li class="campaign">22/09/2020 - <a href="http://eepurl.com/hd8qEH" title="Jump into open source this fall! - Embark Dev Newsletter 005" target="_blank">Jump into open source this fall! - Embark Dev Newsletter 005</a></li>
@@ -66,5 +66,22 @@
     </ul>
     <a class="button-primary" href="https://mailchi.mp/3608b3a1adca/embarkdev">Sign up</a>
   </div>
-</body>
+  </div>-->
+
+  <section class="category">
+    <div class="container">
+      <h2>Previous Editions:</h2>
+      <div class="projects-container">
+        <a v-bind:href="repoUrl(n)" class="newsletter" v-for="n in newsletter">
+          <div class="project-card">
+            <h3 class="title">
+              {{ n.name }}
+            </h3>
+            <p v-html="n.date"></p>
+          </div>
+        </a>
+      </div>
+      </div>
+    </section>
+  </body>
 </html>

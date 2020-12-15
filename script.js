@@ -30,6 +30,27 @@ Vue.component('tags', {
   },
 });
 
+Vue.component('newsletter', {
+  props: ['newsletter'],
+  template: `
+  <section class="category">
+  <div class="container">
+    <h2>Previous Editions:</h2>
+    <div class="projects-container">
+      <a v-bind:href="repoUrl(n)" class="newsletter" v-for="n in newsletter">
+        <div class="project-card">
+          <h3 class="title">
+            {{ n.name }}
+          </h3>
+          <p v-html="n.date"></p>
+        </div>
+      </a>
+    </div>
+    </div>
+  </section>
+  `,
+});
+
 Vue.component('star-count', {
   mixins: [sharedMethods],
   props: ['project'],
