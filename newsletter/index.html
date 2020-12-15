@@ -47,33 +47,13 @@
     </h1>
     <p>Stay up to date with new open source projects and developer events from Embark with our developer newsletter.</p>
     <a class="button-primary" href="https://mailchi.mp/3608b3a1adca/embarkdev">Sign up</a>
-    <h2>Recent Editions:</h2>
-    <ul id="archive-list">
-      <div class="display_archive">
-        <li class="campaign">06/11/2020 - <a href="http://eepurl.com/hhPibj" title="Bringing Rust to the GPU - Embark Dev Newsletter 006" target="_blank">Bringing Rust to the GPU - Embark Dev Newsletter 006</a></li>
-      </div>
+    <h2>Previous Editions:</h2>
     </ul>
   </div>
-
-    <!--<h2>Previous Editions:</h2>
-    <ul id="archive-list">
-      <div class="display_archive">
-        <li class="campaign">22/09/2020 - <a href="http://eepurl.com/hd8qEH" title="Jump into open source this fall! - Embark Dev Newsletter 005" target="_blank">Jump into open source this fall! - Embark Dev Newsletter 005</a></li>
-        <li class="campaign">02/03/2020 - <a href="http://eepurl.com/gTOOB5" title="Watch 2 New Talks from Embark! - Embark Dev Newsletter 004" target="_blank">Watch 2 New Talks from Embark! - Embark Dev Newsletter 004</a></li>
-        <li class="campaign">23/01/2020 - <a href="http://eepurl.com/gPFCp1" title="A sneak peek at our experiments and upcoming events | Embark Dev Newsletter 003" target="_blank">A sneak peek at our experiments and upcoming events - Embark Dev Newsletter 003</a></li>
-        <li class="campaign">12/06/2019 - <a href="http://eepurl.com/gJh88j" title="New Blender add-on, and a peek inside Rust development at Embark: Embark Dev Newsletter 002" target="_blank">New Blender add-on, and a peek inside Rust development at Embark - Embark Dev Newsletter 002</a></li>
-        <li class="campaign">11/08/2019 - <a href="http://eepurl.com/gI3v89" title="Rust, Blender, Hacktoberfest, and more: Newsletter 001 from Embark" target="_blank">Rust, Blender, Hacktoberfest, and more - Embark Dev Newsletter 001</a></li>
-      </div>
-    </ul>
-    <a class="button-primary" href="https://mailchi.mp/3608b3a1adca/embarkdev">Sign up</a>
-  </div>
-  </div>-->
 
   <section class="category">
     <div class="container">
-      <h2>Previous Editions:</h2>
-      <div class="projects-container">
-        <a v-bind:href="repoUrl(n)" class="newsletter" v-for="n in newsletter">
+        <a v-bind:href="newsletterUrl(n)" class="newsletter" v-for="n in newsletter">
           <div class="project-card">
             <h3 class="title">
               {{ n.name }}
@@ -81,7 +61,6 @@
             <p v-html="n.date"></p>
           </div>
         </a>
-      </div>
       </div>
     </section>
   </body>

@@ -11,6 +11,9 @@ const sharedMethods = {
     issuesUrl(project) {
       return `https://github.com/EmbarkStudios/${project.name}/issues`;
     },
+    newsletterUrl(newsletter) {
+      return `${newsletter.link}`;
+    },
   },
 };
 
