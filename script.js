@@ -30,27 +30,6 @@ Vue.component('tags', {
   },
 });
 
-Vue.component('newsletter', {
-  props: ['newsletter'],
-  template: `
-  <section class="category">
-  <div class="container">
-    <h2>Previous Editions:</h2>
-    <div class="projects-container">
-      <a v-bind:href="repoUrl(n)" class="newsletter" v-for="n in newsletter">
-        <div class="project-card">
-          <h3 class="title">
-            {{ n.name }}
-          </h3>
-          <p v-html="n.date"></p>
-        </div>
-      </a>
-    </div>
-    </div>
-  </section>
-  `,
-});
-
 Vue.component('star-count', {
   mixins: [sharedMethods],
   props: ['project'],
@@ -120,10 +99,11 @@ window.addEventListener('load', () => {
       showSearch: false,
       search: '',
       projects: [],
+      newsletter: [],
     },
     async mounted() {
       try {
-        const dataPromise = fetch('./data.json');
+        const dataPromise = fetch('/data.json');
 
         // We don't want the whole website to break if the GH API is down or rate limit is hit
         // so it's wrapped in a different try/catch
@@ -137,7 +117,7 @@ window.addEventListener('load', () => {
 
         // data is awaited here instead of in the fetch, so the GitHub request can start in parallel
         const fetchedData = await dataPromise;
-        const { projects } = await fetchedData.json();
+        const { projects, newsletter } = await fetchedData.json();
 
         // If GitHub API request succeeded, we add the extra data to the projects array
         if (fetchedRepos && fetchedRepos.ok) {
@@ -157,6 +137,8 @@ window.addEventListener('load', () => {
         }
 
         this.projects = projects;
+        this.newsletter = newsletter;
+        console.log("newsletter data", newsletter);
       } catch (err) {
         console.log(`Failed to get project data: ${err}`); // eslint-disable-line no-console
       }
