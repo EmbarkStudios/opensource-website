@@ -141,7 +141,6 @@ window.addEventListener('load', () => {
 
         this.projects = projects;
         this.newsletter = newsletter;
-        console.log("newsletter data", newsletter);
       } catch (err) {
         console.log(`Failed to get project data: ${err}`); // eslint-disable-line no-console
       }

@@ -210,7 +210,8 @@ body > * > * {
   color: var(--embark-blue);
 }
 
-.project {
+.project,
+.card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -226,7 +227,7 @@ body > * > * {
   transition: all 0.2s ease-in-out;
 }
 
-.project p {
+.project .card p {
   font-size: 1rem;
 }
 
@@ -234,7 +235,8 @@ body > * > * {
   opacity: 0.6;
 }
 
-.project:hover {
+.project:hover,
+.card:hover {
   transform: scale(1.05);
 }
 

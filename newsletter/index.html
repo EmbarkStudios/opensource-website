@@ -7,13 +7,13 @@
 
     <!-- Standard Metadata -->
     <title>Embark Studios Open Source Newsletter | embark.dev</title>
-    <meta name="description" content="Discover open source repositories in Rust, Go, and more from Embark Studios">
+    <meta name="description" content="Stay up to date with new open source projects and developer events from Embark with our developer newsletter">
     <meta name="keywords" content="open source, sponsorship, rust, newsletter">
     <link rel="icon" href="../favicon.ico">
 
     <!-- Open Graph Metadata -->
     <meta property="og:title" content="Embark Studios Open Source Newsletter" />
-    <meta property="og:description" content="Discover open source repositories in Rust, Go, and more from Embark Studios" />
+    <meta property="og:description" content="Stay up to date with new open source projects and developer events from Embark with our developer newsletter" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://embark.dev" />
     <meta property="og:image" content="https://embark.dev/img/code.jpg" />
@@ -49,12 +49,11 @@
     <p>Stay up to date with new open source projects and developer events from Embark with our developer newsletter.</p>
     <a class="button-primary" href="https://mailchi.mp/3608b3a1adca/embarkdev">Sign up</a>
     <h2>Previous Editions:</h2>
-    </ul>
   </div>
 
   <section class="category">
     <div class="newsletter-container container">
-      <a v-bind:href="newsletterUrl(n)" class="project" v-for="n in newsletter">
+      <a v-bind:href="newsletterUrl(n)" class="card" v-for="n in newsletter">
         <div class="newsletter-card">
           <h3 class="title">
             {{ n.name }}
