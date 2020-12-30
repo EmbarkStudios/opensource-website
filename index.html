@@ -220,7 +220,7 @@
             <h1>
               🗞 Newsletter
               </h1>
-              <p>Stay up to date with new open source projects and developer events from Embark with our developer newsletter.</p>
+              <p>Stay up to date with new open source projects and developer events from Embark with our developer newsletter. Check out the latest issues:</p>
               <a v-bind:href="newsletterUrl(n)" class="card" v-for="n in newsletter.slice(0,3)">
               <div class="newsletter-card">
                 <h3 class="title">
@@ -230,7 +230,8 @@
                 <p v-html="n.description"></p>
               </div>
             </a>
-            <a class="button-primary" href="/newsletter">Join</a>
+            <a class="button-primary" href="https://mailchi.mp/3608b3a1adca/embarkdev">Join</a>
+            <a class="button-primary button-secondary" href="/newsletter">Archives</a>
         </div>
       </section>
 
