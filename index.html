@@ -216,24 +216,22 @@
       </section>
 
       <section class="full-width-section background-grey" id="newsletter">
-        <div class="container">
-          <h1>
-            Stay in the loop
-          </h1>
-          <p>Stay up to date with new open source projects and developer events from Embark with our developer newsletter.</p>
-          <p>Recent Editions:</p>
-          <ul id="archive-list">
-            <div class="display_archive">
-              <li class="campaign">17/12/2020 - <a href="http://eepurl.com/hkFHy1" title="Blender, rust-gpu 0.2 and more - Embark Dev Newsletter" target="_blank">Blender, rust-gpu 0.2 and more - Embark Dev Newsletter</a></li>
-              <li class="campaign">06/11/2020 - <a href="http://eepurl.com/hhPibj" title="Bringing Rust to the GPU - Embark Dev Newsletter" target="_blank">Bringing Rust to the GPU - Embark Dev Newsletter</a></li>
-              <li class="campaign">22/09/2020 - <a href="http://eepurl.com/hd8qEH" title="Jump into open source this fall! - Embark Dev Newsletter" target="_blank">Jump into open source this fall! - Embark Dev Newsletter</a></li>
-              <li class="campaign">02/03/2020 - <a href="http://eepurl.com/gTOOB5" title="Watch 2 New Talks from Embark! - Embark Dev Newsletter 004" target="_blank">Watch 2 New Talks from Embark! - Embark Dev Newsletter 004</a></li>
-              <li class="campaign">23/01/2020 - <a href="http://eepurl.com/gPFCp1" title="A sneak peek at our experiments and upcoming events | Embark Dev Newsletter 003" target="_blank">A sneak peek at our experiments and upcoming events | Embark Dev Newsletter 003</a></li>
-              <li class="campaign">12/06/2019 - <a href="http://eepurl.com/gJh88j" title="New Blender add-on, and a peek inside Rust development at Embark: Embark Dev Newsletter 002" target="_blank">New Blender add-on, and a peek inside Rust development at Embark: Embark Dev Newsletter 002</a></li>
-              <li class="campaign">11/08/2019 - <a href="http://eepurl.com/gI3v89" title="Rust, Blender, Hacktoberfest, and more: Newsletter 001 from Embark" target="_blank">Rust, Blender, Hacktoberfest, and more: Newsletter 001 from Embark</a></li>
-            </div>
-          </ul>
-          <a class="button-primary" href="https://mailchi.mp/3608b3a1adca/embarkdev">Sign up</a>
+          <div class="newsletter-container container">
+            <h1>
+              🗞 Newsletter
+              </h1>
+              <p>Stay up to date with new open source projects and developer events from Embark with our developer newsletter. Check out the latest issues:</p>
+              <a v-bind:href="newsletterUrl(n)" class="card" v-for="n in newsletter.slice(0,3)">
+              <div class="newsletter-card">
+                <h3 class="title">
+                  {{ n.name }}
+                </h3>
+                <p v-html="n.date"></p>
+                <p v-html="n.description"></p>
+              </div>
+            </a>
+            <a class="button-primary" href="https://mailchi.mp/3608b3a1adca/embarkdev">Join</a>
+            <a class="button-primary button-secondary" href="/newsletter">Archives</a>
         </div>
       </section>
 
