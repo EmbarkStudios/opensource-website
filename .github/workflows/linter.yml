@@ -21,8 +21,8 @@ jobs:
       # Install your dependencies
       - run: npm ci
 
-      # Run ESLint
-      - uses: eslint/github-action@v0
+      # Check JavaScript code formatting
+      - run: npm run lint
       
       # Run Stylelint
       - uses: actions-hub/stylelint@v1.1.3
