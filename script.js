@@ -106,7 +106,7 @@ window.addEventListener("load", () => {
     },
     async mounted() {
       try {
-        const dataPromise = fetch('/data.json');
+        const dataPromise = fetch("/data.json");
 
         // We don't want the whole website to break if the GH API is down or rate limit is hit
         // so it's wrapped in a different try/catch
