@@ -102,6 +102,7 @@ window.addEventListener("load", () => {
       showSearch: false,
       search: "",
       projects: [],
+      newsletter: [],
     },
     async mounted() {
       try {
@@ -140,7 +141,7 @@ window.addEventListener("load", () => {
           }
         }
 
-        this.projects = projects;
+        this.projects = projects.filter((project) => !project.hidden);
         this.newsletter = newsletter;
       } catch (err) {
         console.error(`Failed to get project data: ${err}`);
