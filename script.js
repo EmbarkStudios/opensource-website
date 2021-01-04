@@ -11,6 +11,9 @@ const sharedMethods = {
     issuesUrl(project) {
       return `https://github.com/EmbarkStudios/${project.name}/issues`;
     },
+    newsletterUrl(newsletter) {
+      return `${newsletter.link}`;
+    },
   },
 };
 
@@ -102,7 +105,7 @@ window.addEventListener("load", () => {
     },
     async mounted() {
       try {
-        const dataPromise = fetch("./data.json");
+        const dataPromise = fetch('/data.json');
 
         // We don't want the whole website to break if the GH API is down or rate limit is hit
         // so it's wrapped in a different try/catch
@@ -118,7 +121,7 @@ window.addEventListener("load", () => {
 
         // data is awaited here instead of in the fetch, so the GitHub request can start in parallel
         const fetchedData = await dataPromise;
-        const { projects } = await fetchedData.json();
+        const { projects, newsletter } = await fetchedData.json();
 
         // If GitHub API request succeeded, we add the extra data to the projects array
         if (fetchedRepos && fetchedRepos.ok) {
@@ -137,7 +140,8 @@ window.addEventListener("load", () => {
           }
         }
 
-        this.projects = projects.filter((project) => !project.hidden);
+        this.projects = projects;
+        this.newsletter = newsletter;
       } catch (err) {
         console.error(`Failed to get project data: ${err}`);
       }
