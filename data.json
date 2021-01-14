@@ -168,6 +168,10 @@
       "hidden": "This is a meta-project of information rather than one we want to list here."
     },
     {
+      "name": "opensource",
+      "hidden": "This is a meta-project of information rather than one we want to list here."
+    },
+    {
       "name": "cfg-expr",
       "emoji": "⚙️",
       "tags": ["rust"],
