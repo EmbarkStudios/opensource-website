@@ -164,6 +164,10 @@
       "hidden": "This is not as much a separate project but part of cargo-deny, but has to be its own repo to be a clean GitHub Action."
     },
     {
+      "name": "rust-ecosystem",
+      "hidden": "This is a meta-project of information rather than one we want to list here."
+    },
+    {
       "name": "cfg-expr",
       "emoji": "⚙️",
       "tags": ["rust"],
