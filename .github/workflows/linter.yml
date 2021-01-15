@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Run ESLint & Stylelint
+    name: Validate code
     runs-on: ubuntu-latest
     steps:
       
@@ -21,8 +21,14 @@ jobs:
       # Install your dependencies
       - run: npm ci
 
-      # Check JavaScript code formatting
-      - run: npm run lint
+      - name: "Check JavaScript code formatting"
+        run: npm run format-check
+
+      - name: "Lint English writing"
+        run: npm run alex
       
-      # Run Stylelint
-      - uses: actions-hub/stylelint@v1.1.3
+      - name: "Lint CSS"
+        uses: actions-hub/stylelint@v1.1.3
+
+      - name: "Validate data.json format"
+        run: npm run Validate-data

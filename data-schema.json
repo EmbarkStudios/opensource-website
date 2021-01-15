@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "required": ["projects", "newsletter"],
+  "additionalProperties": false,
+  "properties": {
+    "projects": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "required": ["name", "emoji", "tags", "description"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "emoji": { "type": "string" },
+              "tags": { "type": "array", "items": { "type": "string" } },
+              "description": { "type": "string" },
+              "featured": { "type": "boolean" },
+              "extendedDescription": { "type": "string" },
+              "featureImage": { "type": "string" }
+            }
+          },
+          {
+            "type": "object",
+            "required": ["name", "hidden"],
+            "properties": {
+              "name": { "type": "string" },
+              "hidden": { "type": "string" }
+            }
+          }
+        ]
+      }
+    },
+    "newsletter": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "date", "link", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "date": { "type": "string" },
+          "link": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    }
+  }
+}
