@@ -176,7 +176,13 @@
       "emoji": "⚙️",
       "tags": ["rust"],
       "description": "A parser and evaluator for Rust cfg() expressions"
-    }
+    },
+    {
+      "name": "skyhook",
+      "emoji": "🌴",
+      "tags": ["blender", "python"],
+      "description": "Game engine and DCC communication system"
+    },
   ],
   "newsletter":[
     {
