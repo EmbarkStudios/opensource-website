@@ -1,8 +1,12 @@
-name: Linting
+name: Lint
 
 on:
-  - pull_request
-  - push
+  push:
+    branches:
+      - main
+    tags:
+      - "*"
+  pull_request:
 
 jobs:
   build:
@@ -31,4 +35,4 @@ jobs:
         uses: actions-hub/stylelint@v1.1.3
 
       - name: "Validate data.json format"
-        run: npm run Validate-data
+        run: npm run validate-data
