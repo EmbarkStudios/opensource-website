@@ -131,17 +131,19 @@
           <p> 
             We have also released an open source add-on featuring some of our day-to-day studio tools.
           </p>
-          <a v-bind:href="repoUrl(p)" class="project" v-for="p in projectsWithTag('blender')">
-            <div class="project-card">
-              <h3 class="title">
-                <span class="emoji">{{ p.emoji }}</span>
-                {{ p.name }}
-              </h3>
-              <p v-html="p.description"></p>
-              <tags v-bind:tags="p.tags"></tags>
-              <github-stats v-bind:project="p" />
-            </div>
-          </a>
+          <div class="projects-container">
+            <a v-bind:href="repoUrl(p)" class="project" v-for="p in projectsWithTag('blender')">
+              <div class="project-card">
+                <h3 class="title">
+                  <span class="emoji">{{ p.emoji }}</span>
+                  {{ p.name }}
+                </h3>
+                <p v-html="p.description"></p>
+                <tags v-bind:tags="p.tags"></tags>
+                <github-stats v-bind:project="p" />
+              </div>
+            </a>
+          </div>
           <a href="https://medium.com/embarkstudios/a-love-letter-to-blender-e54167c22193" class="button-primary background-grey">Learn More</a>
         </div>
       </section>
