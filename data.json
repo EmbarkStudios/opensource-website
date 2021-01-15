@@ -182,6 +182,12 @@
       "emoji": "🌴",
       "tags": ["blender", "python"],
       "description": "Game engine and DCC communication system"
+    },
+    {
+      "name": "octobors",
+      "emoji": "🆙",
+      "tags": ["github-actions", "rust"],
+      "description": "GitHub action for automerging PRs based on a few rules"
     }
   ],
   "newsletter":[
