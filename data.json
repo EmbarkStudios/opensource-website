@@ -188,6 +188,12 @@
       "emoji": "🆙",
       "tags": ["github-actions", "rust"],
       "description": "GitHub action for automerging PRs based on a few rules"
+    },
+    {
+      "name": "relnotes",
+      "emoji": "📓",
+      "tags": ["tools", "rust"],
+      "description": "Automatic GitHub release notes"
     }
   ],
   "newsletter":[
