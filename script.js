@@ -141,6 +141,7 @@ window.addEventListener("load", () => {
           }
         }
 
+        projects.forEach((project) => (project.tags || []).sort());
         this.projects = projects.filter((project) => !project.hidden);
         this.newsletter = newsletter;
       } catch (err) {
