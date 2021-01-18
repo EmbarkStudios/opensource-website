@@ -194,6 +194,10 @@
       "emoji": "📓",
       "tags": ["tools", "rust"],
       "description": "Automatic GitHub release notes"
+    },
+    {
+      "name": "sentry-contrib-rust",
+      "hidden": "This is a public fork used to share changes with the Sentry team"
     }
   ],
   "newsletter":[
