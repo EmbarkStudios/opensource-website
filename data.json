@@ -196,6 +196,12 @@
       "description": "Automatic GitHub release notes"
     },
     {
+      "name": "gsutil",
+      "emoji": "🚙",
+      "tags": ["gcs", "rust"],
+      "description": "Small, incomplete replacement for the official gsutil"
+    },
+    {
       "name": "sentry-contrib-rust",
       "hidden": "This is a public fork used to share changes with the Sentry team"
     }
