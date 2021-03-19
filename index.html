@@ -53,7 +53,7 @@
             <input id="search-input" type="text" placeholder="Start typing..." v-model="search" ref="search">
           </div>
           <div class="search-overlay__results">
-            <a v-bind:href="repoUrl(p)" class="project" v-for="p in searchedProjects">
+            <a v-bind:href="repoUrl(p)" class="card" v-for="p in searchedProjects">
               <div class="project-card">
                 <h3 class="title">
                   <span class="emoji">{{ p.emoji }}</span>
@@ -102,7 +102,7 @@
             Featured Open Source Projects
           </h2>
           <div class="projects-container">
-            <a v-bind:style="{ 'background-image': 'url(' + p.featureImage + ')' }" v-bind:href="repoUrl(p)" class="project project-featured" v-for="p in featuredProjects">
+            <a v-bind:style="{ 'background-image': 'url(' + p.featureImage + ')' }" v-bind:href="repoUrl(p)" class="card project-featured" v-for="p in featuredProjects">
               <h3 class="title">
                 <span class="emoji">{{ p.emoji }}</span>
                 {{ p.name }}
@@ -132,7 +132,7 @@
             We have also released some of our day-to-day studio tools.
           </p>
           <div class="projects-container">
-            <a v-bind:href="repoUrl(p)" class="project" v-for="p in projectsWithTag('blender')">
+            <a v-bind:href="repoUrl(p)" class="card" v-for="p in projectsWithTag('blender')">
               <div class="project-card">
                 <h3 class="title">
                   <span class="emoji">{{ p.emoji }}</span>
