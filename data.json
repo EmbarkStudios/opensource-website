@@ -150,12 +150,6 @@
       "description": "Wrapper crate for SPIRV-Tools"
     },
     {
-      "name": "review-action",
-      "emoji": "🏷️",
-      "tags": ["github-actions", "tools"],
-      "description": "Github Action that adds and removes labels based on PR review state"
-    },
-    {
       "name": "nfd2",
       "hidden": "This is a temporary fork so we are not showing it on the website"
     },
