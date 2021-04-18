@@ -13,7 +13,7 @@
 
 {% macro tags(tags) %}
 <div class="tags">
-    {% for tag in tags %}
+    {% for tag in tags | sort() %}
     <div class="tag tag-{{ tag }}">
         <a href="/tags?tag={{ tag }}">{{ tag }}</a>
     </div>
@@ -60,17 +60,25 @@
     <h2 class="category-title">Our <span class="category-tag">{{ tag }}</span> projects</h2>
     <div class="projects-container" id="{{ tag }}">
         {% for p in projects %}
-        <a href="https://github.com/EmbarkStudios/{{ p }}" class="card">
+        {%- if not p.hidden and p.tags is containing(tag) -%}
+        <div onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'" class="card">
             <div class="project-card">
                 <h3 class="title">
+                    {%- if p.emoji -%}
                     <span class="emoji">{{ p.emoji }}</span>
+                    {%- endif -%}
                     {{ p.name }}
                 </h3>
+                {%- if p.description -%}
                 <p>{{ p.description }}</p>
+                {%- endif -%}
+                {%- if p.tags -%}
                 {{ macros::tags(tags=p.tags) }}
+                {%- endif -%}
                 {{ macros::github_stats(project=p) }}
             </div>
-        </a>
+        </div>
+        {%- endif -%}
         {% endfor %}
     </div>
 </section>
@@ -92,7 +100,7 @@
         <div class="search-overlay__results">
             <!-- TODO this has to be handled by javascript v-for-->
             {% for p in projects %}
-            {%- if not p.hidden  -%}
+            {%- if not p.hidden -%}
             <div id="search-project-card-{{ p.name }}"
                 onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'" class="card"
                 v-for="p in searchedProjects">
