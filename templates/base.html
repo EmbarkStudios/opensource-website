@@ -1,0 +1,29 @@
+{% import "macros.html" as macros %}
+
+{% set data = load_data(path="static/data/data.json", format="json") %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MyBlog</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/e541009933.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  {{ macros::header() }}
+  {{ macros::search_overlay(projects=data.projects) }}
+  <!-- <div id="app"></div> -->
+  <section class="section">
+    <div class="container">
+      {% block content %} {% endblock %}
+    </div>
+  </section>
+</body>
+
+<script src="./script.js"></script>
+
+</html>

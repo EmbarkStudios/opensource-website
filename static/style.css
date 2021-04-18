@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap');
+
+:root {
+  --embark-blue: #0fa0b4;
+  --embark-red: #b40000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+
+a {
+  color: inherit;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+/* Spacing */
+
+/* All 2nd level items (ie. sections) should have margins... */
+body > * > * {
+  margin: 3% 5%;
+}
+
+/* ...Except full-width sections */
+.full-width-section {
+  background: black;
+  color: white;
+  margin: 0;
+  padding: 3% 5%;
+}
+
+.full-width-section p {
+  font-size: 1.3rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Embark theming */
+
+.button-primary {
+  display: inline-block;
+  font-size: 20px;
+  background: var(--embark-blue);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+  padding: 0.5em 2em;
+  margin: 1em 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-primary:hover {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+}
+
+.button-secondary {
+  margin: 1em 1em;
+}
+
+.background-blue {
+  background: var(--embark-blue);
+}
+
+.background-red {
+  background: var(--embark-red);
+}
+
+.background-black {
+  background: black;
+}
+
+.background-grey {
+  background: #eee;
+  color: black;
+}
+
+/* Header and Intro */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  margin: 0;
+  font-size: 1.5em;
+  position: fixed;
+  top: 0;
+  padding: 0 5%;
+  width: 100vw;
+  height: 90px;
+  z-index: 100;
+}
+
+.header * {
+  margin: 0;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.2em;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+
+.header .fa:hover,
+.header .fab:hover,
+.header .fas:hover {
+  transform: scale(1.1);
+}
+
+.search-overlay {
+  margin-top: 90px;
+}
+
+.search-overlay h2 {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.search-input-group {
+  margin-bottom: 30px;
+}
+
+.search-input-group > input {
+  padding: 5px 5px;
+  width: 200px;
+  font-size: 1rem;
+}
+
+.search-close-button {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.search-icon {
+  padding-left: 0.7em;
+  cursor: pointer;
+}
+
+.search-overlay__results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#logo {
+  width: 200px;
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 90px;
+  background-image: url('./img/code.jpg');
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+}
+
+.cover i {
+  margin-right: 10px;
+}
+
+.cover a {
+  text-decoration: none;
+}
+
+#hero {
+  min-height: 40vh;
+}
+
+/* Project and Newsletter Cards */
+
+.projects-container,
+.newsletter-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-tag {
+  color: var(--embark-blue);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+  margin: 0.5rem 1rem 0.5rem 0;
+  padding: 1.5rem;
+  background: white;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: black;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+.card p a:hover {
+  opacity: 0.6;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.project-featured {
+  width: 550px;
+  color: white;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  border: none;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+
+.project-featured p {
+  font-size: 1.1rem;
+}
+
+.title {
+  margin: 0;
+}
+
+.emoji {
+  font-size: 1.5em;
+  padding-right: 5px;
+}
+
+.star-button {
+  margin-top: 1rem;
+}
+
+/* Projects A-Z Table */
+
+.projects-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 1000px;
+}
+
+.projects-list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.projects-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  border-bottom: 1px #ccc solid;
+  transition: all 0.2s ease-in-out;
+}
+
+.projects-list li:hover {
+  background: #eee;
+}
+
+/* Tags */
+
+.tag {
+  display: inline-block;
+  background: var(--embark-blue);
+  margin: 3px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  text-shadow: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.tag a {
+  text-decoration: none;
+}
+
+.tag:hover {
+  transform: scale(1.15);
+}
+
+.tag-rust {
+  background: #731b00;
+}
+
+.tag-blender {
+  background: #e08210;
+}
+
+.tag-web {
+  background: #ffc30b;
+}
+
+.tag-go {
+  background: #00ced1;
+}
+
+.tag-docker {
+  background: #1e90ff;
+}
+
+.logo-container a {
+  text-decoration: none;
+}
+
+.logo-image {
+  height: 70px;
+  margin: 1em;
+  fill: #111;
+}
+
+.feature-logo {
+  fill: white;
+  height: 100px;
+  margin-bottom: -20px;
+}
+
+/* Dark mode */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #222;
+    color: white;
+  }
+
+  .background-grey {
+    background: #1a1a1a;
+    color: white;
+  }
+
+  .background-blue {
+    /* Embark blue looks way too bright in dark mode, so make it 70% opacity */
+    background: rgba(15, 160, 180, 0.7);
+  }
+
+  .card {
+    background-color: #333;
+    border-color: #333;
+    color: white;
+  }
+
+  .projects-list li:hover {
+    background-color: #333;
+  }
+
+  .logo-image {
+    fill: white;
+  }
+}
+
+.project-card,
+.newsletter-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.github-buttons-container {
+  display: flex;
+  flex-direction: row;
+  text-shadow: none;
+}
+
+.github-buttons-container > div:not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+/* Licensed under Apache 2.0 https://github.com/mdo/github-buttons/blob/master/LICENSE.md */
+
+/* No modifications were made from the original source */
+
+/* From https://github.com/mdo/github-buttons/blob/master/src/styles.css */
+.github-btn {
+  height: 20px;
+  margin-top: 1rem;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.gh-btn,
+.gh-count,
+.gh-ico {
+  float: left;
+}
+
+.gh-btn,
+.gh-count {
+  padding: 2px 5px 2px 4px;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.gh-btn {
+  background-color: #eee;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fcfcfc), to(#eee));
+  background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);
+  background-repeat: no-repeat;
+  border: 1px solid #d5d5d5;
+}
+
+.gh-btn:hover,
+.gh-btn:focus {
+  text-decoration: none;
+  background-color: #ddd;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), to(#ddd));
+  background-image: linear-gradient(to bottom, #eee 0, #ddd 100%);
+  border-color: #ccc;
+}
+
+.gh-btn:active {
+  background-color: #dcdcdc;
+  background-image: none;
+  border-color: #b5b5b5;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.gh-ico {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='12 12 40 40'%3e%3cpath fill='%23333' d='M32 13.4c-10.5 0-19 8.5-19 19 0 8.4 5.5 15.5 13 18 1 .2 1.3-.4 1.3-.9v-3.2c-5.3 1.1-6.4-2.6-6.4-2.6-.9-2.1-2.1-2.7-2.1-2.7-1.7-1.2.1-1.1.1-1.1 1.9.1 2.9 2 2.9 2 1.7 2.9 4.5 2.1 5.5 1.6.2-1.2.7-2.1 1.2-2.6-4.2-.5-8.7-2.1-8.7-9.4 0-2.1.7-3.7 2-5.1-.2-.5-.8-2.4.2-5 0 0 1.6-.5 5.2 2 1.5-.4 3.1-.7 4.8-.7 1.6 0 3.3.2 4.7.7 3.6-2.4 5.2-2 5.2-2 1 2.6.4 4.6.2 5 1.2 1.3 2 3 2 5.1 0 7.3-4.5 8.9-8.7 9.4.7.6 1.3 1.7 1.3 3.5v5.2c0 .5.4 1.1 1.3.9 7.5-2.6 13-9.7 13-18.1 0-10.5-8.5-19-19-19z'/%3e%3c/svg%3e") 0 0 / 100% 100% no-repeat;
+}
+
+.gh-count {
+  position: relative;
+  margin-left: 4px;
+  background-color: #fafafa;
+  border: 1px solid #d4d4d4;
+}
+
+.gh-count:hover,
+.gh-count:focus {
+  color: #0366d6;
+}
+
+.gh-count::before,
+.gh-count::after {
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+}
+
+.gh-count::before {
+  top: 50%;
+  left: -3px;
+  margin-top: -4px;
+  border-width: 4px 4px 4px 0;
+  border-right-color: #fafafa;
+}
+
+.gh-count::after {
+  top: 50%;
+  left: -4px;
+  z-index: -1;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #d4d4d4;
+}
+
+.github-btn-large {
+  height: 30px;
+}
+
+.github-btn-large .gh-btn,
+.github-btn-large .gh-count {
+  padding: 3px 10px 3px 8px;
+  font-size: 16px;
+  line-height: 22px;
+  border-radius: 4px;
+}
+
+.github-btn-large .gh-ico {
+  width: 20px;
+  height: 20px;
+}
+
+.github-btn-large .gh-count {
+  margin-left: 6px;
+}
+
+.github-btn-large .gh-count::before {
+  left: -5px;
+  margin-top: -6px;
+  border-width: 6px 6px 6px 0;
+}
+
+.github-btn-large .gh-count::after {
+  left: -6px;
+  margin-top: -7px;
+  border-width: 7px 7px 7px 0;
+}
+
+details {
+  font-size: 16px;
+  width: 1000px;
+}
+
+details > summary {
+  display: inline-block;
+  font-size: 20px;
+  background: var(--embark-blue);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+  padding: 0.5em 2em;
+  margin: 1em 0;
+  transition: all 0.2s ease-in-out;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}

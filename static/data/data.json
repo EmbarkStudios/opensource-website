@@ -1,0 +1,265 @@
+{
+  "projects": [
+    {
+      "name": "rust-gpu",
+      "emoji": "🐉",
+      "tags": ["rust", "gpu"],
+      "description": "Making Rust a first-class language and ecosystem for GPU code",
+      "featured": true,
+      "extendedDescription": "This is a very early stage project to make Rust a first-class language and ecosystem for building GPU code.",
+      "featureImage": "https://github.com/EmbarkStudios/rust-gpu/blob/main/docs/assets/sky.jpg?raw=true"
+    },
+    {
+      "name": "texture-synthesis",
+      "emoji": "🎨",
+      "tags": ["rust"],
+      "description": "Example-based texture synthesis written in Rust",
+      "featured": true,
+      "extendedDescription": "A light Rust API for Multiresolution Stochastic Texture Synthesis, a non-parametric example-based algorithm for image generation.",
+      "featureImage": "https://camo.githubusercontent.com/c279dea27db2c10f64cd27563d8d7cc86048c5c1/68747470733a2f2f692e696d6775722e636f6d2f43735a6f5350532e6a7067"
+    },
+    {
+      "name": "cargo-deny",
+      "emoji": "❌",
+      "tags": ["rust", "tools"],
+      "description": "Cargo plugin to help you manage large dependency graphs",
+      "featured": false,
+      "featureImage": "https://camo.githubusercontent.com/fe000e383ffe85ed80a2fff1be630a6da4ae7070/68747470733a2f2f692e696d6775722e636f6d2f787461727a65552e706e67"
+    },
+    {
+      "name": "tame-oauth",
+      "emoji": "🔐",
+      "tags": ["rust"],
+      "description": "Small OAuth crate that follows the sans-io approach"
+    },
+    {
+      "name": "tame-gcs",
+      "emoji": "📁",
+      "tags": ["rust", "gcp"],
+      "description": "A small library with a limited set of Google Cloud Storage operations"
+    },
+    {
+      "name": "ash-molten",
+      "emoji": "🌋",
+      "tags": ["rust"],
+      "description": "Statically linked MoltenVK for Vulkan on Mac using Ash"
+    },
+    {
+      "name": "helix-oidc",
+      "emoji": "🧬",
+      "tags": ["go"],
+      "description": "Helix Perforce OIDC validator"
+    },
+    {
+      "name": "buildkite-jobify",
+      "emoji": "👷",
+      "tags": ["rust", "tools"],
+      "description": "Kubekite, but in Rust, using configuration from your repos"
+    },
+    {
+      "name": "cargo-fetcher",
+      "emoji": "🎁",
+      "tags": ["rust", "tools"],
+      "description": "Cargo plugin for quickly fetching dependencies"
+    },
+    {
+      "name": "physx-rs",
+      "emoji": "🎳",
+      "tags": ["rust"],
+      "description": "Rust binding and wrapper over NVIDIA PhysX",
+      "featured": true,
+      "extendedDescription": "Rust binding and wrapper over NVIDIA PhysX, a popular and mature physics engine particularly well-suited for games.",
+      "featureImage": "https://raw.githubusercontent.com/EmbarkStudios/physx-rs/master/images/example-ball.png"
+    },
+    {
+      "name": "wg-ui",
+      "emoji": "",
+      "tags": ["go", "web"],
+      "description": "A basic web UI for managing WireGuard clients."
+    },
+    {
+      "name": "gke-accelerated-xorg-example",
+      "emoji": "",
+      "tags": ["docker", "gcp"],
+      "description": "Example project for running remote rendering on GKE"
+    },
+    {
+      "name": "opensource-website",
+      "emoji": "🌐",
+      "tags": ["web"],
+      "description": "The webpage you're looking at right now"
+    },
+    {
+      "name": "spdx",
+      "emoji": "🆔",
+      "tags": ["rust"],
+      "description": "Helper crate for SPDX expressions"
+    },
+    {
+      "name": "rpmalloc-rs",
+      "emoji": "🐏",
+      "tags": ["rust"],
+      "description": "Cross-platform Rust memory allocator using <a href=\"https://github.com/rampantpixels/rpmalloc\">rpmalloc</a>"
+    },
+    {
+      "name": "k8s-buildkite-plugin",
+      "emoji": "",
+      "tags": ["kubernetes", "buildkite"],
+      "description": "Run any buildkite build step as a Kubernetes Job"
+    },
+    {
+      "name": "cargo-about",
+      "emoji": "📜",
+      "tags": ["rust", "tools"],
+      "description": "Cargo plugin to generate list of all licenses for a crate"
+    },
+    {
+      "name": "blender-tools",
+      "emoji": "🐵",
+      "tags": ["python", "blender"],
+      "description": "A Blender add-on containing workflow tools for game development"
+    },
+    {
+      "name": "krates",
+      "emoji": "📦",
+      "tags": ["rust", "tools"],
+      "description": "Creates graphs of crates from cargo_metadata metadata."
+    },
+    {
+      "name": "superluminal-perf-rs",
+      "emoji": "🔆",
+      "tags": ["rust", "tools"],
+      "description": "Superluminal Performance profiler Rust API for adding user events to captures."
+    },
+    {
+      "name": "puffin",
+      "emoji": "🐦",
+      "tags": ["rust", "tools"],
+      "description": "Simple instrumentation profiler for Rust."
+    },
+    {
+      "name": "tryhard",
+      "emoji": "💫",
+      "tags": ["rust"],
+      "description": "Easily retry futures"
+    },
+    {
+      "name": "spirv-tools-rs",
+      "emoji": "🛠",
+      "tags": ["rust", "tools", "gpu"],
+      "description": "Wrapper crate for SPIRV-Tools"
+    },
+    {
+      "name": "nfd2",
+      "hidden": "This is a temporary fork so we are not showing it on the website"
+    },
+    {
+      "name": "cargo-deny-action",
+      "hidden": "This is not as much a separate project but part of cargo-deny, but has to be its own repo to be a clean GitHub Action."
+    },
+    {
+      "name": "rust-ecosystem",
+      "hidden": "This is a meta-project of information rather than one we want to list here."
+    },
+    {
+      "name": "opensource",
+      "hidden": "This is a meta-project of information rather than one we want to list here."
+    },
+    {
+      "name": "cfg-expr",
+      "emoji": "⚙️",
+      "tags": ["rust"],
+      "description": "A parser and evaluator for Rust cfg() expressions"
+    },
+    {
+      "name": "skyhook",
+      "emoji": "🌴",
+      "tags": ["blender", "python"],
+      "description": "Game engine and DCC communication system"
+    },
+    {
+      "name": "octobors",
+      "emoji": "🆙",
+      "tags": ["github-actions", "rust"],
+      "description": "GitHub action for automerging PRs based on a few rules"
+    },
+    {
+      "name": "relnotes",
+      "emoji": "📓",
+      "tags": ["tools", "rust"],
+      "description": "Automatic GitHub release notes"
+    },
+    {
+      "name": "gsutil",
+      "emoji": "🚙",
+      "tags": ["gcs", "rust"],
+      "description": "Small, incomplete replacement for the official gsutil"
+    },
+    {
+      "name": "sentry-contrib-rust",
+      "hidden": "This is a public fork used to share changes with the Sentry team"
+    },	
+    {	
+      "name": "tame-oidc",	
+      "emoji": "🧬",	
+      "tags": ["rust"],	
+      "description": "Small OIDC crate that follows the sans-io approach"
+    }
+  ],
+  "newsletter":[
+    {
+      "name": "Goodbye, GLSL! Hello, Rust! - Embark Dev Newsletter 009",
+      "date": "19/03/2021",
+      "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=ec5759f460",
+      "description": "Learn more about rust-gpu and catch up on March's highlights from the Embark open source community."
+    },
+    {
+      "name": "New Open Source Crates, Contributor highlights, and more - Embark Dev Newsletter 008",
+      "date": "02/02/2021",
+      "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=2b4725478e",
+      "description": "Learn more about our new open-source crates, and catch up on January highlights from the Embark open source community."
+    },
+    {
+      "name": "Blender, rust-gpu 0.2 and more - Embark Dev Newsletter 007",
+      "date": "17/12/2020",
+      "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=866a1780e3",
+      "description": "Learn more about how we use Blender, read about rust-gpu 0.2, and catch up on December highlights from the Embark open source community."
+    },
+    {
+      "name": "Bringing Rust to the GPU - Embark Dev Newsletter 006",
+      "date": "06/11/2020",
+      "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=cc8ff30199",
+      "description": "Hear from the lead developer of rust-gpu, and catch up on October's highlights from the Embark open source community."
+    },
+    {
+      "name": "Jump into open source this fall! - Embark Dev Newsletter 005",
+      "date": "22/09/2020",
+      "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=ed99e06990",
+      "description": "Learn how to get involved in open source this fall in Embark's latest developer newsletter!"
+    },
+    {
+      "name": "Watch 2 New Talks from Embark! - Embark Dev Newsletter 004",
+      "date": "02/03/2020",
+      "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=e8df1462e7",
+      "description": "See what we're working on at Embark in our latest developer newsletter!"
+    },
+    {
+      "name": "A sneak peek at our experiments and upcoming events - Embark Dev Newsletter 003",
+      "date": "23/01/2020",
+      "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=4ace2982ac",
+      "description": "See what we're working on at Embark in our latest developer newsletter!"
+    },
+    {
+      "name": "New Blender add-on, and a peek inside Rust development at Embark - Embark Dev Newsletter 002",
+      "date": "06/12/2019",
+      "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=0339af3ed2",
+      "description": "We've got exciting announcements from Embark Studios this month, including 2 new open source projects!"
+    },
+    {
+      "name": "Rust, Blender, Hacktoberfest, and more - Embark Dev Newsletter 001",
+      "date": "08/11/2019",
+      "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=81860842cb",
+      "description": "Welcome to the first Embark developer newsletter! In this edition, see tech talks from our Rust engineers and read about our Blender sponsorship."
+    }
+  ]
+}
