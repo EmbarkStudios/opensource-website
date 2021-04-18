@@ -2,6 +2,19 @@
 
 {% import "macros.html" as macros %}
 
+{% block head %}
+<!-- Standard Metadata -->
+<title>Embark Studios Open Source Newsletter | embark.dev</title>
+<meta name="description"
+    content="Stay up to date with new open source projects and developer events from Embark with our developer newsletter">
+<meta name="keywords" content="open source, sponsorship, rust, newsletter">
+
+<!-- Open Graph Metadata -->
+<meta property="og:title" content="Embark Studios Open Source Newsletter" />
+<meta property="og:description"
+    content="Stay up to date with new open source projects and developer events from Embark with our developer newsletter" />
+{% endblock content %}
+
 {% block content %}
 <section class="full-width-section cover">
     <div class="container">
@@ -24,15 +37,15 @@
     <div class="newsletter-container container">
         {% for n in data.newsletter %}
         <a href="{{ n.link }}" class="card">
-        <div class="newsletter-card">
-          <h3 class="title">
-            {{ n.name }}
-          </h3>
-          <p>{{ n.date }}</p>
-          <p>{{ n.description }}</p>
-        </div>
-      </a>
-      {% endfor %}
+            <div class="newsletter-card">
+                <h3 class="title">
+                    {{ n.name }}
+                </h3>
+                <p>{{ n.date }}</p>
+                <p>{{ n.description }}</p>
+            </div>
+        </a>
+        {% endfor %}
     </div>
 </section>
 {% endblock content %}
