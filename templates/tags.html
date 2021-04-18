@@ -15,8 +15,6 @@
 
 <section id="projects">
     <div class="container">
-        <project-category v-bind:tag="getTagFromUrl()" v-bind:projects="projectsWithTag(getTagFromUrl())">
-        </project-category>
         {{ macros::project_category_all(projects=data.projects) }}
     </div>
 </section>

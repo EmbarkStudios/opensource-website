@@ -22,8 +22,7 @@
 {% endmacro tags %}
 
 {% macro star_count(project) %}
-<!-- TODO v-if -->
-<div class="github-btn github-stargazers github-btn-large" v-if="project.stargazers_count != undefined">
+<div class="github-btn github-stargazers github-btn-large">
     <a class="gh-btn" href="https://github.com/EmbarkStudios/{{ project.name }}" rel="noopener noreferrer"
         target="_blank">
         <span class="gh-ico" aria-hidden="true"></span>
@@ -31,20 +30,21 @@
     </a>
     <a class="gh-count star-count-{{ project.name }}"
         href="https://github.com/EmbarkStudios/{{ project.name }}/stargazers" rel="noopener noreferrer" target="_blank"
-        aria-hidden="true"></a>
+        aria-hidden="true">
+    </a>
 </div>
 {% endmacro star_count %}
 
 {% macro issues_count(project) %}
-<!-- TODO v-if -->
-<div class="github-btn github-stargazers github-btn-large" v-if="project.open_issues_count != undefined">
+<div class="github-btn github-stargazers github-btn-large">
     <a class="gh-btn" href="https://github.com/EmbarkStudios/{{ project.name }}/issues" rel="noopener noreferrer"
         target="_blank">
         <span class="gh-ico" aria-hidden="true"></span>
         <span class="gh-text">Issues</span>
     </a>
     <a class="gh-count issue-count-{{ project.name }}" href="https://github.com/EmbarkStudios/{{ project.name }}/issues"
-        rel="noopener noreferrer" target="_blank" aria-hidden="true"></a>
+        rel="noopener noreferrer" target="_blank" aria-hidden="true">
+    </a>
 </div>
 {% endmacro issues_count %}
 
@@ -114,8 +114,7 @@
 {% endmacro project_category %}
 
 {% macro search_overlay(projects) %}
-<!-- TODO v-show -->
-<div id="search-overlay" class="search-overlay" v-show="showSearch" onkeyup="escapeSearch(event)"
+<div id="search-overlay" class="search-overlay" onkeyup="escapeSearch(event)"
     style="display: none;">
     <div class="search-overlay__content">
         <h2>Search packages:</h2>
@@ -123,16 +122,13 @@
             <button onclick="toggleSearch()" class="search-close-button">
                 <span class="fa fa-close search-overlay__close"></span>
             </button>
-            <!-- TODO v-model & ref-->
-            <input id="search-input" type="text" placeholder="Start typing..." v-model="search" ref="search">
+            <input id="search-input" type="text" placeholder="Start typing...">
         </div>
         <div class="search-overlay__results">
-            <!-- TODO this has to be handled by javascript v-for-->
             {% for p in projects | sort(attribute="name") %}
             {%- if not p.hidden -%}
             <div id="search-project-card-{{ p.name }}"
-                onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'" class="card cursor-pointer"
-                v-for="p in searchedProjects">
+                onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'" class="card cursor-pointer">
                 <div class="project-card">
                     <h3 class="title">
                         {%- if p.emoji -%}
