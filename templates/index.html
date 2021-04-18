@@ -58,8 +58,7 @@
             Featured Open Source Projects
         </h2>
         <div class="projects-container">
-            {% for p in data.projects | sort(attribute="name") %}
-            {%- if p.featured -%}
+            {% for p in data.projects | filter(attribute="featured", value=true) | sort(attribute="name") %}
             <div style="background-image: url('{{ p.featureImage }}');"
                 onclick="window.location = '{{ config.extra.embark_github_url }}{{ p.name }}'"
                 class="card project-featured cursor-pointer">
@@ -68,11 +67,12 @@
                     {{ p.name }}
                 </h3>
                 <p>
+                    {%- if p.extendedDescription -%}
                     {{ p.extendedDescription }}
+                    {%- endif -%}
                 </p>
                 {{ macros::tags(tags=p.tags) }}
             </div>
-            {%- endif -%}
             {% endfor %}
         </div>
     </div>
@@ -100,8 +100,8 @@
             We have also released some of our day-to-day studio tools.
         </p>
         <div class="projects-container">
-            {% for p in data.projects | sort(attribute="name") %}
-            {%- if p.tags and p.tags is containing("blender") -%}
+            {% for p in data.projects | filter(attribute="tags") | sort(attribute="name") %}
+            {%- if p.tags is containing("blender") -%}
             <div onclick="window.location = '{{ config.extra.embark_github_url }}{{ p.name }}'"
                 class="card cursor-pointer">
                 <div class="project-card">
