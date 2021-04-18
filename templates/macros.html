@@ -61,8 +61,9 @@
     <div class="projects-container" id="{{ tag }}">
         {% for p in projects | sort(attribute="name") %}
         {%- if not p.hidden and p.tags is containing(tag) -%}
-        <div onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'" class="card cursor-pointer">
-            <div class="project-card">
+        <div class="card link-container">
+            <a class="link-container-overlay" href="{{ config.extra.embark_github_url }}{{ p.name }}"></a>
+            <div class="project-card link-container-inner">
                 <h3 class="title">
                     {%- if p.emoji -%}
                     <span class="emoji">{{ p.emoji }}</span>
@@ -90,8 +91,9 @@
     <div class="projects-container">
         {% for p in projects | sort(attribute="name") %}
         {%- if not p.hidden -%}
-        <div id="project-category-{{ p.name }}" onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'" class="card cursor-pointer">
-            <div class="project-card">
+        <div id="project-category-{{ p.name }}" class="card link-container">
+            <a class="link-container-overlay" href="{{ config.extra.embark_github_url }}{{ p.name }}"></a>
+            <div class="project-card link-container-inner">
                 <h3 class="title">
                     {%- if p.emoji -%}
                     <span class="emoji">{{ p.emoji }}</span>
@@ -114,8 +116,7 @@
 {% endmacro project_category %}
 
 {% macro search_overlay(projects) %}
-<div id="search-overlay" class="search-overlay" onkeyup="escapeSearch(event)"
-    style="display: none;">
+<div id="search-overlay" class="search-overlay" onkeyup="escapeSearch(event)" style="display: none;">
     <div class="search-overlay__content">
         <h2>Search packages:</h2>
         <div class="search-input-group">
@@ -127,9 +128,9 @@
         <div class="search-overlay__results">
             {% for p in projects | sort(attribute="name") %}
             {%- if not p.hidden -%}
-            <div id="search-project-card-{{ p.name }}"
-                onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'" class="card cursor-pointer">
-                <div class="project-card">
+            <div id="search-project-card-{{ p.name }}" class="card link-container">
+                <a class="link-container-overlay" href="{{ config.extra.embark_github_url }}{{ p.name }}"></a>
+                <div class="project-card link-container-inner">
                     <h3 class="title">
                         {%- if p.emoji -%}
                         <span class="emoji">{{ p.emoji }}</span>

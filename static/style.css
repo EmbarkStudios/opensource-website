@@ -269,6 +269,28 @@ body > * {
   margin-top: 1rem;
 }
 
+.link-container {
+  position:relative;
+}
+
+.link-container .link-container-overlay {
+  position:absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.link-container .link-container-inner {
+  position:relative;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.link-container .link-container-inner a {
+  pointer-events: all;
+}
+
 /* Projects A-Z Table */
 
 .projects-list {
@@ -565,8 +587,4 @@ details > summary::-webkit-details-marker {
 
 .hidden {
   display: none;
-}
-
-.cursor-pointer {
-  cursor: pointer;
 }
