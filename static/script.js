@@ -58,7 +58,7 @@ function updateHtml(projectName, cssClass, innerHtml) {
             }
         } else { // remove HTML if no innerHtml value
             for (let j = 0; j < htmlTags.length; j++) {
-                if(cssClass !== 'project-description-') { // if its issue-count or star-count for GitHub Stats and now Data remove whole GitHub Stats
+                if(cssClass !== 'project-description-') { // if its issue-count or star-count for GitHub Stats and no GitHub Data remove whole GitHub Stats
                     htmlTags[j].parentNode.parentNode.removeChild(htmlTags[j].parentNode);
                 } else {
                     htmlTags[j].parentNode.removeChild(htmlTags[j]);
@@ -107,7 +107,6 @@ function handleSearchInput() {
 
 function showAllSearchedProjects(searchedProjects) {
     for (let i = 0; i < state.projects.length; i++) {
-        // normal string concat instead of template-strings to be able to support IE
         const card = document.body.querySelector('#search-project-card-' + state.projects[i].name);
         if (!card) return;
 

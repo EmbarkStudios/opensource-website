@@ -269,11 +269,11 @@ body > * {
 }
 
 .link-container {
-  position:relative;
+  position: relative;
 }
 
 .link-container .link-container-overlay {
-  position:absolute;
+  position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
@@ -281,7 +281,7 @@ body > * {
 }
 
 .link-container .link-container-inner {
-  position:relative;
+  position: relative;
   pointer-events: none;
   z-index: 1;
 }
