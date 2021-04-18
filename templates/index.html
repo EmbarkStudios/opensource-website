@@ -150,7 +150,7 @@
             <ul class="projects-list">
                 {% for p in data.projects | sort(attribute="name") %}
                 {%- if not p.hidden -%}
-                <a v-for="p in alphabetisedProjects" href="{{ config.extra.embark_github_url }}{{ p.name }}">
+                <a href="{{ config.extra.embark_github_url }}{{ p.name }}">
                     <li>
                         <span>{%- if p.emoji -%} {{ p.emoji }} {%- endif -%} &nbsp; {{ p.name }}</span>
                         {{ macros::tags(tags=p.tags) }}
