@@ -1,0 +1,121 @@
+{% macro header() %}
+<header class="header">
+    <a href="https://embark-studios.com"><img id="logo" src="./img/logo.png" /></a>
+    <div>
+        <a href="https://embark-studios.com" class="fas fa-globe-americas"></a>
+        <a href="https://twitter.com/EmbarkStudios" class="fa fa-twitter"></a>
+        <a href="https://github.com/EmbarkStudios" class="fa fa-github"></a>
+        <a href="https://discord.gg/8TW9nfF" class="fab fa-discord"></a>
+        <div class="fa fa-search search-icon" onclick="toggleSearch()"></div>
+    </div>
+</header>
+{% endmacro header %}
+
+{% macro tags(tags) %}
+<div class="tags">
+    {% for tag in tags %}
+    <div class="tag tag-{{ tag }}">
+        <a href="/tags?tag={{ tag }}">{{ tag }}</a>
+    </div>
+    {% endfor %}
+</div>
+{% endmacro tags %}
+
+{% macro star_count(project) %}
+<!-- TODO v-if -->
+<div class="github-btn github-stargazers github-btn-large" v-if="project.stargazers_count != undefined">
+    <a class="gh-btn" href="https://github.com/EmbarkStudios/{{ project.name }}" rel="noopener noreferrer"
+        target="_blank">
+        <span class="gh-ico" aria-hidden="true"></span>
+        <span class="gh-text">Star</span>
+    </a>
+    <a class="gh-count star-count-{{ project.name }}"
+        href="https://github.com/EmbarkStudios/{{ project.name }}/stargazers" rel="noopener noreferrer" target="_blank"
+        aria-hidden="true">TODO project.stargazers_count</a>
+</div>
+{% endmacro star_count %}
+
+{% macro issues_count(project) %}
+<!-- TODO v-if -->
+<div class="github-btn github-stargazers github-btn-large" v-if="project.open_issues_count != undefined">
+    <a class="gh-btn" href="https://github.com/EmbarkStudios/{{ project.name }}" rel="noopener noreferrer"
+        target="_blank">
+        <span class="gh-ico" aria-hidden="true"></span>
+        <span class="gh-text">Issues</span>
+    </a>
+    <a class="gh-count issue-count-{{ project.name }}" href="https://github.com/EmbarkStudios/{{ project.name }}"
+        rel="noopener noreferrer" target="_blank" aria-hidden="true">TODO project.open_issues_count</a>
+</div>
+{% endmacro issues_count %}
+
+{% macro github_stats(project) %}
+<div class="github-buttons-container">
+    {{ macros::star_count(project=project) }}
+    {{ macros::issues_count(project=project) }}
+</div>
+{% endmacro github_stats %}
+
+{% macro project_category(projects, tag) %}
+<section class="category">
+    <h2 class="category-title">Our <span class="category-tag">{{ tag }}</span> projects</h2>
+    <div class="projects-container" id="{{ tag }}">
+        {% for p in projects %}
+        <a href="https://github.com/EmbarkStudios/{{ p }}" class="card">
+            <div class="project-card">
+                <h3 class="title">
+                    <span class="emoji">{{ p.emoji }}</span>
+                    {{ p.name }}
+                </h3>
+                <p>{{ p.description }}</p>
+                {{ macros::tags(tags=p.tags) }}
+                {{ macros::github_stats(project=p) }}
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+{% endmacro project_category %}
+
+{% macro search_overlay(projects) %}
+<!-- TODO v-show -->
+<div id="search-overlay" class="search-overlay" v-show="showSearch" onkeyup="escapeSearch(event)"
+    style="display: none;">
+    <div class="search-overlay__content">
+        <h2>Search packages:</h2>
+        <div class="search-input-group">
+            <button onclick="toggleSearch()" class="search-close-button">
+                <span class="fa fa-close search-overlay__close"></span>
+            </button>
+            <!-- TODO v-model & ref-->
+            <input id="search-input" type="text" placeholder="Start typing..." v-model="search" ref="search">
+        </div>
+        <div class="search-overlay__results">
+            <!-- TODO this has to be handled by javascript v-for-->
+            {% for p in projects %}
+            {%- if not p.hidden  -%}
+            <div id="search-project-card-{{ p.name }}"
+                onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'" class="card"
+                v-for="p in searchedProjects">
+                <div class="project-card">
+                    <h3 class="title">
+                        {%- if p.emoji -%}
+                        <span class="emoji">{{ p.emoji }}</span>
+                        {%- endif -%}
+                        {{ p.name }}
+                    </h3>
+                    {%- if p.description -%}
+                    <p>{{ p.description }}</p>
+                    {%- endif -%}
+                    {%- if p.tags -%}
+                    {{ macros::tags(tags=p.tags) }}
+                    {%- endif -%}
+                    {{ macros::github_stats(project=p) }}
+                </div>
+            </div>
+            {%- endif -%}
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endmacro search_overlay %}
