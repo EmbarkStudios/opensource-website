@@ -566,3 +566,7 @@ details > summary::-webkit-details-marker {
 .hidden {
   display: none;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}

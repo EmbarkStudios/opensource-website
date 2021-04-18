@@ -41,11 +41,11 @@
             Featured Open Source Projects
         </h2>
         <div class="projects-container">
-            {% for p in data.projects %}
+            {% for p in data.projects | sort(attribute="name") %}
             {%- if p.featured -%}
             <div style="background-image: url('{{ p.featureImage }}');"
-                onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'"
-                class="card project-featured">
+                onclick="window.location = '{{ config.extra.embark_github_url }}{{ p.name }}'"
+                class="card project-featured cursor-pointer">
                 <h3 class="title">
                     <span class="emoji">{{ p.emoji }}</span>
                     {{ p.name }}
@@ -83,9 +83,9 @@
             We have also released some of our day-to-day studio tools.
         </p>
         <div class="projects-container">
-            {% for p in data.projects %}
+            {% for p in data.projects | sort(attribute="name") %}
             {%- if p.tags and p.tags is containing("blender") -%}
-            <div onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'" class="card">
+            <div onclick="window.location = '{{ config.extra.embark_github_url }}{{ p.name }}'" class="card cursor-pointer">
                 <div class="project-card">
                     <h3 class="title">
                         {%- if p.emoji -%}
@@ -94,7 +94,7 @@
                         {{ p.name }}
                     </h3>
                     {%- if p.description -%}
-                    <p>{{ p.description }}</p>
+                    <p class="project-description-{{ p.name }}">{{ p.description }}</p>
                     {%- endif -%}
                     {%- if p.tags -%}
                     {{ macros::tags(tags=p.tags) }}
@@ -143,9 +143,9 @@
         <details>
             <summary>See all Projects</summary>
             <ul class="projects-list">
-                {% for p in data.projects %}
+                {% for p in data.projects | sort(attribute="name") %}
                 {%- if not p.hidden -%}
-                <a v-for="p in alphabetisedProjects" href="https://github.com/EmbarkStudios/{{ p.name }}">
+                <a v-for="p in alphabetisedProjects" href="{{ config.extra.embark_github_url }}{{ p.name }}">
                     <li>
                         <span>{%- if p.emoji -%} {{ p.emoji }} {%- endif -%} &nbsp; {{ p.name }}</span>
                         {{ macros::tags(tags=p.tags) }}
@@ -212,9 +212,9 @@
       </h1>
       <p>All projects created at Embark Studios are open for contribution. We welcome contributions from people of all backgrounds who are interested in making great software with us. We need <b>you</b> to help us achieve our goal of empowering everyone to create.</p>
       <p>If you have any difficulties getting involved or finding answers to your questions, please don't hesitate to ask your questions in our <a href="https://discord.com/invite/8TW9nfF">discord</a> channel.</p>
-      <a href="https://github.com/EmbarkStudios/opensource-website/blob/main/CODE_OF_CONDUCT.md"><h3>Read our Code of Conduct →</h3></a>
+      <a href="{{ config.extra.embark_github_url }}opensource-website/blob/main/CODE_OF_CONDUCT.md"><h3>Read our Code of Conduct →</h3></a>
       <a href="https://github.com/search?q=user:EmbarkStudios+state:open"><h3>Check out open issues →</h3></a>
-      <a href="https://github.com/EmbarkStudios/opensource-website/blob/main/CONTRIBUTING.md" class="button-primary">Get Started!</a>
+      <a href="{{ config.extra.embark_github_url }}opensource-website/blob/main/CONTRIBUTING.md" class="button-primary">Get Started!</a>
       <p>If you want to collaborate with Embark, you can reach out to us at <a href="mailto:opensource@embark-studios.com">opensource@embark-studios.com</a>.</p>
       <p>We're also looking for passionate people to <a href="https://embark-studios.com/jobs">join our team</a> in Stockholm!</p>
     </div>
