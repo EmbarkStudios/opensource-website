@@ -31,20 +31,20 @@
     </a>
     <a class="gh-count star-count-{{ project.name }}"
         href="https://github.com/EmbarkStudios/{{ project.name }}/stargazers" rel="noopener noreferrer" target="_blank"
-        aria-hidden="true">TODO project.stargazers_count</a>
+        aria-hidden="true"></a>
 </div>
 {% endmacro star_count %}
 
 {% macro issues_count(project) %}
 <!-- TODO v-if -->
 <div class="github-btn github-stargazers github-btn-large" v-if="project.open_issues_count != undefined">
-    <a class="gh-btn" href="https://github.com/EmbarkStudios/{{ project.name }}" rel="noopener noreferrer"
+    <a class="gh-btn" href="https://github.com/EmbarkStudios/{{ project.name }}/issues" rel="noopener noreferrer"
         target="_blank">
         <span class="gh-ico" aria-hidden="true"></span>
         <span class="gh-text">Issues</span>
     </a>
-    <a class="gh-count issue-count-{{ project.name }}" href="https://github.com/EmbarkStudios/{{ project.name }}"
-        rel="noopener noreferrer" target="_blank" aria-hidden="true">TODO project.open_issues_count</a>
+    <a class="gh-count issue-count-{{ project.name }}" href="https://github.com/EmbarkStudios/{{ project.name }}/issues"
+        rel="noopener noreferrer" target="_blank" aria-hidden="true"></a>
 </div>
 {% endmacro issues_count %}
 
@@ -59,9 +59,9 @@
 <section class="category">
     <h2 class="category-title">Our <span class="category-tag">{{ tag }}</span> projects</h2>
     <div class="projects-container" id="{{ tag }}">
-        {% for p in projects %}
+        {% for p in projects | sort(attribute="name") %}
         {%- if not p.hidden and p.tags is containing(tag) -%}
-        <div onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'" class="card">
+        <div onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'" class="card cursor-pointer">
             <div class="project-card">
                 <h3 class="title">
                     {%- if p.emoji -%}
@@ -70,7 +70,7 @@
                     {{ p.name }}
                 </h3>
                 {%- if p.description -%}
-                <p>{{ p.description }}</p>
+                <p class="project-description-{{ p.name }}">{{ p.description }}</p>
                 {%- endif -%}
                 {%- if p.tags -%}
                 {{ macros::tags(tags=p.tags) }}
@@ -99,10 +99,10 @@
         </div>
         <div class="search-overlay__results">
             <!-- TODO this has to be handled by javascript v-for-->
-            {% for p in projects %}
+            {% for p in projects | sort(attribute="name") %}
             {%- if not p.hidden -%}
             <div id="search-project-card-{{ p.name }}"
-                onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'" class="card"
+                onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'" class="card cursor-pointer"
                 v-for="p in searchedProjects">
                 <div class="project-card">
                     <h3 class="title">
@@ -112,7 +112,7 @@
                         {{ p.name }}
                     </h3>
                     {%- if p.description -%}
-                    <p>{{ p.description }}</p>
+                    <p class="project-description-{{ p.name }}">{{ p.description }}</p>
                     {%- endif -%}
                     {%- if p.tags -%}
                     {{ macros::tags(tags=p.tags) }}
