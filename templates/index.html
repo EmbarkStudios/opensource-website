@@ -59,19 +59,20 @@
         </h2>
         <div class="projects-container">
             {% for p in data.projects | filter(attribute="featured", value=true) | sort(attribute="name") %}
-            <div style="background-image: url('{{ p.featureImage }}');"
-                onclick="window.location = '{{ config.extra.embark_github_url }}{{ p.name }}'"
-                class="card project-featured cursor-pointer">
-                <h3 class="title">
-                    <span class="emoji">{{ p.emoji }}</span>
-                    {{ p.name }}
-                </h3>
-                <p>
-                    {%- if p.extendedDescription -%}
-                    {{ p.extendedDescription }}
-                    {%- endif -%}
-                </p>
-                {{ macros::tags(tags=p.tags) }}
+            <div style="background-image: url('{{ p.featureImage }}');" class="card project-featured link-container">
+                <a class="link-container-overlay" href="{{ config.extra.embark_github_url }}{{ p.name }}"></a>
+                <div class="link-container-inner">
+                    <h3 class="title">
+                        <span class="emoji">{{ p.emoji }}</span>
+                        {{ p.name }}
+                    </h3>
+                    <p>
+                        {%- if p.extendedDescription -%}
+                        {{ p.extendedDescription }}
+                        {%- endif -%}
+                    </p>
+                    {{ macros::tags(tags=p.tags) }}
+                </div>
             </div>
             {% endfor %}
         </div>
@@ -102,9 +103,9 @@
         <div class="projects-container">
             {% for p in data.projects | filter(attribute="tags") | sort(attribute="name") %}
             {%- if p.tags is containing("blender") -%}
-            <div onclick="window.location = '{{ config.extra.embark_github_url }}{{ p.name }}'"
-                class="card cursor-pointer">
-                <div class="project-card">
+            <div class="card link-container">
+                <a class="link-container-overlay" href="{{ config.extra.embark_github_url }}{{ p.name }}"></a>
+                <div class="project-card link-container-inner">
                     <h3 class="title">
                         {%- if p.emoji -%}
                         <span class="emoji">{{ p.emoji }}</span>
