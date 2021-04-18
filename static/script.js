@@ -4,8 +4,6 @@ let state = {
     showSearch: false,
 };
 
-init();
-
 async function init() {
     await loadProjectAndNewsletterData();
     await loadGitHubData();
@@ -23,28 +21,23 @@ async function loadProjectAndNewsletterData() {
 }
 
 async function loadGitHubData() {
-    try {
-        const gitHubResponse = await fetch("https://api.github.com/search/repositories?q=+org:EmbarkStudios+is:public&sort=created&order=asc&per_page=100");
-        if (gitHubResponse && gitHubResponse.ok) {
-            const { items: repos } = await gitHubResponse.json();
+    const gitHubResponse = await fetch("https://api.github.com/search/repositories?q=+org:EmbarkStudios+is:public&sort=created&order=asc&per_page=100");
+    if (gitHubResponse && gitHubResponse.ok) {
+        const { items: repos } = await gitHubResponse.json();
 
-            for (let i = 0; i < state.projects.length; i++) {
-                const project = state.projects[i];
-                const repo = repos.find((el) => el.name === project.name);
-                if (repo) {
-                    project.description = repo.description;
-                    project.stargazers_count = repo.stargazers_count;
-                    project.language = repo.language;
-                    project.forks_count = repo.forks_count;
-                    project.open_issues_count = repo.open_issues_count;
-                }
+        for (let i = 0; i < state.projects.length; i++) {
+            const project = state.projects[i];
+            const repo = repos.find((el) => el.name === project.name);
+            if (repo) {
+                project.description = repo.description;
+                project.stargazers_count = repo.stargazers_count;
+                project.language = repo.language;
+                project.forks_count = repo.forks_count;
+                project.open_issues_count = repo.open_issues_count;
             }
-            hydrateHtmlWithGitHubData();
         }
-
-    } catch (error) {
-        console.error('Failed to get repos info: ' + error);
     }
+    hydrateHtmlWithGitHubData();
 }
 
 function hydrateHtmlWithGitHubData() {
@@ -110,7 +103,7 @@ function handleSearchInput() {
 
 function showAllSearchedProjects(searchedProjects) {
     for (let i = 0; i < state.projects.length; i++) {
-        //normal string concat instead of template-strings to be able to support IE
+        // normal string concat instead of template-strings to be able to support IE
         const card = document.body.querySelector('#search-project-card-' + state.projects[i].name);
         if (!card) return;
 
