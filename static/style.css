@@ -162,7 +162,6 @@ body > * {
   cursor: pointer;
   background: transparent;
   border: none;
-  color: white;
   font-size: 1rem;
   padding: 0;
 }
@@ -291,6 +290,11 @@ body > * {
   pointer-events: all;
 }
 
+.hidden {
+  display: none;
+}
+
+
 /* Projects A-Z Table */
 
 .projects-list {
@@ -405,6 +409,10 @@ body > * {
 
   .logo-image {
     fill: white;
+  }
+
+  .search-close-button {
+    color: white;
   }
 }
 
@@ -567,6 +575,7 @@ details {
 }
 
 details > summary {
+  list-style: none;
   display: inline-block;
   font-size: 20px;
   background: var(--embark-blue);
@@ -581,10 +590,7 @@ details > summary {
   transition: all 0.2s ease-in-out;
 }
 
-details > summary::-webkit-details-marker {
-  display: none;
-}
-
-.hidden {
+details > summary::-webkit-details-marker,
+details > summary::marker {
   display: none;
 }
