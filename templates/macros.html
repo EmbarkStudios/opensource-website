@@ -84,6 +84,35 @@
 </section>
 {% endmacro project_category %}
 
+{% macro project_category_all(projects) %}
+<section class="category">
+    <h2 class="category-title">Our <span id="category-tag-headline" class="category-tag"></span> projects</h2>
+    <div class="projects-container">
+        {% for p in projects | sort(attribute="name") %}
+        {%- if not p.hidden -%}
+        <div id="project-category-{{ p.name }}" onclick="window.location = 'https://github.com/EmbarkStudios/{{ p.name }}'" class="card cursor-pointer">
+            <div class="project-card">
+                <h3 class="title">
+                    {%- if p.emoji -%}
+                    <span class="emoji">{{ p.emoji }}</span>
+                    {%- endif -%}
+                    {{ p.name }}
+                </h3>
+                {%- if p.description -%}
+                <p class="project-description-{{ p.name }}">{{ p.description }}</p>
+                {%- endif -%}
+                {%- if p.tags -%}
+                {{ macros::tags(tags=p.tags) }}
+                {%- endif -%}
+                {{ macros::github_stats(project=p) }}
+            </div>
+        </div>
+        {%- endif -%}
+        {% endfor %}
+    </div>
+</section>
+{% endmacro project_category %}
+
 {% macro search_overlay(projects) %}
 <!-- TODO v-show -->
 <div id="search-overlay" class="search-overlay" v-show="showSearch" onkeyup="escapeSearch(event)"

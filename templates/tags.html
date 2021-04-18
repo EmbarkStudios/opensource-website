@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
+{% block content %}
+<section class="full-width-section cover">
+    <div class="container">
+        <a href="/">
+            <h1>
+                <i class="fa fa-long-arrow-left"></i>Back
+            </h1>
+        </a>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <project-category v-bind:tag="getTagFromUrl()" v-bind:projects="projectsWithTag(getTagFromUrl())">
+        </project-category>
+        {{ macros::project_category_all(projects=data.projects) }}
+    </div>
+</section>
+<script src="./tags/tags.js"></script>
+{% endblock content %}
