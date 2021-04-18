@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
+{% block content %}
+<section class="full-width-section cover">
+    <div class="container">
+        <a href="/">
+            <h1>
+                <i class="fa fa-long-arrow-left"></i>Back
+            </h1>
+        </a>
+    </div>
+</section>
+
+<div class="container">
+    <h1>🗞 Newsletter</h1>
+    <p>Stay up to date with new open source projects and developer events from Embark with our developer newsletter.</p>
+    <a class="button-primary" href="https://mailchi.mp/3608b3a1adca/embarkdev">Sign up</a>
+    <h2>Previous Editions:</h2>
+</div>
+
+<section class="category">
+    <div class="newsletter-container container">
+        {% for n in data.newsletter %}
+        <a href="{{ n.link }}" class="card">
+        <div class="newsletter-card">
+          <h3 class="title">
+            {{ n.name }}
+          </h3>
+          <p>{{ n.date }}</p>
+          <p>{{ n.description }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+</section>
+{% endblock content %}

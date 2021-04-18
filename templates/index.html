@@ -195,7 +195,7 @@
         </h1>
         <p>Stay up to date with new open source projects and developer events from Embark with our developer newsletter. Check out the latest issues:</p>
         {% for n in data.newsletter | slice(end=3) %}
-        <a href="{{ n.link }}" class="card" v-for="n in newsletter.slice(0,3)">
+        <a href="{{ n.link }}" class="card">
         <div class="newsletter-card">
           <h3 class="title">
             {{ n.name }}
