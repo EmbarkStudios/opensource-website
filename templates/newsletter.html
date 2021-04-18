@@ -13,9 +13,14 @@
 <meta property="og:title" content="Embark Studios Open Source Newsletter" />
 <meta property="og:description"
     content="Stay up to date with new open source projects and developer events from Embark with our developer newsletter" />
-{% endblock content %}
+{% endblock head %}
 
 {% block content %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        init();
+    });
+</script>
 <section class="full-width-section cover">
     <div class="container">
         <a href="/">
