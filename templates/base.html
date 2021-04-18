@@ -7,7 +7,21 @@
 
 <head>
   <meta charset="utf-8">
-  <title>MyBlog</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Standard Metadata -->
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://embark.dev" />
+  <meta property="og:image" content="https://embark.dev/img/code.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@EmbarkStudios" />
+  <meta name="twitter:image" content="https://embark.dev/img/code.jpg">
+
+  {% block head %} {% endblock %}
 
   <link rel="stylesheet" href="./style.css">
   <script src="https://kit.fontawesome.com/e541009933.js" crossorigin="anonymous"></script>
@@ -17,7 +31,6 @@
 <body>
   {{ macros::header() }}
   {{ macros::search_overlay(projects=data.projects) }}
-  <!-- <div id="app"></div> -->
   {% block content %} {% endblock %}
 </body>
 
