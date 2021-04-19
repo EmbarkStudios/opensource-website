@@ -29,7 +29,7 @@ jobs:
         run: npm run format-check
       
       - name: "Lint CSS"
-        uses: npm run stylelint
+        run: npm run stylelint
 
       - name: "Validate data.json format"
         run: npm run validate-data
