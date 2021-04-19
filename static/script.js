@@ -11,7 +11,7 @@ async function init() {
 }
 
 async function loadProjectAndNewsletterData() {
-    const data = await (await fetch('./data/data.json')).json();
+    const data = await (await fetch('/data/data.json')).json();
     if (data.projects && data.newsletter) {
         data.projects = data.projects.filter((project) => !project.hidden);
 
