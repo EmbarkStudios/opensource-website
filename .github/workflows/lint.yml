@@ -27,6 +27,9 @@ jobs:
 
       - name: "Check JavaScript code formatting"
         run: npm run format-check
+
+      - name: "Lint English writing"
+        run: npm run alex
       
       - name: "Lint CSS"
         run: npm run stylelint

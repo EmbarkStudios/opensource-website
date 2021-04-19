@@ -7,7 +7,8 @@
         "format-check": "prettier --check **/*.js",
         "format": "prettier --write **/*.js",
         "stylelint": "stylelint ./static/style.css",
-        "validate-data": "ajv validate -s ./static/data/data-schema.json -d ./static/data/data.json"
+        "validate-data": "ajv validate -s ./static/data/data-schema.json -d ./static/data/data.json",
+        "alex": "alex && alex --html"
     },
     "repository": {
         "type": "git",
@@ -20,9 +21,10 @@
     },
     "homepage": "https://github.com/EmbarkStudios/opensource-website#readme",
     "devDependencies": {
-        "ajv-cli": "^4.0.1",
+        "ajv-cli": "^5.0.0",
+        "alex": "^9.1.0",
         "prettier": "^2.2.1",
-        "stylelint": "^13.8.0",
-        "stylelint-config-standard": "^20.0.0"
+        "stylelint": "^13.12.0",
+        "stylelint-config-standard": "^21.0.0"
     }
 }
