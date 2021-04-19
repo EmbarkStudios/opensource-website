@@ -185,7 +185,7 @@ body > * {
   flex-direction: column;
   justify-content: center;
   margin-top: 90px;
-  background-image: url('./img/code.jpg');
+  background-image: url('/img/code.jpg');
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
 }
