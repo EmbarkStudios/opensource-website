@@ -1,0 +1,28 @@
+{
+    "name": "opensource-website",
+    "version": "1.0.0",
+    "description": "Hub for Embark's open source efforts",
+    "scripts": {
+        "lint": "npm run format-check && npm run stylelint && npm run alex && npm run validate-data",
+        "format-check": "prettier --check **/*.js",
+        "format": "prettier --write **/*.js",
+        "stylelint": "stylelint ./static/style.css",
+        "validate-data": "ajv validate -s ./static/data/data-schema.json -d ./static/data/data.json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/EmbarkStudios/opensource-website.git"
+    },
+    "author": "EmbarkStudios",
+    "license": "(MIT OR Apache-2.0)",
+    "bugs": {
+        "url": "https://github.com/EmbarkStudios/opensource-website/issues"
+    },
+    "homepage": "https://github.com/EmbarkStudios/opensource-website#readme",
+    "devDependencies": {
+        "ajv-cli": "^4.0.1",
+        "prettier": "^2.2.1",
+        "stylelint": "^13.8.0",
+        "stylelint-config-standard": "^20.0.0"
+    }
+}

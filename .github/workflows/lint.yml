@@ -1,0 +1,35 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "*"
+  pull_request:
+
+jobs:
+  build:
+    name: Validate code
+    runs-on: ubuntu-latest
+    steps:
+      
+      # Check out the repository
+      - uses: actions/checkout@v2
+
+      # Install Node.js
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      # Install your dependencies
+      - run: npm ci
+
+      - name: "Check JavaScript code formatting"
+        run: npm run format-check
+      
+      - name: "Lint CSS"
+        uses: npm run stylelint
+
+      - name: "Validate data.json format"
+        run: npm run validate-data
