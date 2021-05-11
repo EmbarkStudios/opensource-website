@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "name": "opa-policies",
+      "emoji": "📜",
+      "tags": ["opa", "rego"],
+      "description": "OPA Policies for Dockerfiles, Kubernetes YAMLs, Terraform, etc",
+      "featured": false
+    },
+    {
       "name": "rust-gpu",
       "emoji": "🐉",
       "tags": ["rust", "gpu"],
