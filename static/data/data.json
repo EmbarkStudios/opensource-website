@@ -207,10 +207,16 @@
       "hidden": "This is a public fork used to share changes with the Sentry team"
     },	
     {	
-      "name": "tame-oidc",	
-      "emoji": "🧬",	
-      "tags": ["rust"],	
+      "name": "tame-oidc",
+      "emoji": "🧬",
+      "tags": ["rust"],
       "description": "Small OIDC crate that follows the sans-io approach"
+    },
+    {
+      "name": "discord-sdk",
+      "emoji": "⛴",
+      "tags": ["rust"],
+      "description": "An open implementation of the Discord Game SDK in Rust"
     }
   ],
   "newsletter":[
