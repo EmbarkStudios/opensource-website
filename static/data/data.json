@@ -214,8 +214,8 @@
     },
     {
       "name": "discord-sdk",
-      "emoji": "⛴",
-      "tags": ["rust"],
+      "emoji": "⚔️",
+      "tags": ["rust", "discord"],
       "description": "An open implementation of the Discord Game SDK in Rust"
     }
   ],
