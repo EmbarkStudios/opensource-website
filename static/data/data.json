@@ -217,6 +217,24 @@
       "emoji": "⚔️",
       "tags": ["rust", "discord"],
       "description": "An open implementation of the Discord Game SDK in Rust"
+    },
+    {
+      "name": "breakpad-sys",
+      "emoji": "👁",
+      "tags": ["rust", "breakpad", "minidump"],
+      "description": "Rust wrapper around the crash collection features of Breakpad"
+    },
+    {
+      "name": "breakpad-handler",
+      "emoji": "👁",
+      "tags": ["rust", "breakpad", "minidump"],
+      "description": "Rust wrapper around breakpad-sys"
+    },
+    {
+      "name": "sentry-contrib-breakpad",
+      "emoji": "👁",
+      "tags": ["rust", "breakpad", "minidump", "sentry"],
+      "description": "Integrates crash dump collection with Sentry"
     }
   ],
   "newsletter":[
