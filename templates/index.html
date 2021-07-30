@@ -60,7 +60,7 @@
         <div class="projects-container">
             {% for p in data.projects | filter(attribute="featured", value=true) | sort(attribute="name") %}
             <div style="background-image: url('{{ p.featureImage }}');" class="card project-featured link-container">
-                <a class="link-container-overlay" href="{{ p.repo }}"></a>
+                <a class="link-container-overlay" href="{{ macros::repo_url(project=p) }}"></a>
                 <div class="link-container-inner">
                     <h3 class="title">
                         <span class="emoji">{{ p.emoji }}</span>
@@ -104,7 +104,7 @@
             {% for p in data.projects | filter(attribute="tags") | sort(attribute="name") %}
             {%- if p.tags is containing("blender") -%}
             <div class="card link-container">
-                <a class="link-container-overlay" href="{{ p.repo }}"></a>
+                <a class="link-container-overlay" href="{{ macros::repo_url(project=p) }}"></a>
                 <div class="project-card link-container-inner">
                     <h3 class="title">
                         {%- if p.emoji -%}
@@ -164,7 +164,7 @@
             <ul class="projects-list">
                 {% for p in data.projects | sort(attribute="name") %}
                 {%- if not p.hidden -%}
-                <a href="{{ p.repo }}">
+                <a href="{{ macros::repo_url(project=p) }}">
                     <li>
                         <span>{%- if p.emoji -%} {{ p.emoji }} {%- endif -%} &nbsp; {{ p.name }}</span>
                         {{ macros::tags(tags=p.tags) }}
