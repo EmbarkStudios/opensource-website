@@ -29,13 +29,19 @@ async function loadGitHubData() {
 
     for (let i = 0; i < state.projects.length; i++) {
       const project = state.projects[i];
-      const repo = repos.find((el) => el.name === project.name || el.html_url === project.repo);
+      const repo = repos.find(
+        (el) => el.name === project.name || el.html_url === project.repo
+      );
       if (repo) {
         project.description = repo.description;
         project.stargazers_count = repo.stargazers_count;
         project.language = repo.language;
         project.forks_count = repo.forks_count;
         project.open_issues_count = repo.open_issues_count;
+
+        if (project.repo === null) {
+          project.repo = repo.html_url;
+        }
       }
     }
   }
