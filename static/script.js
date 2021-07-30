@@ -29,7 +29,7 @@ async function loadGitHubData() {
 
     for (let i = 0; i < state.projects.length; i++) {
       const project = state.projects[i];
-      const repo = repos.find((el) => el.name === project.name);
+      const repo = repos.find((el) => el.name === project.name || el.html_url === project.repo);
       if (repo) {
         project.description = repo.description;
         project.stargazers_count = repo.stargazers_count;
