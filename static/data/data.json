@@ -222,19 +222,22 @@
       "name": "breakpad-sys",
       "emoji": "👁",
       "tags": ["rust", "breakpad", "minidump"],
-      "description": "Rust wrapper around the crash collection features of Breakpad"
+      "description": "Rust wrapper around the crash collection features of Breakpad",
+      "repo": "https://github.com/EmbarkStudios/sentry-contrib-rust"
     },
     {
       "name": "breakpad-handler",
       "emoji": "👁",
       "tags": ["rust", "breakpad", "minidump"],
-      "description": "Rust wrapper around breakpad-sys"
+      "description": "Rust wrapper around breakpad-sys",
+      "repo": "https://github.com/EmbarkStudios/sentry-contrib-rust"
     },
     {
       "name": "sentry-contrib-breakpad",
       "emoji": "👁",
       "tags": ["rust", "breakpad", "minidump", "sentry"],
-      "description": "Integrates crash dump collection with Sentry"
+      "description": "Integrates crash dump collection with Sentry",
+      "repo": "https://github.com/EmbarkStudios/sentry-contrib-rust"
     }
   ],
   "newsletter":[

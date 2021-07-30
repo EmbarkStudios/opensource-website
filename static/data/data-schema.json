@@ -19,7 +19,8 @@
               "description": { "type": "string" },
               "featured": { "type": "boolean" },
               "extendedDescription": { "type": "string" },
-              "featureImage": { "type": "string" }
+              "featureImage": { "type": "string" },
+              "repo": { "type": "string" }
             }
           },
           {

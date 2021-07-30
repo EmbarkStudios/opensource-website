@@ -21,28 +21,33 @@
 </div>
 {% endmacro tags %}
 
+{% macro repo_url(project) %}
+{% if project.repo %}
+{{ project.repo }}
+{% else %}
+{{ config.extra.embark_github_url }}{{ project.name }}
+{% endif %}
+{% endmacro repo_url %}
+
 {% macro star_count(project) %}
 <div class="github-btn github-stargazers github-btn-large">
-    <a class="gh-btn" href="https://github.com/EmbarkStudios/{{ project.name }}" rel="noopener noreferrer"
-        target="_blank">
+    <a class="gh-btn" href="{{ macros::repo_url(project=project) }}" rel="noopener noreferrer" target="_blank">
         <span class="gh-ico" aria-hidden="true"></span>
         <span class="gh-text">Star</span>
     </a>
-    <a class="gh-count star-count-{{ project.name }}"
-        href="https://github.com/EmbarkStudios/{{ project.name }}/stargazers" rel="noopener noreferrer" target="_blank"
-        aria-hidden="true">
+    <a class="gh-count star-count-{{ project.name }}" href="{{ macros::repo_url(project=project) }}/stargazers"
+        rel="noopener noreferrer" target="_blank" aria-hidden="true">
     </a>
 </div>
 {% endmacro star_count %}
 
 {% macro issues_count(project) %}
 <div class="github-btn github-stargazers github-btn-large">
-    <a class="gh-btn" href="https://github.com/EmbarkStudios/{{ project.name }}/issues" rel="noopener noreferrer"
-        target="_blank">
+    <a class="gh-btn" href="{{ macros::repo_url(project=project) }}/issues" rel="noopener noreferrer" target="_blank">
         <span class="gh-ico" aria-hidden="true"></span>
         <span class="gh-text">Issues</span>
     </a>
-    <a class="gh-count issue-count-{{ project.name }}" href="https://github.com/EmbarkStudios/{{ project.name }}/issues"
+    <a class="gh-count issue-count-{{ project.name }}" href="{{ macros::repo_url(project=project) }}/issues"
         rel="noopener noreferrer" target="_blank" aria-hidden="true">
     </a>
 </div>
@@ -62,7 +67,7 @@
         {% for p in projects | sort(attribute="name") %}
         {%- if not p.hidden and p.tags is containing(tag) -%}
         <div class="card link-container">
-            <a class="link-container-overlay" href="{{ config.extra.embark_github_url }}{{ p.name }}"></a>
+            <a class="link-container-overlay" href="{{ macros::repo_url(project=p) }}"></a>
             <div class="project-card link-container-inner">
                 <h3 class="title">
                     {%- if p.emoji -%}
@@ -92,7 +97,7 @@
         {% for p in projects | sort(attribute="name") %}
         {%- if not p.hidden -%}
         <div id="project-category-{{ p.name }}" class="card link-container">
-            <a class="link-container-overlay" href="{{ config.extra.embark_github_url }}{{ p.name }}"></a>
+            <a class="link-container-overlay" href="{{ macros::repo_url(project=p) }}"></a>
             <div class="project-card link-container-inner">
                 <h3 class="title">
                     {%- if p.emoji -%}
@@ -129,7 +134,7 @@
             {% for p in projects | sort(attribute="name") %}
             {%- if not p.hidden -%}
             <div id="search-project-card-{{ p.name }}" class="card link-container">
-                <a class="link-container-overlay" href="{{ config.extra.embark_github_url }}{{ p.name }}"></a>
+                <a class="link-container-overlay" href="{{ macros::repo_url(project=p) }}"></a>
                 <div class="project-card link-container-inner">
                     <h3 class="title">
                         {%- if p.emoji -%}
