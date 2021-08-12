@@ -162,7 +162,7 @@ body > * {
   }
 }
 
-@media screen and (min-width: 321px) and (max-width: 360px) {
+@media screen and (min-width: 321px) and (max-width: 371px) {
   .header {
     padding: 0 10px;
   }
@@ -177,17 +177,17 @@ body > * {
   }
 }
 
-@media screen and (min-width: 361px) and (max-width: 470px) {
+@media screen and (min-width: 372px) and (max-width: 470px) {
   .header {
     padding: 0 20px;
   }
 
   .icon-container a {
-    margin: 0.2em 0.2em;
+    margin: 0.2em 0.3em;
   }
 
   .search-icon {
-    margin: 0.2em 0.2em;
+    margin: 0.2em 0.3em;
     padding-left: 0;
   }
 }
