@@ -145,7 +145,7 @@ body > * {
 
 @media screen and (max-width: 320px) {
   .header {
-    padding: 0 2%;
+    padding: 0 10px;
   }
 
   .icon-container {
@@ -163,6 +163,10 @@ body > * {
 }
 
 @media screen and (min-width: 321px) and (max-width: 360px) {
+  .header {
+    padding: 0 10px;
+  }
+
   .icon-container a {
     margin: 0.1em 0.2em;
   }
@@ -174,6 +178,10 @@ body > * {
 }
 
 @media screen and (min-width: 361px) and (max-width: 470px) {
+  .header {
+    padding: 0 20px;
+  }
+
   .icon-container a {
     margin: 0.2em 0.2em;
   }
