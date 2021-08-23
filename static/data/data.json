@@ -238,6 +238,13 @@
       "tags": ["rust", "breakpad", "minidump", "sentry"],
       "description": "Integrates crash dump collection with Sentry",
       "repo": "https://github.com/EmbarkStudios/sentry-contrib-rust"
+    },
+    {
+      "name": "rymder",
+      "emoji": "🌌",
+      "tags": ["agones", "games", "multiplayer", "k8s"],
+      "description": "Unofficial agones client SDK",
+      "repo": "https://github.com/EmbarkStudios/rymder"
     }
   ],
   "newsletter":[
