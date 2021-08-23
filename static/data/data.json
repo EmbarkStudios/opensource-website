@@ -242,7 +242,7 @@
     {
       "name": "rymder",
       "emoji": "🌌",
-      "tags": ["agones", "games", "multiplayer", "k8s"],
+      "tags": ["rust", "agones", "games", "multiplayer", "k8s"],
       "description": "Unofficial agones client SDK",
       "repo": "https://github.com/EmbarkStudios/rymder"
     }
