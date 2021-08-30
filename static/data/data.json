@@ -249,6 +249,12 @@
   ],
   "newsletter":[
     {
+      "name": "Announcing Our Opensource Game Server Proxy! - Embark Dev Newsletter 010",
+      "date": "25/08/2021",
+      "link": "https://mailchi.mp/embark-studios/dev010",
+      "description": "Learn more about Quilkin, our collaboration with Google Cloud to create open-source UDP proxies built for game server communication, and more!"
+    },
+    {
       "name": "Goodbye, GLSL! Hello, Rust! - Embark Dev Newsletter 009",
       "date": "19/03/2021",
       "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=ec5759f460",
