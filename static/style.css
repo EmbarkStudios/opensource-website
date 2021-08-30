@@ -123,17 +123,78 @@ body > * {
   margin: 0;
 }
 
-.header a {
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.icon-container a {
   color: white;
   text-decoration: none;
-  margin: 0 0.2em;
+  margin: 0 0.3em;
   display: inline-block;
   transition: all 0.2s ease-in-out;
 }
 
-.header .fa:hover,
-.header .fab:hover,
-.header .fas:hover {
+.search-icon {
+  padding-left: 1em;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    padding: 0 10px;
+  }
+
+  .icon-container {
+    margin: 0 0;
+  }
+
+  .icon-container a {
+    margin: 0.1em 0.1em;
+  }
+
+  .search-icon {
+    margin: 0.1em 0.1em;
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 371px) {
+  .header {
+    padding: 0 10px;
+  }
+
+  .icon-container a {
+    margin: 0.1em 0.2em;
+  }
+
+  .search-icon {
+    margin: 0.1em 0.2em;
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 372px) and (max-width: 470px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .icon-container a {
+    margin: 0.2em 0.3em;
+  }
+
+  .search-icon {
+    margin: 0.2em 0.3em;
+    padding-left: 0;
+  }
+}
+
+.icon-container .fa:hover,
+.icon-container .fab:hover,
+.icon-container .fas:hover {
   transform: scale(1.1);
 }
 
@@ -164,11 +225,6 @@ body > * {
   border: none;
   font-size: 1rem;
   padding: 0;
-}
-
-.search-icon {
-  padding-left: 0.7em;
-  cursor: pointer;
 }
 
 .search-overlay__results {
