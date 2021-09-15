@@ -1,10 +1,19 @@
+import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
+
 let state = {
   projects: [],
   newsletter: [],
   showSearch: false,
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+});
+
 async function init() {
+  window.toggleSearch = toggleSearch;
+  window.escapeSearch = escapeSearch;
+
   await loadProjectAndNewsletterData();
   await loadGitHubData();
   handleSearchInput();
@@ -21,31 +30,32 @@ async function loadProjectAndNewsletterData() {
 }
 
 async function loadGitHubData() {
-  const gitHubResponse = await fetch(
-    "https://api.github.com/search/repositories?q=+org:EmbarkStudios+is:public&sort=created&order=asc&per_page=100"
-  );
-  if (gitHubResponse && gitHubResponse.ok) {
-    const { items: repos } = await gitHubResponse.json();
+  const octokit = new Octokit();
+  
+  octokit
+    .paginate(octokit.repos.listForOrg, {
+      org: "EmbarkStudios"
+    })
+    .then((repos) => {
+      for (let i = 0; i < state.projects.length; i++) {
+        const project = state.projects[i];
+        const repo = repos.find(
+          (el) => el.name === project.name || el.html_url === project.repo
+        );
+        if (repo) {
+          project.description = repo.description;
+          project.stargazers_count = repo.stargazers_count;
+          project.language = repo.language;
+          project.forks_count = repo.forks_count;
+          project.open_issues_count = repo.open_issues_count;
 
-    for (let i = 0; i < state.projects.length; i++) {
-      const project = state.projects[i];
-      const repo = repos.find(
-        (el) => el.name === project.name || el.html_url === project.repo
-      );
-      if (repo) {
-        project.description = repo.description;
-        project.stargazers_count = repo.stargazers_count;
-        project.language = repo.language;
-        project.forks_count = repo.forks_count;
-        project.open_issues_count = repo.open_issues_count;
-
-        if (project.repo === null) {
-          project.repo = repo.html_url;
+          if (project.repo === null) {
+            project.repo = repo.html_url;
+          }
         }
       }
-    }
-  }
-  hydrateHtmlWithGitHubData();
+      hydrateHtmlWithGitHubData();
+    });
 }
 
 function hydrateHtmlWithGitHubData() {
@@ -112,7 +122,6 @@ function handleSearchInput() {
     const searchedProjects = state.projects.filter((p) =>
       JSON.stringify(p).toLowerCase().includes(search.toLowerCase())
     );
-    console.log(searchedProjects);
     showAllSearchedProjects(searchedProjects);
   });
 }
