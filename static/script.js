@@ -34,7 +34,8 @@ async function loadGitHubData() {
   
   octokit
     .paginate(octokit.repos.listForOrg, {
-      org: "EmbarkStudios"
+      org: "EmbarkStudios",
+      per_page: 100
     })
     .then((repos) => {
       for (let i = 0; i < state.projects.length; i++) {
