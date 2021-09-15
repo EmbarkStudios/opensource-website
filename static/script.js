@@ -6,7 +6,7 @@ let state = {
   showSearch: false,
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   init();
 });
 
@@ -32,11 +32,10 @@ async function loadProjectAndNewsletterData() {
 async function loadGitHubData() {
   const octokit = new Octokit();
 
-  const repos = await octokit
-    .paginate(octokit.repos.listForOrg, {
-      org: "EmbarkStudios",
-      per_page: 100
-    });
+  const repos = await octokit.paginate(octokit.repos.listForOrg, {
+    org: "EmbarkStudios",
+    per_page: 100,
+  });
 
   for (let i = 0; i < state.projects.length; i++) {
     const project = state.projects[i];
@@ -55,7 +54,7 @@ async function loadGitHubData() {
       }
     }
   }
-  
+
   hydrateHtmlWithGitHubData();
 }
 
