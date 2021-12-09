@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "name": "cloud-dns",
+      "emoji": "📒",
+      "tags": ["rust", "gcp", "dns"],
+      "description": "cloud-dns is a crate providing a client to interact with Google Cloud DNS",
+      "featured": false
+    },
+    {
       "name": "opa-policies",
       "emoji": "📜",
       "tags": ["opa", "rego"],
