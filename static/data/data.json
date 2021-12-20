@@ -252,7 +252,17 @@
       "tags": ["rust", "agones", "games", "multiplayer", "k8s"],
       "description": "Unofficial agones client SDK",
       "repo": "https://github.com/EmbarkStudios/rymder"
-    }
+    },
+    {
+        "name": "kajiya",
+        "emoji": "💡",
+        "tags": ["rust", "gpu"],
+        "description": "Experimental real-time global illumination renderer",
+        "repo": "https://github.com/EmbarkStudios/kajiya",
+        "featured": true,
+        "extendedDescription": "Experimental real-time global illumination renderer (no precomputed light transport). Rust on CPU and GPU.",
+        "featureImage": "https://user-images.githubusercontent.com/16522064/146789417-0cc84f60-157d-4a7d-99f5-79122c1fa982.png"
+      }
   ],
   "newsletter":[
     {
