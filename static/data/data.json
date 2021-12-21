@@ -28,7 +28,7 @@
       "emoji": "🎨",
       "tags": ["rust"],
       "description": "Example-based texture synthesis written in Rust",
-      "featured": true,
+      "featured": false,
       "extendedDescription": "A light Rust API for Multiresolution Stochastic Texture Synthesis, a non-parametric example-based algorithm for image generation.",
       "featureImage": "https://camo.githubusercontent.com/c279dea27db2c10f64cd27563d8d7cc86048c5c1/68747470733a2f2f692e696d6775722e636f6d2f43735a6f5350532e6a7067"
     },
