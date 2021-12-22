@@ -150,6 +150,7 @@
       "emoji": "🐦",
       "tags": ["rust", "tools"],
       "description": "Simple instrumentation profiler for Rust."
+      "featured": true      
     },
     {
       "name": "tryhard",
