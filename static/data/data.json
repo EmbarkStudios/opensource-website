@@ -149,7 +149,7 @@
       "name": "puffin",
       "emoji": "🐦",
       "tags": ["rust", "tools"],
-      "description": "Simple instrumentation profiler for Rust."
+      "description": "Simple instrumentation profiler for Rust.",
       "featured": true      
     },
     {
