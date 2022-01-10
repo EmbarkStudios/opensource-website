@@ -152,7 +152,7 @@
       "description": "Simple instrumentation profiler for Rust.",
       "featured": true,
       "extendedDescription": "The friendly little instrumentation-based CPU profiler for Rust",
-      "featureImage": "https://github.com/EmbarkStudios/puffin/blob/main/puffin.jpg?raw=true        "      
+      "featureImage": "https://github.com/EmbarkStudios/puffin/blob/main/puffin.jpg?raw=true"
     },
     {
       "name": "tryhard",
