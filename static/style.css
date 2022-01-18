@@ -107,7 +107,7 @@ body > * {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: black;
+  background: linear-gradient(#be47e9, #fbab1e);
   color: white;
   margin: 0;
   font-size: 1.5em;
@@ -119,8 +119,42 @@ body > * {
   z-index: 100;
 }
 
+.logo-embark {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#developer {
+  margin: 0 0.5em;
+  font-size: .9em;
+}
+
 .header * {
   margin: 0;
+}
+
+.hero-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#hero-intro {
+  width: 50%;
+}
+
+#hero-intro h1 {
+  font-size: 3.5rem;
+}
+
+#hero-img {
+  width: 46%;
+}
+
+#hero-img img {
+  width: 100%;
 }
 
 .icon-container {
@@ -162,6 +196,26 @@ body > * {
   }
 }
 
+@media screen and (max-width: 1000px) {
+
+  .hero-container {
+    flex-direction: column;
+  }
+
+  #hero-intro {
+    width: 100%;
+  }
+
+  #hero-intro h1 {
+    text-align: center;
+  }
+
+  #hero-img {
+    display: none;
+  }
+  
+}
+
 @media screen and (min-width: 321px) and (max-width: 371px) {
   .header {
     padding: 0 10px;
@@ -190,6 +244,8 @@ body > * {
     margin: 0.2em 0.3em;
     padding-left: 0;
   }
+
+  
 }
 
 .icon-container .fa:hover,
@@ -241,9 +297,11 @@ body > * {
   flex-direction: column;
   justify-content: center;
   margin-top: 90px;
-  background-image: url('/img/code.jpg');
+  color: black;
+  /* background-image: url('/img/bg.png'); */
+  background-color: white;
   background-size: cover;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+  /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); */
 }
 
 .cover i {
