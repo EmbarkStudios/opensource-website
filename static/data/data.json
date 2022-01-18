@@ -146,6 +146,12 @@
       "description": "Superluminal Performance profiler Rust API for adding user events to captures."
     },
     {
+      "name": "poll-promise",
+      "emoji": "⌛",
+      "tags": ["rust", "tools"],
+      "description": "A Rust promise for games and immediate mode GUIs."
+    },
+    {
       "name": "puffin",
       "emoji": "🐦",
       "tags": ["rust", "tools"],
