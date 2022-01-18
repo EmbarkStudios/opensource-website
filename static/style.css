@@ -151,10 +151,16 @@ body > * {
 
 #hero-intro h1 {
   font-size: 3.5rem;
+  transition: all 0.3s ease-in-out;
 }
 
 #hero-img {
   width: 46%;
+
+}
+
+#hero-intro h1:hover {
+  transform: scale(1.1);
 }
 
 #hero-img img {
