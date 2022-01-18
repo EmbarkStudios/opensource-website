@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap');
 
 :root {
-  --embark-blue: #0fa0b4;
+  --embark-orange: #fbab1e;
   --embark-red: #b40000;
 }
 
@@ -34,6 +34,10 @@ h3 {
   line-height: 2rem;
 }
 
+.white-font {
+  color: white;
+}
+
 /* Spacing */
 
 /* All 2nd level items (ie. sections) should have margins... */
@@ -64,7 +68,7 @@ body > * {
 .button-primary {
   display: inline-block;
   font-size: 20px;
-  background: var(--embark-blue);
+  background: var(--embark-orange);
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -84,8 +88,9 @@ body > * {
   margin: 1em 1em;
 }
 
-.background-blue {
-  background: var(--embark-blue);
+.background-orange {
+  background: #f1b463;
+  color: black;
 }
 
 .background-red {
@@ -294,7 +299,7 @@ body > * {
   justify-content: center;
   margin-top: 90px;
   color: black;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   background-size: cover;
 }
 
@@ -319,7 +324,7 @@ body > * {
 }
 
 .category-tag {
-  color: var(--embark-blue);
+  color: var(--embark-orange);
 }
 
 .card {
@@ -431,7 +436,7 @@ body > * {
 
 .tag {
   display: inline-block;
-  background: var(--embark-blue);
+  background: var(--embark-orange);
   margin: 3px;
   padding: 2px 6px;
   border-radius: 10px;
@@ -494,12 +499,17 @@ body > * {
     color: white;
   }
 
+  .cover {
+    background: #222;
+    color: white;
+  }
+
   .background-grey {
     background: #1a1a1a;
     color: white;
   }
 
-  .background-blue {
+  .background-orange {
     /* Embark blue looks way too bright in dark mode, so make it 70% opacity */
     background: rgba(15, 160, 180, 0.7);
   }
@@ -685,7 +695,7 @@ details > summary {
   list-style: none;
   display: inline-block;
   font-size: 20px;
-  background: var(--embark-blue);
+  background: var(--embark-orange);
   color: white;
   font-weight: bold;
   text-decoration: none;
