@@ -156,7 +156,6 @@ body > * {
 
 #hero-img {
   width: 46%;
-
 }
 
 #hero-intro h1:hover {
@@ -227,7 +226,7 @@ body > * {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   #developer {
     margin: 0 auto;
     font-size: 0.9em;
