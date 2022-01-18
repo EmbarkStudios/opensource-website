@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "name": "cloud-dns",
+      "emoji": "📒",
+      "tags": ["rust", "gcp", "dns"],
+      "description": "cloud-dns is a crate providing a client to interact with Google Cloud DNS",
+      "featured": false
+    },
+    {
       "name": "opa-policies",
       "emoji": "📜",
       "tags": ["opa", "rego"],
@@ -21,7 +28,7 @@
       "emoji": "🎨",
       "tags": ["rust"],
       "description": "Example-based texture synthesis written in Rust",
-      "featured": true,
+      "featured": false,
       "extendedDescription": "A light Rust API for Multiresolution Stochastic Texture Synthesis, a non-parametric example-based algorithm for image generation.",
       "featureImage": "https://camo.githubusercontent.com/c279dea27db2c10f64cd27563d8d7cc86048c5c1/68747470733a2f2f692e696d6775722e636f6d2f43735a6f5350532e6a7067"
     },
@@ -142,7 +149,10 @@
       "name": "puffin",
       "emoji": "🐦",
       "tags": ["rust", "tools"],
-      "description": "Simple instrumentation profiler for Rust."
+      "description": "Simple instrumentation profiler for Rust.",
+      "featured": true,
+      "extendedDescription": "The friendly little instrumentation-based CPU profiler for Rust",
+      "featureImage": "https://github.com/EmbarkStudios/puffin/blob/main/puffin.jpg?raw=true"
     },
     {
       "name": "tryhard",
@@ -245,7 +255,17 @@
       "tags": ["rust", "agones", "games", "multiplayer", "k8s"],
       "description": "Unofficial agones client SDK",
       "repo": "https://github.com/EmbarkStudios/rymder"
-    }
+    },
+    {
+        "name": "kajiya",
+        "emoji": "💡",
+        "tags": ["rust", "gpu"],
+        "description": "Experimental real-time global illumination renderer",
+        "repo": "https://github.com/EmbarkStudios/kajiya",
+        "featured": true,
+        "extendedDescription": "Experimental real-time global illumination renderer (no precomputed light transport). Rust on CPU and GPU.",
+        "featureImage": "https://user-images.githubusercontent.com/16522064/146789417-0cc84f60-157d-4a7d-99f5-79122c1fa982.png"
+      }
   ],
   "newsletter":[
     {
