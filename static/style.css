@@ -525,7 +525,8 @@ body > * {
 
   .background-orange {
     /* Embark blue looks way too bright in dark mode, so make it 70% opacity */
-    background: rgba(15, 160, 180, 0.7);
+    background-color: #bd882d;
+    color: white;
   }
 
   .card {
