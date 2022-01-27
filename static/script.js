@@ -1,5 +1,9 @@
 import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
 
+const issueCountCssPrefix = "issue-count-";
+const starCountCssPrefix = "star-count-";
+const projectDescriptionCssPrefix = "project-description-";
+
 let state = {
   projects: [],
   newsletter: [],
@@ -61,16 +65,16 @@ async function loadGitHubData() {
 function hydrateHtmlWithGitHubData() {
   for (let i = 0; i < state.projects.length; i++) {
     const project = state.projects[i];
-    updateHtml(project.name, "star-count-", project.stargazers_count);
-    updateHtml(project.name, "issue-count-", project.open_issues_count);
-    updateHtml(project.name, "project-description-", project.description);
+    updateHtml(project.name, starCountCssPrefix, project.stargazers_count);
+    updateHtml(project.name, issueCountCssPrefix, project.open_issues_count);
+    updateHtml(project.name, projectDescriptionCssPrefix, project.description);
   }
 }
 
 function updateHtml(projectName, cssClass, innerHtml) {
   const htmlTags = document.body.querySelectorAll("." + cssClass + projectName);
   if (htmlTags) {
-    if (innerHtml !== undefined) {
+    if (innerHtml !== undefined && innerHtml !== null) {
       // add innerHTML if given
       for (let j = 0; j < htmlTags.length; j++) {
         htmlTags[j].innerHTML = innerHtml;
@@ -78,11 +82,9 @@ function updateHtml(projectName, cssClass, innerHtml) {
     } else {
       // remove HTML if no innerHtml value
       for (let j = 0; j < htmlTags.length; j++) {
-        if (cssClass !== "project-description-") {
+        if (cssClass == starCountCssPrefix || cssClass == issueCountCssPrefix) {
           // if its issue-count or star-count for GitHub Stats and no GitHub Data remove whole GitHub Stats
           htmlTags[j].parentNode.parentNode.removeChild(htmlTags[j].parentNode);
-        } else {
-          htmlTags[j].parentNode.removeChild(htmlTags[j]);
         }
       }
     }
