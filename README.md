@@ -1,15 +1,14 @@
 🌐 opensource-website
 =================
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a509a033-951d-4d9b-a2c0-3702a8cf9107/deploy-status)](https://app.netlify.com/sites/embark-dev-opensource/deploys)
 [![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 [![Embark](https://img.shields.io/badge/embark-open%20source-blueviolet.svg)](https://github.com/EmbarkStudios)
 
-Hub for Embark's open source efforts.
+Hub for [Embark's open source efforts](https://www.embark.dev/).
 
 ## About
 
-This is a website using Zola as static site generator.
+This is a website using [Zola](https://www.getzola.org/) as static site generator.
 
 Project data is provided by a small JSON file, but in the future this should be grabbed from an API.
 
@@ -24,6 +23,7 @@ zola serve
 ```
 ```sh
 # build the static content
+# default output dir `public/`
 zola build
 ```
 
