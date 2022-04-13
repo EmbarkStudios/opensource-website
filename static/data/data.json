@@ -280,31 +280,10 @@
       "repo": "https://github.com/EmbarkStudios/ServerCodeExciser"
     },
     {
-      "name": "crash-context",
+      "name": "crash-handling",
       "emoji": "🔥",
-      "tags": ["rust", "crash"],
-      "description": "Provides portable types containing target specific contextual information at the time of an exception",
-      "repo": "https://github.com/EmbarkStudios/crash-handling"
-    },
-    {
-      "name": "exception-handler",
-      "emoji": "🔥",
-      "tags": ["rust", "crash", "exception", "signal"],
-      "description": "Allows running of user code during exceptional events",
-      "repo": "https://github.com/EmbarkStudios/crash-handling"
-    },
-    {
-      "name": "minidumper",
-      "emoji": "🔥",
-      "tags": ["rust", "crash", "minidump"],
-      "description": "Provides a client and server for writing minidumps in the server process for a crashed client process",
-      "repo": "https://github.com/EmbarkStudios/crash-handling"
-    },
-    {
-      "name": "sadness-generator",
-      "emoji": "🔥",
-      "tags": ["rust", "crash", "exception", "signal", "sadness"],
-      "description": "Cross-platform generation of crash events",
+      "tags": ["rust", "crash", "exception", "signal", "minidump"],
+      "description": "Set of crates for catching and handling crashes",
       "repo": "https://github.com/EmbarkStudios/crash-handling"
     }
   ],
