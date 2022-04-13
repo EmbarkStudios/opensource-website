@@ -133,7 +133,7 @@
             </button>
             <input id="search-input" type="text" placeholder="Start typing...">
         </div>
-        <div class="search-overlay__results">
+        <div class="search-overlay-results">
             {% for p in projects | sort(attribute="name") %}
             {%- if not p.hidden -%}
             <div id="search-project-card-{{ p.name }}" class="card link-container">
