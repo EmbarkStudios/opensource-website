@@ -22,9 +22,9 @@
     "homepage": "https://github.com/EmbarkStudios/opensource-website#readme",
     "devDependencies": {
         "ajv-cli": "^5.0.0",
-        "alex": "^9.1.0",
-        "prettier": "^2.2.1",
-        "stylelint": "^13.12.0",
-        "stylelint-config-standard": "^21.0.0"
+        "alex": "^10.0.0",
+        "prettier": "^2.6.2",
+        "stylelint": "^14.6.1",
+        "stylelint-config-standard": "^25.0.0"
     }
 }
