@@ -277,7 +277,7 @@
       "emoji": "🈹",
       "tags": ["unreal", "angelscript", "automation", "server", "ast", "antlr", "grammar"],
       "description": "A tool to automatically remove server only code from Unreal code bases.",
-      "repo": "https://github.com/EmbarkStudios/ServerCodeExciser"
+      "repo": "https://github.com/EmbarkStudios/server-code-exciser"
     },
     {
       "name": "crash-handling",
