@@ -269,61 +269,73 @@
   ],
   "newsletter":[
     {
-      "name": "Announcing Our Opensource Game Server Proxy! - Embark Dev Newsletter 010",
+      "name": "Machine Learning For Believable AI Characters",
+      "date": "13/04/2022",
+      "link": "https://mailchi.mp/embark-studios/april2022",
+      "description": "Learn about how we're changing the character creation workflow with machine learning."
+    },
+    {
+      "name": "The open source technology that powers our games",
+      "date": "03/02/2022",
+      "link": "https://mailchi.mp/ad17109ff541/feb2022",
+      "description": "Learn about the open source technology that powers our games and platforms, including Arc Raiders, recently announced at The Game Awards."
+    },
+    {
+      "name": "Announcing Our Opensource Game Server Proxy!",
       "date": "25/08/2021",
       "link": "https://mailchi.mp/embark-studios/dev010",
       "description": "Learn more about Quilkin, our collaboration with Google Cloud to create open-source UDP proxies built for game server communication, and more!"
     },
     {
-      "name": "Goodbye, GLSL! Hello, Rust! - Embark Dev Newsletter 009",
+      "name": "Goodbye, GLSL! Hello, Rust!",
       "date": "19/03/2021",
       "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=ec5759f460",
       "description": "Learn more about rust-gpu and catch up on March's highlights from the Embark open source community."
     },
     {
-      "name": "New Open Source Crates, Contributor highlights, and more - Embark Dev Newsletter 008",
+      "name": "New Open Source Crates, Contributor highlights, and more",
       "date": "02/02/2021",
       "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=2b4725478e",
       "description": "Learn more about our new open-source crates, and catch up on January highlights from the Embark open source community."
     },
     {
-      "name": "Blender, rust-gpu 0.2 and more - Embark Dev Newsletter 007",
+      "name": "Blender, rust-gpu 0.2 and more",
       "date": "17/12/2020",
       "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=866a1780e3",
       "description": "Learn more about how we use Blender, read about rust-gpu 0.2, and catch up on December highlights from the Embark open source community."
     },
     {
-      "name": "Bringing Rust to the GPU - Embark Dev Newsletter 006",
+      "name": "Bringing Rust to the GPU",
       "date": "06/11/2020",
       "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=cc8ff30199",
       "description": "Hear from the lead developer of rust-gpu, and catch up on October's highlights from the Embark open source community."
     },
     {
-      "name": "Jump into open source this fall! - Embark Dev Newsletter 005",
+      "name": "Jump into open source this fall!",
       "date": "22/09/2020",
       "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=ed99e06990",
       "description": "Learn how to get involved in open source this fall in Embark's latest developer newsletter!"
     },
     {
-      "name": "Watch 2 New Talks from Embark! - Embark Dev Newsletter 004",
+      "name": "Watch 2 New Talks from Embark!",
       "date": "02/03/2020",
       "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=e8df1462e7",
       "description": "See what we're working on at Embark in our latest developer newsletter!"
     },
     {
-      "name": "A sneak peek at our experiments and upcoming events - Embark Dev Newsletter 003",
+      "name": "A sneak peek at our experiments and upcoming events",
       "date": "23/01/2020",
       "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=4ace2982ac",
       "description": "See what we're working on at Embark in our latest developer newsletter!"
     },
     {
-      "name": "New Blender add-on, and a peek inside Rust development at Embark - Embark Dev Newsletter 002",
+      "name": "New Blender add-on, and a peek inside Rust development at Embark",
       "date": "06/12/2019",
       "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=0339af3ed2",
       "description": "We've got exciting announcements from Embark Studios this month, including 2 new open source projects!"
     },
     {
-      "name": "Rust, Blender, Hacktoberfest, and more - Embark Dev Newsletter 001",
+      "name": "Rust, Blender, Hacktoberfest, and more",
       "date": "08/11/2019",
       "link": "https://us20.campaign-archive.com/?u=4206f0696b8b13a996c701852&id=81860842cb",
       "description": "Welcome to the first Embark developer newsletter! In this edition, see tech talks from our Rust engineers and read about our Blender sponsorship."

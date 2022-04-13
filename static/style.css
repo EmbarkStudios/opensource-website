@@ -386,6 +386,10 @@ body > * {
   margin: 0;
 }
 
+.title-newsletter {
+  font-size: 1.2rem;
+}
+
 .emoji {
   font-size: 1.5em;
   padding-right: 5px;
@@ -553,7 +557,7 @@ body > * {
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .github-buttons-container {
