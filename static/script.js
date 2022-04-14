@@ -64,14 +64,22 @@ async function loadGitHubData() {
 
 const getSelector = (cssClass, projectName) => {
   return `.${cssClass}${projectName}`;
-}
+};
 
 function hydrateHtmlWithGitHubData() {
   for (let i = 0; i < state.projects.length; i++) {
     const project = state.projects[i];
     setProjectCount(project.name, starCountCssPrefix, project.stargazers_count);
-    setProjectCount(project.name, issueCountCssPrefix, project.open_issues_count);
-    setProjectText(project.name, projectDescriptionCssPrefix, project.description);
+    setProjectCount(
+      project.name,
+      issueCountCssPrefix,
+      project.open_issues_count
+    );
+    setProjectText(
+      project.name,
+      projectDescriptionCssPrefix,
+      project.description
+    );
   }
 }
 
@@ -79,7 +87,7 @@ function hydrateHtmlWithGitHubData() {
 function setProjectCount(projectName, cssClass, count) {
   const selector = getSelector(cssClass, projectName);
   const htmlTags = document.body.querySelectorAll(selector);
-  if (htmlTags && typeof count === 'number') {
+  if (htmlTags && typeof count === "number") {
     for (let j = 0; j < htmlTags.length; j++) {
       htmlTags[j].textContent = `${count}`;
     }
@@ -99,7 +107,11 @@ function setProjectText(projectName, cssClass, description) {
   const selector = getSelector(cssClass, projectName);
   const htmlTags = document.body.querySelectorAll(selector);
   if (htmlTags) {
-    if (description !== undefined && description !== null && (typeof description === 'string')) {
+    if (
+      description !== undefined &&
+      description !== null &&
+      typeof description === "string"
+    ) {
       // add innerHTML if given
       for (let j = 0; j < htmlTags.length; j++) {
         htmlTags[j].textContent = `${description}`;
