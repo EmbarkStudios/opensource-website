@@ -62,30 +62,47 @@ async function loadGitHubData() {
   hydrateHtmlWithGitHubData();
 }
 
+const getSelector = (cssClass, projectName) => {
+  return `.${cssClass}${projectName}`;
+}
+
 function hydrateHtmlWithGitHubData() {
   for (let i = 0; i < state.projects.length; i++) {
     const project = state.projects[i];
-    updateHtml(project.name, starCountCssPrefix, project.stargazers_count);
-    updateHtml(project.name, issueCountCssPrefix, project.open_issues_count);
-    updateHtml(project.name, projectDescriptionCssPrefix, project.description);
+    setProjectCount(project.name, starCountCssPrefix, project.stargazers_count);
+    setProjectCount(project.name, issueCountCssPrefix, project.open_issues_count);
+    setProjectText(project.name, projectDescriptionCssPrefix, project.description);
   }
 }
 
-function updateHtml(projectName, cssClass, innerHtml) {
-  const htmlTags = document.body.querySelectorAll("." + cssClass + projectName);
+// Sets the number of GitHub stars and number of issues for a project
+function setProjectCount(projectName, cssClass, count) {
+  const selector = getSelector(cssClass, projectName);
+  const htmlTags = document.body.querySelectorAll(selector);
+  if (htmlTags && typeof count === 'number') {
+    for (let j = 0; j < htmlTags.length; j++) {
+      htmlTags[j].textContent = `${count}`;
+    }
+  } else {
+    // remove HTML if we don't have an element to attach the count value to
+    for (let j = 0; j < htmlTags.length; j++) {
+      if (cssClass === starCountCssPrefix || cssClass === issueCountCssPrefix) {
+        // if its issue-count or star-count for GitHub Stats and no GitHub Data remove whole GitHub Stats
+        htmlTags[j].parentNode.parentNode.removeChild(htmlTags[j].parentNode);
+      }
+    }
+  }
+}
+
+// Sets the description of a project
+function setProjectText(projectName, cssClass, description) {
+  const selector = getSelector(cssClass, projectName);
+  const htmlTags = document.body.querySelectorAll(selector);
   if (htmlTags) {
-    if (innerHtml !== undefined && innerHtml !== null) {
+    if (description !== undefined && description !== null && (typeof description === 'string')) {
       // add innerHTML if given
       for (let j = 0; j < htmlTags.length; j++) {
-        htmlTags[j].innerHTML = innerHtml;
-      }
-    } else {
-      // remove HTML if no innerHtml value
-      for (let j = 0; j < htmlTags.length; j++) {
-        if (cssClass == starCountCssPrefix || cssClass == issueCountCssPrefix) {
-          // if its issue-count or star-count for GitHub Stats and no GitHub Data remove whole GitHub Stats
-          htmlTags[j].parentNode.parentNode.removeChild(htmlTags[j].parentNode);
-        }
+        htmlTags[j].textContent = `${description}`;
       }
     }
   }
@@ -110,7 +127,7 @@ function toggleSearch() {
 }
 
 function escapeSearch(event) {
-  if (event.key == "Escape") {
+  if (event.key === "Escape") {
     toggleSearch();
   }
 }
