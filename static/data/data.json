@@ -221,8 +221,8 @@
     {
       "name": "sentry-contrib-rust",
       "hidden": "This is a public fork used to share changes with the Sentry team"
-    },	
-    {	
+    },
+    {
       "name": "tame-oidc",
       "emoji": "🧬",
       "tags": ["rust"],
@@ -285,6 +285,20 @@
       "tags": ["rust", "crash", "exception", "signal", "minidump"],
       "description": "Set of crates for catching and handling crashes",
       "repo": "https://github.com/EmbarkStudios/crash-handling"
+    },
+    {
+      "name": "cervo",
+      "emoji": "🧠",
+      "tags": ["rust", "machine-learning", "games"],
+      "description": "Middleware used for ML inference in our games.",
+      "repo": "https://github.com/EmbarkStudios/cervo"
+    },
+    {
+      "name": "tracing-ext-ffi-subscriber",
+      "emoji": "⏱️",
+      "tags": ["rust", "tools"],
+      "description": "Subscriber for passing spans from a rust library to a profiling tool in a host application via FFI.",
+      "repo": "https://github.com/EmbarkStudios/tracing-ext-ffi-subscriber"
     }
   ],
   "newsletter":[
