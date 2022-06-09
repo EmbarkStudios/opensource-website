@@ -299,6 +299,13 @@
       "tags": ["rust", "tools"],
       "description": "Subscriber for passing spans from a rust library to a profiling tool in a host application via FFI.",
       "repo": "https://github.com/EmbarkStudios/tracing-ext-ffi-subscriber"
+    },
+    {
+      "name": "tiny-bench",
+      "emoji": "🛠",
+      "tags": ["rust", "tools", "benchmarking"],
+      "description": "A tiny benchmarking library",
+      "repo": "https://github.com/EmbarkStudios/tiny-bench"
     }
   ],
   "newsletter":[
