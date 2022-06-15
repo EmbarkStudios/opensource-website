@@ -301,6 +301,13 @@
       "repo": "https://github.com/EmbarkStudios/tracing-ext-ffi-subscriber"
     },
     {
+      "name": "tracing-logfmt",
+      "emoji": "🪵️",
+      "tags": ["rust", "logging", "tracing"],
+      "description": "A logfmt formatter for tracing-subscriber.",
+      "repo": "https://github.com/EmbarkStudios/tracing-logfmt"
+    },
+    {
       "name": "tiny-bench",
       "emoji": "🛠",
       "tags": ["rust", "tools", "benchmarking"],
