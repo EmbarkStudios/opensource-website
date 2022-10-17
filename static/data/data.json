@@ -152,6 +152,12 @@
       "description": "A Rust promise for games and immediate mode GUIs."
     },
     {
+      "name": "presser",
+      "emoji": "🗜",
+      "tags": ["rust", "tools"],
+      "description": "Helpers for doing low-level data copies into raw buffers without invoking undefined behavior."
+    },
+    {
       "name": "puffin",
       "emoji": "🐦",
       "tags": ["rust", "tools"],
