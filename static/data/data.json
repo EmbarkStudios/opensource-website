@@ -179,6 +179,12 @@
       "description": "Wrapper crate for SPIRV-Tools"
     },
     {
+      "name": "mirror-mirror",
+      "emoji": "🪞",
+      "tags": ["rust"],
+      "description": "Powerful reflection library for Rust"
+    },
+    {
       "name": "nfd2",
       "hidden": "This is a temporary fork so we are not showing it on the website"
     },
