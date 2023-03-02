@@ -319,6 +319,13 @@
       "tags": ["rust", "tools", "benchmarking"],
       "description": "A tiny benchmarking library",
       "repo": "https://github.com/EmbarkStudios/tiny-bench"
+    },
+    {
+      "name": "pdm-plugin-torch",
+      "emoji": "🔦",
+      "tags": ["python", "tools", "machinelearning", "pdm", "plugin"],
+      "description": "A utility tool for selecting torch backend and version.",
+      "repo": "https://github.com/EmbarkStudios/pdm-plugin-torch"
     }
   ],
   "newsletter":[
