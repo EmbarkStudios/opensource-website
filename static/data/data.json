@@ -86,12 +86,6 @@
       "featureImage": "https://raw.githubusercontent.com/EmbarkStudios/physx-rs/master/images/example-ball.png"
     },
     {
-      "name": "wg-ui",
-      "emoji": "",
-      "tags": ["go", "web"],
-      "description": "A basic web UI for managing WireGuard clients."
-    },
-    {
       "name": "gke-accelerated-xorg-example",
       "emoji": "",
       "tags": ["docker", "gcp"],
