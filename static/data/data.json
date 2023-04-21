@@ -320,6 +320,13 @@
       "tags": ["python", "tools", "machinelearning", "pdm", "plugin"],
       "description": "A utility tool for selecting torch backend and version.",
       "repo": "https://github.com/EmbarkStudios/pdm-plugin-torch"
+    },
+    {
+      "name": "tame-webpurify",
+      "emoji": "💩",
+      "tags": ["rust", "content-moderation"],
+      "description": "Super simple client for the WebPurify REST API",
+      "repo": "https://github.com/EmbarkStudios/tame-webpurify"
     }
   ],
   "newsletter":[
