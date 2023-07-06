@@ -161,3 +161,7 @@
     </div>
 </div>
 {% endmacro search_overlay %}
+
+{% macro dev_to_api(tag) -%}
+{%- set data = load_data(url="https://dev.to/api/articles?username=embark", format="json") -%}
+{%- endmacro dev_to_api -%}
