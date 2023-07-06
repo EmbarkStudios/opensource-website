@@ -15,3 +15,4 @@ highlight_code = true
 [extra]
 # Put all your custom variables here
 embark_github_url = "https://github.com/EmbarkStudios/"
+embark_devto_api_endpoint = "https://dev.to/api/articles?username=embark"
