@@ -108,7 +108,7 @@ body > * {
 
 /* Header and Intro */
 
-.header-container {
+.header {
   background: linear-gradient(#be47e9, #fbab1e);
   padding: 0 5%;
   width: 100vw;
@@ -118,7 +118,7 @@ body > * {
   top: 0;
 }
 
-.header {
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -139,7 +139,7 @@ body > * {
   font-size: 0.9em;
 }
 
-.header * {
+.header-container * {
   margin: 0;
 }
 
@@ -192,7 +192,7 @@ body > * {
 }
 
 @media screen and (max-width: 320px) {
-  .header {
+  .header-container {
     padding: 0 10px;
   }
 
@@ -221,7 +221,7 @@ body > * {
 
   #hero-intro h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .container h1 {
@@ -244,7 +244,7 @@ body > * {
 }
 
 @media screen and (min-width: 321px) and (max-width: 371px) {
-  .header {
+  .header-container {
     padding: 0 10px;
   }
 
@@ -259,8 +259,8 @@ body > * {
 }
 
 @media screen and (min-width: 372px) and (max-width: 470px) {
-  .header {
-    padding: 0 20px;
+  .icon-container {
+    margin: 0;
   }
 
   .icon-container a {
