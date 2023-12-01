@@ -109,19 +109,24 @@ body > * {
 /* Header and Intro */
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: linear-gradient(#be47e9, #fbab1e);
-  color: white;
-  margin: 0;
-  font-size: 1.5em;
-  position: fixed;
-  top: 0;
   padding: 0 5%;
   width: 100vw;
   height: 90px;
+  position: fixed;
   z-index: 100;
+  top: 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 1.5em;
+  height: 90px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo-embark {
@@ -134,7 +139,7 @@ body > * {
   font-size: 0.9em;
 }
 
-.header * {
+.header-container * {
   margin: 0;
 }
 
@@ -187,7 +192,7 @@ body > * {
 }
 
 @media screen and (max-width: 320px) {
-  .header {
+  .header-container {
     padding: 0 10px;
   }
 
@@ -216,6 +221,11 @@ body > * {
 
   #hero-intro h1 {
     text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .container h1 {
+    font-size: 2rem;
   }
 
   #hero-img {
@@ -234,7 +244,7 @@ body > * {
 }
 
 @media screen and (min-width: 321px) and (max-width: 371px) {
-  .header {
+  .header-container {
     padding: 0 10px;
   }
 
@@ -249,8 +259,8 @@ body > * {
 }
 
 @media screen and (min-width: 372px) and (max-width: 470px) {
-  .header {
-    padding: 0 20px;
+  .icon-container {
+    margin: 0;
   }
 
   .icon-container a {
@@ -335,6 +345,19 @@ body > * {
 .newsletter-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 1.5rem;
+  padding: 1rem 0.5rem;
+}
+
+.button-container a {
+  margin: 0;
 }
 
 .category-tag {
@@ -346,7 +369,6 @@ body > * {
   flex-direction: column;
   justify-content: space-between;
   width: 350px;
-  margin: 0.5rem 1rem 0.5rem 0;
   padding: 1.5rem;
   background: white;
   box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 10%);
@@ -556,6 +578,10 @@ body > * {
   justify-content: flex-start;
 }
 
+.project-card p {
+  word-break: break-word;
+}
+
 .github-buttons-container {
   display: flex;
   flex-direction: row;
@@ -701,7 +727,6 @@ body > * {
 
 details {
   font-size: 16px;
-  width: 1000px;
 }
 
 details > summary {

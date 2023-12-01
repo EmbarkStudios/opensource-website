@@ -1,15 +1,17 @@
 {% macro header() %}
-<header class="header">
-    <div class="logo-embark">
-        <a href="https://embark-studios.com"><img id="logo" src="/img/logo.png" /></a> 
-        <div id="developer">DEVELOPER</div>
-    </div>
-    <div class="icon-container">
-        <a href="https://embark-studios.com" class="fas fa-globe-americas"></a>
-        <a href="https://twitter.com/EmbarkStudios" class="fa fa-twitter"></a>
-        <a href="https://github.com/EmbarkStudios" class="fa fa-github"></a>
-        <a href="https://discord.gg/FjuWFKaKRn" class="fab fa-discord"></a>
-        <div class="fa fa-search search-icon" onclick="toggleSearch()"></div>
+<header class="full-width-section header">
+    <div class="header-container">
+        <div class="logo-embark">
+            <a href="https://embark-studios.com"><img id="logo" src="/img/logo.png" /></a>
+            <div id="developer">DEVELOPER</div>
+        </div>
+        <div class="icon-container">
+            <a href="https://embark-studios.com" class="fas fa-globe-americas"></a>
+            <a href="https://twitter.com/EmbarkStudios" class="fa fa-twitter"></a>
+            <a href="https://github.com/EmbarkStudios" class="fa fa-github"></a>
+            <a href="https://discord.gg/FjuWFKaKRn" class="fab fa-discord"></a>
+            <div class="fa fa-search search-icon" onclick="toggleSearch()"></div>
+        </div>
     </div>
 </header>
 {% endmacro header %}
