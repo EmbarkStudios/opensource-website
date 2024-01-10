@@ -18,4 +18,4 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v3.0.0
       - name: Print secret
-        run: "echo $GITHUB_TOKEN"
+        run: "echo ${{ secrets.GITHUB_TOKEN }}"
