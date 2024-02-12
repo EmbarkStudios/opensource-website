@@ -29,6 +29,7 @@
       "tags": ["rust", "gpu"],
       "description": "Rust bindings for AMD FidelityFX™ Super Resolution",
       "featured": false,
+      "repo": "https://github.com/EmbarkStudios/fsr-rs"
     },
     {
       "name": "texture-synthesis",
