@@ -24,6 +24,14 @@
       "featureImage": "https://github.com/EmbarkStudios/rust-gpu/blob/main/docs/assets/sky.jpg?raw=true"
     },
     {
+      "name": "fsr-rs",
+      "emoji": "🌉",
+      "tags": ["rust", "gpu"],
+      "description": "Rust bindings for AMD FidelityFX™ Super Resolution",
+      "featured": false,
+      "repo": "https://github.com/EmbarkStudios/fsr-rs"
+    },
+    {
       "name": "texture-synthesis",
       "emoji": "🎨",
       "tags": ["rust"],
