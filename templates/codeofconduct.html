@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
+{% block head %}
+<!-- Standard Metadata -->
+<title>Embark Studios Open Source Newsletter | embark.dev</title>
+<meta name="description"
+    content="Stay up to date with new open source projects and developer events from Embark with our developer newsletter">
+<meta name="keywords" content="open source, sponsorship, rust, newsletter">
+
+<!-- Open Graph Metadata -->
+<meta property="og:title" content="Embark Studios Open Source Code Of Conduct" />
+<meta property="og:description"
+    content="Contributor Covenant Code of Conduct" />
+
+<!-- markdown-it -->
+<script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+{% endblock head %}
+
+{% block content %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('../CODE_OF_CONDUCT.md')
+        .then((response) => response.text())
+        .then((text) => {
+            const md = window.markdownit();
+            document.getElementById('output').innerHTML = md.render(text);
+        });
+    });
+</script>
+<section class="full-width-section cover">
+    <div class="container">
+        <a href="/#contribute">
+            <h1>
+                <i class="fa fa-long-arrow-left"></i>Back
+            </h1>
+        </a>
+    </div>
+</section>
+<section>
+    <div class="container" id="output"></div>
+</section>
+{% endblock content %}
