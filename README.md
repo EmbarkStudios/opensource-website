@@ -21,6 +21,7 @@ All non-project data and text is hardcoded for now, but in the future this shoul
 # locally serve the site
 zola serve
 ```
+
 ```sh
 # build the static content
 # default output dir `public/`
