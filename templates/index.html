@@ -48,9 +48,6 @@
                         In our open source work, we're exploring and pushing the boundaries of new technologies, and sharing our
                         learnings with the community.
                     </p>
-                    <a href="#contribute" class="button-primary">
-                        Contribute
-                    </a>
                 </div>
             </div>
     
@@ -127,8 +124,6 @@
             {%- endif -%}
             {% endfor %}
         </div>
-        <a href="https://medium.com/embarkstudios/a-love-letter-to-blender-e54167c22193"
-            class="button-primary background-grey">Learn More</a>
     </div>
 </section>
 
@@ -138,7 +133,7 @@
             🦀 Rust at Embark
         </h1>
         <p>
-            When we started Embark, we chose Rust as our primary language for the long term future we are building. We
+            When we started Embark, we chose Rust as our language for some of our long-term projects. We
             love the safety and robustness of the language, the ability to write high performance, safe, and (mostly)
             bug free code and then fearlessly refactor and change it without common lifetime/ownership, memory safety or
             race condition problems.
@@ -148,7 +143,6 @@
             community around Rust. With tens of thousands of open source crates on crates.io and a best-in-class package
             system, cargo, we truly believe Rust is a language for the future.
         </p>
-        <a href="https://embark.rs" class="button-primary background-red">Learn More</a>
         {{ macros::project_category(projects=data.projects, tag="rust") }}
     </div>
 </section>
@@ -205,27 +199,4 @@
     </div>
 </section>
 
-<section class="full-width-section background-orange" id="contribute">
-    <div class="container">
-        <h1>
-            Want to get involved?
-        </h1>
-        <p>All projects created at Embark Studios are open for contribution. We welcome contributions from people of all
-            backgrounds who are interested in making great software with us. We need <b>you</b> to help us achieve our
-            goal of empowering everyone to create.
-        </p>
-        <a href="{{ config.extra.embark_github_url }}opensource-website/blob/main/CODE_OF_CONDUCT.md">
-            <h3>Read our Code of Conduct →</h3>
-        </a>
-        <a href="https://github.com/search?q=user:EmbarkStudios+state:open">
-            <h3>Check out open issues →</h3>
-        </a>
-        <a href="{{ config.extra.embark_github_url }}opensource-website/blob/main/CONTRIBUTING.md"
-            class="button-primary">Get Started!</a>
-        <p>If you want to collaborate with Embark, you can reach out to us at <a
-                href="mailto:opensource@embark-studios.com">opensource@embark-studios.com</a>.</p>
-        <p>We're also looking for passionate people to <a href="https://embark-studios.com/jobs">join our team</a> in
-            Stockholm or remotely (European timezone)!</p>
-    </div>
-</section>
 {% endblock content %}
