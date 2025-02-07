@@ -341,6 +341,13 @@
       "tags": ["rust", "content-moderation"],
       "description": "Super simple client for the WebPurify REST API",
       "repo": "https://github.com/EmbarkStudios/tame-webpurify"
+    },
+    {
+      "name": "proto-gen",
+      "emoji": "💠",
+      "tags": ["rust", "tools", "protobuf", "codegen"],
+      "description": "A protobuf generation runner/cli using tonic build",
+      "repo": "https://github.com/EmbarkStudios/proto-gen"
     }
   ],
   "newsletter":[
